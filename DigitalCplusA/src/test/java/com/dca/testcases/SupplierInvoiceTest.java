@@ -9,11 +9,13 @@ import org.testng.annotations.Test;
 import com.dca.base.BaseClass;
 import com.dca.dataprovider.DataProviders;
 import com.dca.pages.LoginPage;
-import com.dca.pages.ProjectPage;
+
+import com.dca.pages.PropertyActionsPage;
 import com.dca.pages.SupplierInvoice;
+import com.dca.utility.Log;
 
 public class SupplierInvoiceTest extends BaseClass {
-	ProjectPage projectpage;
+	PropertyActionsPage projectpage;
 	SupplierInvoice sip;
 	@Test(dataProvider = "SupplierInvoice", dataProviderClass = DataProviders.class)
 	public void supplier_invoice_test(String selproject1, String date1, String invoiceno1,String warrentydate1,
@@ -21,6 +23,7 @@ public class SupplierInvoiceTest extends BaseClass {
 			String comments1, String selpaymenttype1,  String comment1, String returnquanity1, String remarks1,String  address11,String floor1, String location1,
 			String currentquanity1, String minimumquantity, String expirydate12,String assignedto1,String  description1,
 			String selcat, String selty, String staff1) throws InterruptedException, AWTException {
+		Log.startTestCase("supplier invoice");
 		LoginPage login=new LoginPage();
 		projectpage=login.login();
 		sip=projectpage.supplierinvo();
@@ -29,6 +32,7 @@ public class SupplierInvoiceTest extends BaseClass {
 				, comment1, returnquanity1, remarks1, address11, floor1, location1,
 				currentquanity1, minimumquantity, expirydate12, assignedto1, description1,
 				selcat, selty, staff1);
+		Log.endTestCase("supplier invoice");
 	}
 	@BeforeMethod()
 	public void setup() {

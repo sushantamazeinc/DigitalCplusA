@@ -305,6 +305,194 @@ public Object[][] getSupplierInvoice() {
 	
 	
 }
+@DataProvider(name = "BudgetDashboard")
+public Object[][] getBudgetDashboard() {
+	// Totals rows count
+	int rows = obj.getRowCount("Budgetdashboard");
+	// Total Columns
+	int column = obj.getColumnCount("Budgetdashboard");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("Budgetdashboard", j, i + 2);
+		}
+	}
+	return data;
+}
+@DataProvider(name = "ProjectTeam")
+public Object[][] getProjectTeam() {
+	// Totals rows count
+	int rows = obj.getRowCount("Projectteam");
+	// Total Columns
+	int column = obj.getColumnCount("Projectteam");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("Projectteam", j, i + 2);
+		}
+	}
+	return data;
+}
+@DataProvider(name = "ProjectActivities")
+public Object[][] getProjectActivities() {
+	// Totals rows count
+	int rows = obj.getRowCount("Projectactivities");
+	// Total Columns
+	int column = obj.getColumnCount("Projectactivities");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("Projectactivities", j, i + 2);
+		}
+	}
+	return data;
+}
+@DataProvider(name = "SiteVisits")
+public Object[][] getSiteVisits() {
+	// Totals rows count
+	int rows = obj.getRowCount("Sitevisit");
+	// Total Columns
+	int column = obj.getColumnCount("Sitevisit");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("Sitevisit", j, i + 2);
+		}
+	}
+	return data;
+}
+@DataProvider(name = "MyVisit")
+public Object[][] getMyVisit() {
+	// Totals rows count
+	int rows = obj.getRowCount("Mytask");
+	// Total Columns
+	int column = obj.getColumnCount("Mytask");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("Mytask", j, i + 2);
+		}
+	}
+	return data;
+}
+@DataProvider(name = "ActionItem")
+public Object[][] getActionItem() {
+	// Totals rows count
+	int rows = obj.getRowCount("Actionitem");
+	// Total Columns
+	int column = obj.getColumnCount("Actionitem");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("Actionitem", j, i + 2);
+		}
+	}
+	return data;
+}
+@DataProvider(name = "Assets")
+public Object[][] getAssets() {
+	// Totals rows counts
+	int rows = obj.getRowCount("Asset");
+	// Total Columns
+	int column = obj.getColumnCount("Asset");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("Asset", j, i + 2);
+		}
+	}
+	return data;
+}
+@DataProvider(name = "Announcements")
+public Object[][] getAnnouncements() {
+	// Totals rows counts
+	int rows = obj.getRowCount("Announcement");
+	// Total Columns
+	int column = obj.getColumnCount("Announcement");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("Announcement", j, i + 2);
+		}
+	}
+	return data;
+}
+@DataProvider(name = "Punchlistmaster")
+public Object[][] getPunchlistmaster() {
+	// Totals rows counts
+	int rows = obj.getRowCount("punchlistmasters");
+	// Total Columns
+	int column = obj.getColumnCount("punchlistmasters");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("punchlistmasters", j, i + 2);
+		}
+	}
+	return data;
+}
+@DataProvider(name = "Architecturalstagemaster")
+public Object[][] getArchitecturalstagemaster() {
+	// Totals rows counts
+	int rows = obj.getRowCount("architecturalstagemaster");
+	// Total Columns
+	int column = obj.getColumnCount("architecturalstagemaster");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("architecturalstagemaster", j, i + 2);
+		}
+	}
+	return data;
+}
+@DataProvider(name = "Techsupport")
+public Object[][] getTechsupport() {
+	// Totals rows counts
+	int rows = obj.getRowCount("techsupport");
+	// Total Columns
+	int column = obj.getColumnCount("techsupport");
+	int actRows = rows - 1;
+
+	Object[][] data = new Object[actRows][column];
+
+	for (int i = 0; i < actRows; i++) {
+		for (int j = 0; j < column; j++) {
+			data[i][j] = obj.getCellData("techsupport", j, i + 2);
+		}
+	}
+	return data;
+}
+
 
 }
 

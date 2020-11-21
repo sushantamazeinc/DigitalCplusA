@@ -9,15 +9,16 @@ import org.testng.annotations.Test;
 import com.dca.base.BaseClass;
 import com.dca.dataprovider.DataProviders;
 import com.dca.pages.LoginPage;
-import com.dca.pages.ProjectPage;
+import com.dca.pages.PropertyActionsPage;
 import com.dca.pages.SupplierOnlyPage;
+import com.dca.utility.Log;
 
 public class SupplierOnlyTest extends BaseClass{
 	//ProjectPage projectpage;
 	//InventoryPage inventorypage;
-	ProjectPage projectpage;
+	PropertyActionsPage projectpage;
 	SupplierOnlyPage sop;
-	//@Test(priority = 1,dataProvider = "SupplierOnly", dataProviderClass = DataProviders.class)
+	@Test(priority = 1,dataProvider = "SupplierOnly", dataProviderClass = DataProviders.class)
 public void supplier_only_test(String selproject1, String name1, String email11, String phoneo1, 
 		String servicearea1, String address1, 
 		String website1, String contactname1, String suppliertype1, String bankname1, 
@@ -25,6 +26,7 @@ public void supplier_only_test(String selproject1, String name1, String email11,
 		String bankaddress1, String btxn1, String branchname1, String paymentterms1, String creditlimit1, 
 		String creditdays1, 
 		String supplierservices, String suppliersupplies) throws InterruptedException, AWTException {
+	Log.startTestCase("supplier");
 	LoginPage login=new LoginPage();
 	projectpage=login.login();
 	sop=	projectpage.supplier();
@@ -47,7 +49,7 @@ public void supplier_only_test(String selproject1, String name1, String email11,
 				itemdescri1, expirydate1, mrp1, selpotype1, date11,
 				quantity1, comments1, serviceamount1, financemanager1, 
 				cfo1, servicedesc1, financedirector1,selsupptypee);
-		
+		Log.endTestCase("supplier ");
 		
 		
 	}

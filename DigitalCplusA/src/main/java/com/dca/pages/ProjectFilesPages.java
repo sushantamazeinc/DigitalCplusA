@@ -94,7 +94,7 @@ public void projectfile(String foldname1, String planname1, String description11
 	Thread.sleep(3000);
 	folder.sendKeys(foldname1);
 	plan.sendKeys(planname1);
-	projectplan.sendKeys("C:\\Users\\Mac\\Desktop\\empty-shelf-illustration_1284-9525.jpg");
+	projectplan.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 	description.sendKeys(description11);
 	version.sendKeys(version11);
 	includetrans.click();
@@ -111,7 +111,7 @@ public void projectfile(String foldname1, String planname1, String description11
 	dowload.click();
 	Thread.sleep(3000);
 	edit.click();
-	photo.sendKeys("C:\\Users\\Mac\\Desktop\\flower.jpg");
+	photo.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 	uploadphoto.click();
 	uploadphotosucess.click();
 	Thread.sleep(3000);

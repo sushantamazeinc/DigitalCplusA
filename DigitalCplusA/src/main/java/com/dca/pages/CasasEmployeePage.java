@@ -116,8 +116,8 @@ public class CasasEmployeePage extends BaseClass {
 		basicSalary.sendKeys(basicsalary1);
 		Thread.sleep(3000);
 		allowance.sendKeys(allowance1);
-		idAttach.sendKeys("C:\\Users\\Mac\\git\\digi_ca\\DigiCa3\\Imagesrc\\flower.jpg");
-		staffPhoto.sendKeys("C:\\Users\\Mac\\git\\digi_ca\\DigiCa3\\Imagesrc\\flower.jpg");
+		idAttach.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		staffPhoto.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 		save.click();
 		saveok.click();
 		Thread.sleep(3000);
@@ -130,11 +130,11 @@ public class CasasEmployeePage extends BaseClass {
 		update1.click();
 		Thread.sleep(3000);
 		updateok.click();
-		Thread.sleep(3000);
+		/*Thread.sleep(3000);
 		delete.click();
 		Thread.sleep(3000);
 		yesdelete.click();
-		deleteok.click();
+		deleteok.click();*/
 		
 		
 		

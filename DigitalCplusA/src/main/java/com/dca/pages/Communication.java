@@ -1,5 +1,9 @@
 package com.dca.pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -56,7 +60,7 @@ public class Communication extends BaseClass{
 	
 	@FindBy(xpath="//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[5]/ul[1]/li[2]/a[1]")
 	WebElement emails;
-	@FindBy(id="btn_button")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-info-exchangedash[1]/div[1]/div[1]/div[2]/div[1]/button[1]")
 	WebElement addemail;
 	@FindBy(css="#ContactID")
 	WebElement clientcontact;
@@ -88,7 +92,7 @@ public class Communication extends BaseClass{
 	
 	public void communicate(String project,String subject1,String from1,String to1,
 			String datesend,String desc,String remark,String updatesub,String clientcon,
-			String messageby) throws InterruptedException {
+			String messageby) throws InterruptedException, AWTException {
 		ac.selByVisibleText(selproject, project);
 		
 		addtransmits.click();
@@ -98,7 +102,7 @@ public class Communication extends BaseClass{
 		date.sendKeys(datesend);
 		description.sendKeys(desc);
 		remarks.sendKeys(remark);
-		attachment.sendKeys("C:\\Users\\Mac\\Desktop\\empty-shelf-illustration_1284-9525.jpg");
+		attachment.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 		save.click();
 		saveok.click();
 		Thread.sleep(3000);
@@ -108,7 +112,11 @@ public class Communication extends BaseClass{
 		updateok.click();
 		Thread.sleep(3000);
 		//exporttoexcel.click();
-		
+		 Robot robot=new Robot();
+		 for(int i=0;i<1;i++) {
+			 robot.keyPress(KeyEvent.VK_PAGE_UP);
+			 Thread.sleep(3000);
+		 }
 		emails.click();
 		Thread.sleep(3000);
 		Actions actions=new Actions(getDriver());
@@ -120,7 +128,7 @@ public class Communication extends BaseClass{
 		addemail.click();
 		ac.selByVisibleText(clientcontact,clientcon);
 		msgbody.sendKeys(messageby);
-		attachmnet.sendKeys("C:\\Users\\Mac\\Desktop\\empty-shelf-illustration_1284-9525.jpg");
+		attachmnet.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 		save1.click();
 		Thread.sleep(3000);
 		update1ok.click();

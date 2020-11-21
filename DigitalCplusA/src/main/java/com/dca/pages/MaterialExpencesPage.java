@@ -1,5 +1,9 @@
 package com.dca.pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -70,8 +74,13 @@ public class MaterialExpencesPage extends BaseClass {
 	}
 	public void materialexpen(String selpro,
 			String expencetype1,String date1,String cat,String subcat,
-			String quant,String amoun) throws InterruptedException {
-		ac.selByVisibleText(selproject, selpro);
+			String quant,String amoun) throws InterruptedException, AWTException {
+		//ac.selByVisibleText(selproject, selpro);
+		Robot robot=new Robot();
+		 for(int i=0;i<2;i++) {
+			 robot.keyPress(KeyEvent.VK_PAGE_UP);
+			 Thread.sleep(3000);
+		 }
 		addexpence.click();
 		ac.selByVisibleText(expencetype, expencetype1);
 		date.sendKeys(date1);

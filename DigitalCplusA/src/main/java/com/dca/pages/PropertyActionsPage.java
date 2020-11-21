@@ -4,6 +4,8 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,9 +14,9 @@ import org.openqa.selenium.support.ui.Select;
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
 
-public class ProjectPage extends BaseClass {
+public class PropertyActionsPage extends BaseClass {
 	ActionDriver ac=new ActionDriver();
-	ProjectPage projectpage;
+	PropertyActionsPage projectpage;
 	@FindBy(id="btn_button")
 	public WebElement addnew;
 	@FindBy(id="ProjectID")
@@ -115,13 +117,48 @@ public class ProjectPage extends BaseClass {
 	WebElement supply;
 	@FindBy(xpath="//a[contains(text(),'Supplier Invoice')]")
 	WebElement supplierinvoice;
+	@FindBy(xpath="//a[contains(text(),'Budget Dashboard')]")
+	WebElement dropbudgetpage;
+	@FindBy(xpath="//a[contains(text(),'Project Team')]")
+	WebElement droprojectteam;
+	@FindBy(xpath="//a[@href='#Update']")
+	WebElement droprojectactivitiesmain;
+	@FindBy(xpath="//a[contains(text(),'Site Visits')]")
+	WebElement dropsitevisit;
+	@FindBy(xpath="//a[@routerlink='/ProjectworkAssignDash']")
+	WebElement droprojectactivities;
+	@FindBy(xpath="//a[contains(text(),'My Tasks')]")
+	WebElement dropmytask;
+	@FindBy(partialLinkText="Project Actio")
+	WebElement dropprojectactions;
+	@FindBy(xpath="//a[contains(text(),'Actions Items')]")
+	WebElement dropactionitem;
+	@FindBy(partialLinkText ="Asse")
+	WebElement dropassetsmain;
+	@FindBy(linkText ="Asset")
+	WebElement dropasset;
+	@FindBy(css = "div.wrapper:nth-child(3) div:nth-child(1) nav.navbarCustomProperties ul.list-unstyled.components li.submenuAlingment:nth-child(15) > a.hoverchangeproperty")
+	WebElement dropannouncementsmain;
+	@FindBy(xpath ="//a[@routerlink='/Announcements']")
+	WebElement dropannouncements;
+	@FindBy(xpath ="//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[14]/a[1]")
+	WebElement dropmaster;
+	@FindBy(xpath ="//a[contains(text(),'Punch List')]")
+	WebElement droppunchlistmaster;
+	@FindBy(xpath ="//a[contains(text(),'Architectural Stages')]")
+	WebElement droparchitecturalstagemaster;
+	@FindBy(xpath ="//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[17]/a[1]")
+	WebElement droptechsupportmain;
+	@FindBy(xpath ="//a[contains(text(),'New Support Ticket')]")
+	WebElement droptechsupport;
 	
+	///////////////////////////
+	@FindBy(partialLinkText = "Construction Projec")
+	WebElement constpro;
 	
+	////////////////////////////////////////
 	
-	
-	
-	
-	public ProjectPage() {
+	public PropertyActionsPage() {
 		PageFactory.initElements(getDriver(), this);
 	}
 	public PropertPage add() {
@@ -163,21 +200,21 @@ public class ProjectPage extends BaseClass {
 		
 		Thread.sleep(2000);
 		addphoto.click();
-		addPhotoNew.sendKeys("C:\\Users\\Mac\\Desktop\\empty-shelf-illustration_1284-9525.jpg");
+		addPhotoNew.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 		addphotobtn.click();
 		addphotook.click();
 		Thread.sleep(3000);
 		
 		attachment.click();
 		attachmentupdate.click();
-		updatephoto.sendKeys("C:\\Users\\Mac\\Desktop\\flower.jpg");
+		updatephoto.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 		photoupdatebtn.click();
 		photoupdatesuccessbtn.click();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		
-		delete.click();
+		/*delete.click();
 		filedelete.click();
-		filedelok.click();
+		filedelok.click();*/
 		
 		}
 	public ProjectFilesPages droprojectfile() {
@@ -187,11 +224,11 @@ public class ProjectPage extends BaseClass {
 		selprojectfile.click();
 		return new ProjectFilesPages();
 	}
-	public ProjectTimelinePages droptimeline() throws InterruptedException {
+	public ProjectTimelines1page droptimeline() throws InterruptedException {
 		dropconstructionproject.click();
 		selprojecttimeline.click();
 		Thread.sleep(3000);
-		return new ProjectTimelinePages();
+		return new ProjectTimelines1page();
 	}
 	public Communication communic() {
 		communication.click();
@@ -279,6 +316,119 @@ public class ProjectPage extends BaseClass {
 		supplierinvoice.click();
 		return new SupplierInvoice();
 	}
+public BudgetDashboard dropbupage() throws InterruptedException {
+		
+	constpro.click();
+		Thread.sleep(3000);
+		dropbudgetpage.click();
+			return new BudgetDashboard();
+		}
+	
+	public ProjectTeam dropproteam() throws InterruptedException {
+		constpro.click();
+		droprojectteam.click();
+		Thread.sleep(3000);
+		return new ProjectTeam();
+	}
+	public ProjectActivitiesPage dropproactivities() throws InterruptedException {
+		droprojectactivitiesmain.click();
+		Thread.sleep(3000);
+		droprojectactivities.click();
+		Thread.sleep(3000);
+		return new ProjectActivitiesPage();
+		
+	}
+	public SiteVisitPage dropsitevisits() throws InterruptedException {
+		droprojectactivitiesmain.click();
+		Thread.sleep(3000);
+		dropsitevisit.click();
+		Thread.sleep(3000);
+		return new SiteVisitPage();
+		
+		
+	}
+	public MyTaskPage dropmytasks() throws InterruptedException {
+		droprojectactivitiesmain.click();
+		Thread.sleep(3000);
+		dropmytask.click();
+		Thread.sleep(3000);
+		return new MyTaskPage();
+		
+		
+	}
+	public ActionItemPage dropactionitem() throws InterruptedException {
+		dropprojectactions.click();
+		Thread.sleep(3000);
+		dropactionitem.click();
+		Thread.sleep(3000);
+		return new ActionItemPage();
+		
+		
+	}
+	public AssetsPage dropasset() throws InterruptedException {
+		
+		dropassetsmain.click();
+		Thread.sleep(3000);
+		dropasset.click();
+		Thread.sleep(3000);
+		return new AssetsPage();
+		
+		
+	}
+public  AnnouncementPage dropannouncement() throws InterruptedException {
+	JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	js.executeScript("arguments[0].scrollIntoView();", dropannouncementsmain);
+	    dropannouncementsmain.click();
+		Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();", dropannouncements);
+		dropannouncements.click();
+		Thread.sleep(3000);
+		return new AnnouncementPage();
+		
+		}
+public  PunchlistMastersPage droppunchlistmastert() throws InterruptedException {
+	JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	js.executeScript("arguments[0].scrollIntoView();", dropmaster);
+	dropmaster.click();
+		Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();", droppunchlistmaster);
+		droppunchlistmaster.click();
+		Thread.sleep(3000);
+		return new PunchlistMastersPage();
+		
+		
+		
+	}
+public  ArchitecturalstagemasterPage droparchitecturalstagemaster() throws InterruptedException {
+	JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	js.executeScript("arguments[0].scrollIntoView();", dropmaster);
+	dropmaster.click();
+		Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();", droppunchlistmaster);
+		droparchitecturalstagemaster.click();
+		Thread.sleep(3000);
+		return new ArchitecturalstagemasterPage();
+		
+		
+		
+	}
+
+public TechsupportPage droptechsupport() throws InterruptedException {
+	// TODO Auto-generated method stub
+	Dimension dm = new Dimension(1400,2000);
+	getDriver().manage().window().setSize(dm);
+	JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	js.executeScript("arguments[0].scrollIntoView();", droptechsupportmain);
+	droptechsupportmain.click();
+		Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();", droptechsupport);
+		droptechsupport.click();
+		Thread.sleep(3000);
+		return new TechsupportPage();
+		
+	
+}
+	
 	
 	
 }

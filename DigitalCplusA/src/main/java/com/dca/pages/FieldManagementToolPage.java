@@ -1,5 +1,9 @@
 package com.dca.pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -53,7 +57,7 @@ public class FieldManagementToolPage extends BaseClass {
 	}
 	
 	public void fieldmanage(String selproject1,String floor1,String punchlist1,String staff1,String sdate,
-			String edate,String punchlista,String fieldn,String stat,String upstat) throws InterruptedException {
+			String edate,String punchlista,String fieldn,String stat,String upstat) throws InterruptedException, AWTException {
 		ac.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		ac.selByVisibleText(floor, floor1);
@@ -67,6 +71,11 @@ public class FieldManagementToolPage extends BaseClass {
 		save.click();
 		saveok.click();
 		Thread.sleep(3000);
+		Robot robot1=new Robot();
+		 for(int i=0;i<1;i++) {
+			 robot1.keyPress(KeyEvent.VK_PAGE_UP);
+			 Thread.sleep(3000);
+		 }
 		exporttoexcel.click();
 		Thread.sleep(3000);
 		edit.click();

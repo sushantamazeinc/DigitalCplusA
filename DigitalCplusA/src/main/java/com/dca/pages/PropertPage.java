@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.dca.base.BaseClass;
-import com.dca.pages.ProjectPage;
+import com.dca.pages.PropertyActionsPage;
 
 public class PropertPage extends BaseClass {
 	
@@ -60,10 +60,10 @@ public class PropertPage extends BaseClass {
 	public PropertPage() {
 		PageFactory.initElements(getDriver(), this);
 	}
-	public ProjectPage details(String proname, String proadd, String phone,String conname,String conphone,String mail,String nofloor,String noofunit,String unitfloor,String buildarea,String budgethr) throws InterruptedException {
+	public PropertyActionsPage details(String proname, String proadd, String phone,String conname,String conphone,String mail,String nofloor,String noofunit,String unitfloor,String buildarea,String budgethr) throws InterruptedException {
 
 		Select select2=new Select(projecttype);
-		select2.selectByIndex(2);
+		select2.selectByIndex(1);
 		Thread.sleep(1000);
 		Select select3=new Select(country);
 		select3.selectByIndex(1);
@@ -124,7 +124,7 @@ public class PropertPage extends BaseClass {
 		//select5.selectByIndex(1);
 		//Select select6=new Select(propertytype);
 		//select6.selectByIndex(2);
-		photo.sendKeys("C:\\Users\\Mac\\Desktop\\empty-shelf-illustration_1284-9525.jpg");
+		photo.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 		//Select select7=new Select(enterance);
 		//select7.selectByIndex(2);
 		//Select select8=new Select(executed);
@@ -133,7 +133,7 @@ public class PropertPage extends BaseClass {
 		Thread.sleep(1000);
 		savebtn.click();
 		propsaved.click();
-		return new ProjectPage();
+		return new PropertyActionsPage();
 		
 		
 	}

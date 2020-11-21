@@ -27,7 +27,7 @@ public class LocatorRequestPage extends BaseClass {
 	WebElement save;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	WebElement saveok;
-	@FindBy(xpath="//button[contains(text(),'Approve')]")
+	@FindBy(xpath="//tbody/tr[4]/td[7]/button[1]")
 	WebElement approve;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	WebElement approveok;

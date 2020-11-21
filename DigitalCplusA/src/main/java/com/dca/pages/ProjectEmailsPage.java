@@ -48,7 +48,7 @@ public class ProjectEmailsPage extends BaseClass {
 		recipient.sendKeys(recipiet);
 		subject.sendKeys(sub);
 		date.sendKeys(date1);
-		emailattach.sendKeys("C:\\Users\\Mac\\git\\digi_ca\\DigiCa3\\Imagesrc\\empty-shelf-illustration_1284-9525.jpg");
+		emailattach.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 		save.click();
 		Thread.sleep(5000);
 		ok.click();

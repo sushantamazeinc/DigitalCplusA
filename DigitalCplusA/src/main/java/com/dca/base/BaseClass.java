@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,7 +16,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.dca.pages.LoginPage;
-
+import com.dca.utility.ExtentManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -54,8 +55,8 @@ public class BaseClass {
 	 */
 	@BeforeSuite()
 	public void loadConfig() {
-		
-		
+		ExtentManager.setExtent();
+		DOMConfigurator.configure("log4j.xml");
 
 		try {
 			prop = new Properties();
@@ -69,6 +70,7 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 	}
+	
 
 	public static WebDriver getDriver() {
 		// Get Driver from threadLocalmap
@@ -100,6 +102,7 @@ public class BaseClass {
 
 	@AfterSuite()
 	public void afterSuite() {
+		ExtentManager.endReport();
 		
 	
 	}

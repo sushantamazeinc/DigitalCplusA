@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import com.dca.base.BaseClass;
 
@@ -22,12 +23,16 @@ public class LoginPage extends BaseClass
 	public WebElement pswd;
 	@FindBy(id="btn_Loginbutton")
 	public WebElement signin;
+	@FindBy(xpath="//h4[contains(text(),'Project')]") 
+	WebElement projecttest;
+
+	
 	
 	public LoginPage() {
 		PageFactory.initElements(getDriver(), this);
 		
 	}
-	public ProjectPage login() {
+	public PropertyActionsPage login() {
 		
 		Select select=new Select(selcompany);
 		select.selectByIndex(1);
@@ -36,7 +41,9 @@ public class LoginPage extends BaseClass
 		uname.sendKeys(prop.getProperty("username"));
 		pswd.sendKeys(prop.getProperty("password"));
 		signin.click();
-		return new ProjectPage();
+		String verify= projecttest.getText();
+		Assert.assertEquals(verify, "PROJECT");
+		return new PropertyActionsPage();
 		
 	
 		
