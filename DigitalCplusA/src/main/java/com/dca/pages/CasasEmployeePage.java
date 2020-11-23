@@ -1,5 +1,7 @@
 package com.dca.pages;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
@@ -65,18 +67,18 @@ public class CasasEmployeePage extends BaseClass {
 	WebElement allowance;
 	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-staff-details[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[21]/div[3]/input[1]")
 	WebElement grosssalary;
-	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-staff-details[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[22]/div[3]/input[1]")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-staff-details[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[22]/div[3]")
 	WebElement idAttach;
-	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-staff-details[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[23]/div[3]/input[1]")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-staff-details[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[23]/div[3]/ngx-dropzone[1]/div[1]")
 	WebElement staffPhoto;
-	@FindBy(xpath="//button[contains(text(),'Save')]")
+	@FindBy(xpath="//button[@type='submit']")
 	WebElement save;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	WebElement saveok;
 	
 	@FindBy(xpath="//tbody/tr[2]/td[8]/i[1]")
 	WebElement edit;
-	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-staff-details[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[24]/div[3]/button[1]")
+	@FindBy(xpath="//button[@type='submit']")
 	WebElement update1;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	WebElement updateok;
@@ -96,7 +98,7 @@ public class CasasEmployeePage extends BaseClass {
 			String address1,String selsupervisor1,String joiningdate1,String leavesperyear1,
 			String workingtimings1,String dob1,String tinno1,String employeestatus1,
 			String location1,String emergencycontact,String ratehr1,String basicsalary1,
-			String allowance1) throws InterruptedException, IOException {
+			String allowance1) throws Exception {
 		ac.selByVisibleText(selproject, selproject1);
 		add.click();
 		selAddNewEmployee.click();
@@ -118,13 +120,22 @@ public class CasasEmployeePage extends BaseClass {
 		basicSalary.sendKeys(basicsalary1);
 		Thread.sleep(3000);
 		allowance.sendKeys(allowance1);
+		Thread.sleep(3000);
 		//idAttach.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 		idAttach.click();
 		ac.upload();
 		//staffPhoto.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		Thread.sleep(3000);
 		staffPhoto.click();
 		ac.upload();
+		Thread.sleep(3000);
+		 Robot robot=new Robot();
+		 for(int i=0;i<2;i++) {
+			 robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+			 Thread.sleep(3000);
+		 }
 		save.click();
+		//ac.mouseHoverByJavaScript(save);
 		saveok.click();
 		Thread.sleep(3000);
 		search.sendKeys(name1);
@@ -133,7 +144,14 @@ public class CasasEmployeePage extends BaseClass {
 		Thread.sleep(3000);
 		edit.click();
 		updateleavesperyear.sendKeys(leavesperyear1);
+		Thread.sleep(3000);
+		 Robot robot11=new Robot();
+		 for(int i=0;i<2;i++) {
+			 robot11.keyPress(KeyEvent.VK_PAGE_DOWN);
+			 Thread.sleep(3000);
+		 }
 		update1.click();
+		 
 		Thread.sleep(3000);
 		updateok.click();
 		/*Thread.sleep(3000);

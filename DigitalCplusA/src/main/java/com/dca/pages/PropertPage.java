@@ -38,7 +38,7 @@ public class PropertPage extends BaseClass {
 	public WebElement contactemail ;
 	@FindBy(xpath="//input[@id='txt_NumberofFloors']")
 	public WebElement numberoffloor ;
-	@FindBy(xpath="//input[@id='base1']")
+	@FindBy(css="#base1")
 	public WebElement numberofbase ;
 	@FindBy(xpath="//input[@id='txt_TotalNumberofUnits']")
 	public WebElement numberofunit ;
@@ -110,6 +110,7 @@ public class PropertPage extends BaseClass {
 		}
 		
 		numberoffloor.sendKeys(nofloor);
+		numberofbase.click();
 		numberofunit.sendKeys(noofunit);
 		unitperfloor.sendKeys(unitfloor);
 		buildingarea.sendKeys(buildarea);
@@ -135,10 +136,12 @@ public class PropertPage extends BaseClass {
 		//select7.selectByIndex(2);
 		//Select select8=new Select(executed);
 		//select8.selectByIndex(2);
-		numberofbase.click();
-		Thread.sleep(1000);
+		
+		Thread.sleep(5000);
 		savebtn.click();
 		propsaved.click();
+		Thread.sleep(3000);
+		getDriver().navigate().refresh();
 
 		return new PropertyActionsPage();
 		
