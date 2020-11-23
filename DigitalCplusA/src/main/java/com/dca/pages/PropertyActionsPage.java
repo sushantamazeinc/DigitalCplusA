@@ -86,7 +86,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement projectmail;
 	@FindBy(linkText ="Locator Request")
 	WebElement locatorrequest;
-	@FindBy(xpath="//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[7]/ul[1]/li[1]/a[1]")
+	@FindBy(xpath="//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[5]/ul[1]/li[1]/a[1]")
 	WebElement sellocatorrequest;
 	@FindBy(linkText ="Field Management Tool")
 	WebElement dropfieldmanagement;
@@ -248,8 +248,9 @@ public class PropertyActionsPage extends BaseClass {
 		
 	}
 	
-	public LocatorRequestPage drop_LocatorRequest() {
+	public LocatorRequestPage drop_LocatorRequest() throws InterruptedException {
 		locatorrequest.click();
+		Thread.sleep(3000);
 		sellocatorrequest.click();
 		return new LocatorRequestPage();
 	}
@@ -375,12 +376,21 @@ public BudgetDashboard dropbupage() throws InterruptedException {
 		
 		
 	}
-public  AnnouncementPage dropannouncement() throws InterruptedException {
+public  AnnouncementPage dropannouncement() throws InterruptedException, AWTException {
+	
 	JavascriptExecutor js = (JavascriptExecutor) getDriver();
 	js.executeScript("arguments[0].scrollIntoView();", dropannouncementsmain);
+	 Dimension dm = new Dimension(1200,730);
+		getDriver().manage().window().setSize(dm);
 	    dropannouncementsmain.click();
 		Thread.sleep(3000);
-		js.executeScript("arguments[0].scrollIntoView();", dropannouncements);
+		Robot robot=new Robot();
+		  for(int i=0;i<1;i++) {
+		  robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+		
+		Thread.sleep(3000);
+		  }
+		 
 		dropannouncements.click();
 		Thread.sleep(3000);
 		return new AnnouncementPage();

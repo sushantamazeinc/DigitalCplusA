@@ -1,5 +1,7 @@
 package com.dca.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,6 +30,8 @@ public class ActionItemPage extends BaseClass{
 	WebElement description;
 	@FindBy(xpath="//select[@id='ddl_Status']")
 	WebElement status;
+	@FindBy(xpath="//p[contains(text(),'Drop your files here (or click)')]")
+	WebElement photo;
 	@FindBy(xpath="//button[contains(text(),'Save')]")
 	WebElement save;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
@@ -77,7 +81,7 @@ public class ActionItemPage extends BaseClass{
 		PageFactory.initElements(getDriver(), this);
 		
 	}
-	public void actionItem(String selproject1, String item,String task,String priorities ,String assign,String date,String des,String status1,String estatus ) throws InterruptedException {
+	public void actionItem(String selproject1, String item,String task,String priorities ,String assign,String date,String des,String status1,String estatus ) throws InterruptedException, IOException {
 		ad.selByVisibleText(selproject, selproject1);
 		Dimension dm = new Dimension(1200,730);
 		getDriver().manage().window().setSize(dm);
@@ -90,6 +94,8 @@ public class ActionItemPage extends BaseClass{
 		duedate.sendKeys(date);
 		description.sendKeys(des);
 		ad.selByVisibleText(status, status1);
+		photo.click();
+		ad.upload();
 	    save.click();
 		saveok.click();
 		Thread.sleep(3000);

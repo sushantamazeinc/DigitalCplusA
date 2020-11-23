@@ -1,5 +1,7 @@
 package com.dca.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -52,6 +54,13 @@ public class AssetsPage extends BaseClass{
 	WebElement depriciation;
 	@FindBy(xpath="//select[@id='ddl_RemindIn']")
 	WebElement remindin;
+	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-update-assets[1]/div[1]/div[3]/div[1]/form[1]/div[23]/div[3]/ngx-dropzone[1]/div[1]/p[1]")
+	WebElement invoiceimage;
+	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-update-assets[1]/div[1]/div[3]/div[1]/form[1]/div[24]/div[3]/ngx-dropzone[1]/div[1]/p[1]")
+	WebElement attachment;
+	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-update-assets[1]/div[1]/div[3]/div[1]/form[1]/div[25]/div[3]/ngx-dropzone[1]/div[1]/p[1]")
+	WebElement assetphoto;
+	
 	@FindBy(xpath="//input[@id='inlineradio02']")
 	WebElement exisitingvendor;
 	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-update-assets[1]/div[1]/div[3]/div[1]/form[1]/div[11]/div[3]/select[1]")
@@ -76,7 +85,11 @@ public class AssetsPage extends BaseClass{
 		PageFactory.initElements(getDriver(), this);
 		
 	}
-	public void assets(String selproject1, String assets,String type,String floors,String parentassets,String modelnames,String serialnos,String purchasedates,String vendorcontactnames,String vendorphnos,String vendoremails,String warrantyfors,String warrantytills,String firstservicedues,String nextservicedues,String barcodes,String assetscosts,String depriciations,String remindins,String exisitingvendornames,String vendor) {
+	public void assets(String selproject1, String assets,String type,String floors,String parentassets,
+			String modelnames,String serialnos,String purchasedates,String vendorcontactnames,String vendorphnos,
+			String vendoremails,String warrantyfors,String warrantytills,String firstservicedues,String nextservicedues,
+			String barcodes,String assetscosts,String depriciations,String remindins,
+			String exisitingvendornames,String vendor) throws Exception{
 		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		assetname.sendKeys(assets);
@@ -110,6 +123,15 @@ public class AssetsPage extends BaseClass{
 		assetscost.sendKeys(assetscosts);
 		depriciation.sendKeys(depriciations);
 		remindin.sendKeys(remindins);
+		invoiceimage.click();
+		ad.upload();
+		Thread.sleep(3000);
+		attachment.click();
+		ad.upload();
+		Thread.sleep(3000);
+		assetphoto.click();
+		ad.upload();
+		
 		save.click();
 		saveok.click();
 		search.sendKeys(assets);

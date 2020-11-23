@@ -3,6 +3,7 @@ package com.dca.pages;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,6 +35,9 @@ public class SupplierInvoice extends BaseClass {
 	WebElement invoiceno;
 	@FindBy(xpath = "//body/app-root[1]/div[2]/div[2]/div[1]/app-update-vendor-invoice[1]/div[1]/div[3]/div[2]/div[1]/div[3]/input[1]")
 	WebElement suppliercontact;
+	@FindBy(xpath="//p[contains(text(),'Drop your files here (or click)')]")
+	WebElement attachement;
+	
 	@FindBy(xpath = "//body/app-root[1]/div[2]/div[2]/div[1]/app-update-vendor-invoice[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/select[1]")
 	WebElement itemname;
 	@FindBy(xpath = "//body/app-root[1]/div[2]/div[2]/div[1]/app-update-vendor-invoice[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/input[1]")
@@ -145,6 +149,8 @@ public class SupplierInvoice extends BaseClass {
 	WebElement assignedto;
 	@FindBy(xpath = "//textarea[@id='txt_Description']")
 	WebElement description;
+	@FindBy(xpath = "//p[contains(text(),'Drop your files here (or click)')]")
+	WebElement invoiceattachment;
 	@FindBy(xpath = "//button[@id='btn_newinventorybutton']")
 	WebElement save123;
 	@FindBy(xpath = "//button[contains(text(),'OK')]")
@@ -195,15 +201,14 @@ public class SupplierInvoice extends BaseClass {
 			String selpaymenttype1, String comment1, String returnquanity1, String remarks1, String address11,
 			String floor1, String location1, String currentquanity1, String minimumquantity, String expirydate12,
 			String assignedto1, String description1, String selcat, String selty, String staff1)
-			throws InterruptedException, AWTException {
+			throws InterruptedException, AWTException, IOException {
 		ac.selByVisibleText(selproject, selproject1);
 		// clicking.click();
 
 		
 		 addsupplierinvoice.click(); 
 		 Thread.sleep(3000);
-		 Select select22=new
-		 Select(selsupplier);
+		 Select select22=new Select(selsupplier);
 		 int selectoptions= select22.getOptions().size();
 		 select22.selectByIndex(selectoptions - 1); 
 		 //selsupplier.click();
@@ -215,6 +220,9 @@ public class SupplierInvoice extends BaseClass {
 		  //ac.selByVisibleText(searchpono, ponumbb); 
 		 date.sendKeys(date1);
 		  invoiceno.sendKeys(invoiceno1); 
+		  attachement.click();
+		  ac.upload();
+		  
 		  ac.selByIndex(itemname, 1);
 		  warrentydate.sendKeys(warrentydate1); 
 		  mfname.sendKeys(mfname1);
@@ -328,6 +336,8 @@ public class SupplierInvoice extends BaseClass {
 		expirydate.sendKeys(expirydate12);
 		ac.selByVisibleText(assignedto, assignedto1);
 		description.sendKeys(description1);
+		invoiceattachment.click();
+		ac.upload();
 		save123.click();
 		saveok12.click();
 		Thread.sleep(3000);

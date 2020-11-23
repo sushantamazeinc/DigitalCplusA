@@ -1,6 +1,7 @@
 package com.dca.testcases;
 
 import java.awt.AWTException;
+import java.io.IOException;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -22,7 +23,7 @@ public class SupplierInvoiceTest extends BaseClass {
 			String mfname1, String partno1, String actualquanity1, String mrp1,String  discount1,
 			String comments1, String selpaymenttype1,  String comment1, String returnquanity1, String remarks1,String  address11,String floor1, String location1,
 			String currentquanity1, String minimumquantity, String expirydate12,String assignedto1,String  description1,
-			String selcat, String selty, String staff1) throws InterruptedException, AWTException {
+			String selcat, String selty, String staff1) throws InterruptedException, AWTException, IOException {
 		Log.startTestCase("supplier invoice");
 		LoginPage login=new LoginPage();
 		projectpage=login.login();

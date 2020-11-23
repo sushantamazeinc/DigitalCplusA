@@ -15,7 +15,11 @@ public class AseetsTest extends BaseClass {
 	PropertyActionsPage projectpage;
 	AssetsPage assetspage;
 	@Test(dataProvider = "Assets", dataProviderClass = DataProviders.class)
-	public void assets(String selproject1,String assets,String type,String floors,String parentassets,String modelnames,String serialnos,String purchasedates,String vendorcontactnames,String vendorphnos,String vendoremails,String warrantyfors,String warrantytills,String firstservicedues,String nextservicedues,String barcodes,String assetscosts,String depriciations,String remindins,String exisitingvendornames,String vendor) throws InterruptedException {
+	public void assets(String selproject1,String assets,String type,String floors,String parentassets,String modelnames,
+			String serialnos,String purchasedates,String vendorcontactnames,String vendorphnos,String vendoremails,
+			String warrantyfors,String warrantytills,String firstservicedues,String nextservicedues,String barcodes,
+			String assetscosts,String depriciations,String remindins,String exisitingvendornames,
+			String vendor) throws Exception {
 		Log.startTestCase("Assets");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();

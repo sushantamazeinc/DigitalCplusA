@@ -3,6 +3,7 @@ package com.dca.pages;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -92,7 +93,7 @@ public class Communication extends BaseClass{
 	
 	public void communicate(String project,String subject1,String from1,String to1,
 			String datesend,String desc,String remark,String updatesub,String clientcon,
-			String messageby) throws InterruptedException, AWTException {
+			String messageby) throws InterruptedException, AWTException, IOException {
 		ac.selByVisibleText(selproject, project);
 		
 		addtransmits.click();
@@ -102,7 +103,9 @@ public class Communication extends BaseClass{
 		date.sendKeys(datesend);
 		description.sendKeys(desc);
 		remarks.sendKeys(remark);
-		attachment.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		//attachment.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		attachment.click();
+		ac.upload();
 		save.click();
 		saveok.click();
 		Thread.sleep(3000);
@@ -128,7 +131,9 @@ public class Communication extends BaseClass{
 		addemail.click();
 		ac.selByVisibleText(clientcontact,clientcon);
 		msgbody.sendKeys(messageby);
-		attachmnet.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		//attachmnet.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		attachmnet.click();
+		ac.upload();
 		save1.click();
 		Thread.sleep(3000);
 		update1ok.click();

@@ -1,5 +1,7 @@
 package com.dca.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,7 +12,7 @@ import com.dca.base.BaseClass;
 public class AnnouncementPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
 	@FindBy(xpath="//select[@id='ProjectID']")
-	WebElement selproject;
+	WebElement selproject;	
 	@FindBy(xpath="//button[contains(text(),'New Announcement')]")
 	WebElement addnew;
 	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-update-announcements[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[3]/input[1]")
@@ -27,6 +29,9 @@ public class AnnouncementPage extends BaseClass {
 	WebElement announcementdetails;
 	@FindBy(xpath="//input[@id='txt_announcementsVenue']")
 	WebElement venu;
+	@FindBy(xpath="//p[contains(text(),'Drop your files here (or click)')]")
+	WebElement attachment;
+	
 	@FindBy(xpath="//button[contains(text(),'Save')]")
 	WebElement save;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
@@ -55,9 +60,10 @@ public class AnnouncementPage extends BaseClass {
 		
 	}
 	
-	public void announcement(String selproject1, String announcements,String descriptions,String dates,String times,String details,String venus,String edate ) throws InterruptedException {
-		ad.selByVisibleText(selproject, selproject1);
+	public void announcement(String selproject1, String announcements,String descriptions,String dates,String times,String details,String venus,String edate ) throws InterruptedException, IOException {
 		Thread.sleep(3000);
+		ad.selByVisibleText(selproject, selproject1);
+		Thread.sleep(5000);
 		addnew.click();
 		announcementfor.click();
 		announcement.sendKeys(announcements);
@@ -66,6 +72,8 @@ public class AnnouncementPage extends BaseClass {
 		time.sendKeys(times);
 		announcementdetails.sendKeys(details);
 		venu.sendKeys(venus);
+		attachment.click();
+		ad.upload();
 		save.click();
 		saveok.click();
 		search.sendKeys(announcements);
