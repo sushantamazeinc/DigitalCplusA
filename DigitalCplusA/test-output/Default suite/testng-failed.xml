@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.dca.testcases.SupplierInvoiceTest">
+      <class name="com.dca.testcases.PropertyPageTest">
         <methods>
           <include name="afterSuite"/>
-          <include name="supplier_invoice_test" invocation-numbers="0"/>
-          <include name="loadConfig"/>
           <include name="setup"/>
+          <include name="loadConfig"/>
           <include name="tearDown"/>
+          <include name="propertyreg" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.dca.testcases.SupplierInvoiceTest -->
+      </class> <!-- com.dca.testcases.PropertyPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

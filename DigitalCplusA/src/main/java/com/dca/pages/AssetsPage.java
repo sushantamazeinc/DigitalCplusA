@@ -10,6 +10,8 @@ import com.dca.base.BaseClass;
 public class AssetsPage extends BaseClass{
 	//error in edit page need to fix
 	ActionDriver ad=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[contains(text(),'Add New')]")
 	WebElement addnew;
 	@FindBy(xpath="//input[@id='txt_AssetName']")
@@ -74,8 +76,8 @@ public class AssetsPage extends BaseClass{
 		PageFactory.initElements(getDriver(), this);
 		
 	}
-	public void assets(String assets,String type,String floors,String parentassets,String modelnames,String serialnos,String purchasedates,String vendorcontactnames,String vendorphnos,String vendoremails,String warrantyfors,String warrantytills,String firstservicedues,String nextservicedues,String barcodes,String assetscosts,String depriciations,String remindins,String exisitingvendornames,String vendor) {
-		
+	public void assets(String selproject1, String assets,String type,String floors,String parentassets,String modelnames,String serialnos,String purchasedates,String vendorcontactnames,String vendorphnos,String vendoremails,String warrantyfors,String warrantytills,String firstservicedues,String nextservicedues,String barcodes,String assetscosts,String depriciations,String remindins,String exisitingvendornames,String vendor) {
+		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		assetname.sendKeys(assets);
 		ad.selByVisibleText(assettype, type);

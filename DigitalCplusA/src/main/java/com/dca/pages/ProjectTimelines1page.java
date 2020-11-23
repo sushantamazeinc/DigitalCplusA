@@ -9,6 +9,8 @@ import com.dca.base.BaseClass;
 
 public class ProjectTimelines1page extends BaseClass {
 	ActionDriver ac=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[contains(text(),'View Timeline Excel')]")
 	WebElement viewtimelineexcel;
 	@FindBy(xpath="//button[contains(text(),'Add New')]")
@@ -143,9 +145,10 @@ public class ProjectTimelines1page extends BaseClass {
 		
 	
 
-	public void projecttimeline(String selstage, String procheck, String selsdate, String coff, String enddate
+	public void projecttimeline(String selproject1, String selstage, String procheck, String selsdate, String coff, String enddate
 ,
 			String comm) throws InterruptedException {
+		ac.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		selectstage.sendKeys(selstage);
 		Thread.sleep(3000);

@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.dca.utility.ListenerClass"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.dca.testcases.LoginPageTest">
+      <class name="com.dca.testcases.PropertyPageTest">
         <methods>
-          <include name="loginTest"/>
           <include name="afterSuite"/>
-          <include name="loadConfig"/>
           <include name="setup"/>
+          <include name="loadConfig"/>
           <include name="tearDown"/>
+          <include name="propertyreg" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.dca.testcases.LoginPageTest -->
+      </class> <!-- com.dca.testcases.PropertyPageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

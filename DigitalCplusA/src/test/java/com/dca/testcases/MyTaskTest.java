@@ -16,11 +16,11 @@ public class MyTaskTest extends BaseClass {
 	MyTaskPage mytaskpage;
 	
 	@Test(dataProvider = "MyVisit", dataProviderClass = DataProviders.class)
-	public void mytasktest(String sdate,String edate,String task,String des,String eddate ) throws InterruptedException {
+	public void mytasktest(String selproject1, String sdate,String edate,String task,String des,String eddate ) throws InterruptedException {
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
 		mytaskpage=projectpage.dropmytasks();
-		mytaskpage.myTask(sdate, edate, task, des, eddate);
+		mytaskpage.myTask(selproject1,sdate, edate, task, des, eddate);
 		
 		
 		

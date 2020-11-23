@@ -9,6 +9,8 @@ import com.dca.base.BaseClass;
 
 public class ArchitecturalstagemasterPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
 	WebElement addnew;
 	@FindBy(xpath="//select[@id='StagesID']")
@@ -31,7 +33,8 @@ public class ArchitecturalstagemasterPage extends BaseClass {
 		
 	}
 	
-	public void architecturalmaster(String stage,String descriptions) throws InterruptedException {
+	public void architecturalmaster(String selproject1, String stage,String descriptions) throws InterruptedException {
+		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		Thread.sleep(3000);
 		ad.selByVisibleText(stages, stage);

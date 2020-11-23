@@ -15,14 +15,14 @@ public class BudgetDashboardTest extends BaseClass {
 	PropertyActionsPage projectpage;
 	BudgetDashboard budgetdashboard;
 	@Test(dataProvider = "BudgetDashboard", dataProviderClass = DataProviders.class)
-	public void budgetDTest(String stage1,String hour,String des,String edithrs1) throws InterruptedException {
+	public void budgetDTest(String selproject1,String stage1,String hour,String des,String edithrs1) throws InterruptedException {
 		Log.startTestCase("budgetdashboard");
 		
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
 		Log.info("login is successful");
 		budgetdashboard=projectpage.dropbupage();
-		budgetdashboard.budgetDashboard(stage1, hour, des, edithrs1);
+		budgetdashboard.budgetDashboard1(selproject1,stage1, hour, des, edithrs1);
 		Log.endTestCase("budget db ");
 		
 		}

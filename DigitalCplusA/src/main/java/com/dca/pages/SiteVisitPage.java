@@ -9,6 +9,8 @@ import com.dca.base.BaseClass;
 
 public class SiteVisitPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
 	WebElement addnew;
 	@FindBy(xpath="//select[@id='StageID']")
@@ -54,7 +56,8 @@ public class SiteVisitPage extends BaseClass {
 		PageFactory.initElements(getDriver(), this);
 		
 	}
-	public void siteVisit(String stages,String types,String staffs,String vdate,String des,String eddate  ) throws InterruptedException {
+	public void siteVisit(String selproject1, String stages,String types,String staffs,String vdate,String des,String eddate  ) throws InterruptedException {
+		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		ad.selByVisibleText(stage, stages);
 		ad.selByVisibleText(stafftype, types);

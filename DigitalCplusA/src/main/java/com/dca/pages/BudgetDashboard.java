@@ -9,6 +9,8 @@ import com.dca.base.BaseClass;
 
 public class BudgetDashboard extends BaseClass{
 	ActionDriver ac=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[contains(text(),'Add New')]")
 	WebElement addnew;
 	@FindBy(xpath="//select[@id='Stage']")
@@ -47,30 +49,31 @@ public class BudgetDashboard extends BaseClass{
 		
 	}
 
-public void budgetDashboard(String stage1,String hour, String des, String edithrs1) throws InterruptedException {
+
+public void budgetDashboard1(String selproject1, String stage1, String hour, String des, String edithrs1) throws InterruptedException {
 	// TODO Auto-generated method stub
-	Thread.sleep(3000);
-	addnew.click();
-	Thread.sleep(3000);
-	ac.selByVisibleText(stage,stage1);
-	hours.sendKeys(hour);
-	description.sendKeys(des);
-	save.click();
-	Thread.sleep(3000);
-	saveok.click();
-	search.sendKeys(stage1);
-	search.clear();
-	editclick.click();
-	edithrs.sendKeys(edithrs1);
-	update.click();
-	editok.click();
-	Thread.sleep(3000);
-	exporttoexcel.click();
-	delete.click();
-	deleteok.click();
-	deleteoklast.click();
-	
-	
+	// TODO Auto-generated method stub
+		ac.selByVisibleText(selproject, selproject1);
+		Thread.sleep(3000);
+		addnew.click();
+		Thread.sleep(3000);
+		ac.selByVisibleText(stage,stage1);
+		hours.sendKeys(hour);
+		description.sendKeys(des);
+		save.click();
+		Thread.sleep(3000);
+		saveok.click();
+		search.sendKeys(stage1);
+		search.clear();
+		editclick.click();
+		edithrs.sendKeys(edithrs1);
+		update.click();
+		editok.click();
+		Thread.sleep(3000);
+		exporttoexcel.click();
+		delete.click();
+		deleteok.click();
+		deleteoklast.click();
 	
 }
 

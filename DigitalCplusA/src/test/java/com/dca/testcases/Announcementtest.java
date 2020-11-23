@@ -16,12 +16,12 @@ public class Announcementtest extends BaseClass {
 	AnnouncementPage announcementpage;
 	@Test(dataProvider = "Announcements", dataProviderClass = DataProviders.class)
 	
-	public void announcements(String announcements,String descriptions,String dates,String times,String details,String venus,String edate  ) throws InterruptedException {
+	public void announcements(String selproject1,String announcements,String descriptions,String dates,String times,String details,String venus,String edate  ) throws InterruptedException {
 		Log.startTestCase("Announcement");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
 		announcementpage=projectpage.dropannouncement();
-		announcementpage.announcement(announcements, descriptions, dates, times, details, venus,edate);
+		announcementpage.announcement(selproject1,announcements, descriptions, dates, times, details, venus,edate);
 		Log.endTestCase("Announcement");
 		
 		

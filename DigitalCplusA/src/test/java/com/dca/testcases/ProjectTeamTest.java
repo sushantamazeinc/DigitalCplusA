@@ -15,12 +15,12 @@ public class ProjectTeamTest extends BaseClass {
 	PropertyActionsPage projectpage;
 	ProjectTeam projectteam;
 	@Test(dataProvider = "ProjectTeam", dataProviderClass = DataProviders.class)
-	public void projectteamtest(String type1,String stafftype1,String staff1,String des,String msg,String email,String staff2,String chat1 ) throws InterruptedException {
+	public void projectteamtest(String selproject1, String type1,String stafftype1,String staff1,String des,String msg,String email,String staff2,String chat1 ) throws InterruptedException {
 		Log.startTestCase("projectteam");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
 		projectteam=projectpage.dropproteam();
-		projectteam.projectTeam(type1, stafftype1, staff1, des,msg,email,staff2,chat1);
+		projectteam.projectTeam(selproject1,type1, stafftype1, staff1, des,msg,email,staff2,chat1);
 		Log.endTestCase("projectteam ");
 		
 		

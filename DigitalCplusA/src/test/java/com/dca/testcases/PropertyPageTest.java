@@ -1,5 +1,7 @@
 package com.dca.testcases;
 
+import java.io.IOException;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,7 +18,7 @@ public class PropertyPageTest extends BaseClass{
 	PropertyActionsPage projectpage;
 	PropertPage propertypage;
 	@Test(dataProvider = "credentials", dataProviderClass = DataProviders.class)
-	public void propertyreg(String proname1,String proadd1,String phone1,String conname1,String conphone1,String mail1,String nofloor1,String noofunit1,String unitfloor1,String buildarea1,String budgethr1) throws InterruptedException {
+	public void propertyreg(String proname1,String proadd1,String phone1,String conname1,String conphone1,String mail1,String nofloor1,String noofunit1,String unitfloor1,String buildarea1,String budgethr1) throws InterruptedException, IOException {
 		Log.startTestCase("property");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
@@ -32,7 +34,7 @@ public class PropertyPageTest extends BaseClass{
 
 	@AfterMethod()
 	public void tearDown() {
-	getDriver().quit();
+	//getDriver().quit();
 	}
 	
 

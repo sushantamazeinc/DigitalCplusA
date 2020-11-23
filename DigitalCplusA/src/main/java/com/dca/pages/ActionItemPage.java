@@ -10,6 +10,8 @@ import com.dca.base.BaseClass;
 
 public class ActionItemPage extends BaseClass{
 	ActionDriver ad=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
 	WebElement addnew;
 	@FindBy(xpath="//input[@id='Item']")
@@ -75,7 +77,8 @@ public class ActionItemPage extends BaseClass{
 		PageFactory.initElements(getDriver(), this);
 		
 	}
-	public void actionItem(String item,String task,String priorities ,String assign,String date,String des,String status1,String estatus ) throws InterruptedException {
+	public void actionItem(String selproject1, String item,String task,String priorities ,String assign,String date,String des,String status1,String estatus ) throws InterruptedException {
+		ad.selByVisibleText(selproject, selproject1);
 		Dimension dm = new Dimension(1200,730);
 		getDriver().manage().window().setSize(dm);
 		addnew.click();

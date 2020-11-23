@@ -9,6 +9,8 @@ import com.dca.base.BaseClass;
 
 public class PunchlistMastersPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
 	WebElement addnew;
 	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-punch-lists[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[3]/input[1]")
@@ -45,7 +47,8 @@ public class PunchlistMastersPage extends BaseClass {
 	}
 	
 	
-	public void punchlistmaster(String names,String locations,String descriptions,String reviewtypes,String ename ) {
+	public void punchlistmaster(String selproject1,String names,String locations,String descriptions,String reviewtypes,String ename ) {
+		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		name.sendKeys(names);
 		location.sendKeys(locations);

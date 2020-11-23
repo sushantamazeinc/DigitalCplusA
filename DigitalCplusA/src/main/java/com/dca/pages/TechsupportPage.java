@@ -9,6 +9,8 @@ import com.dca.base.BaseClass;
 
 public class TechsupportPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
 	WebElement addnew;
 	@FindBy(xpath="//input[@id='date']")
@@ -27,7 +29,8 @@ public class TechsupportPage extends BaseClass {
 		
 	}
 	
-	public void techsupport(String dates,String issues,String descriptions ) {
+	public void techsupport(String selproject1,String dates,String issues,String descriptions ) {
+		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		date.sendKeys(dates);
 		issue.sendKeys(issues);

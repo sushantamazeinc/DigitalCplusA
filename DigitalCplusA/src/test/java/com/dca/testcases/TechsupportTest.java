@@ -14,12 +14,12 @@ public class TechsupportTest extends BaseClass {
 	PropertyActionsPage projectpage;
 	TechsupportPage techsupportpage;
 	@Test(dataProvider = "Techsupport", dataProviderClass = DataProviders.class)
-	public void techsupport(String dates,String issues,String descriptions  ) throws InterruptedException {
+	public void techsupport(String selproject1,String dates,String issues,String descriptions  ) throws InterruptedException {
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
 		techsupportpage=projectpage.droptechsupport();
 		
-		techsupportpage.techsupport(dates, issues, descriptions);
+		techsupportpage.techsupport(selproject1,dates, issues, descriptions);
 		
 		
 		

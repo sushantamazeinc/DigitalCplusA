@@ -1,5 +1,7 @@
 package com.dca.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -94,7 +96,7 @@ public class CasasEmployeePage extends BaseClass {
 			String address1,String selsupervisor1,String joiningdate1,String leavesperyear1,
 			String workingtimings1,String dob1,String tinno1,String employeestatus1,
 			String location1,String emergencycontact,String ratehr1,String basicsalary1,
-			String allowance1) throws InterruptedException {
+			String allowance1) throws InterruptedException, IOException {
 		ac.selByVisibleText(selproject, selproject1);
 		add.click();
 		selAddNewEmployee.click();
@@ -116,8 +118,12 @@ public class CasasEmployeePage extends BaseClass {
 		basicSalary.sendKeys(basicsalary1);
 		Thread.sleep(3000);
 		allowance.sendKeys(allowance1);
-		idAttach.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
-		staffPhoto.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		//idAttach.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		idAttach.click();
+		ac.upload();
+		//staffPhoto.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		staffPhoto.click();
+		ac.upload();
 		save.click();
 		saveok.click();
 		Thread.sleep(3000);

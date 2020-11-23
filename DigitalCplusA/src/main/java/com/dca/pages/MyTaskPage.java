@@ -11,6 +11,8 @@ import com.dca.base.BaseClass;
 
 public class MyTaskPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
 	WebElement addnew;
 	@FindBy(xpath="//input[@id='StartDate']")
@@ -59,7 +61,8 @@ public class MyTaskPage extends BaseClass {
 		
 	}
 	
-	public void myTask(String sdate,String edate,String task,String des,String eddate   ) throws InterruptedException {
+	public void myTask(String selproject1,String sdate,String edate,String task,String des,String eddate   ) throws InterruptedException {
+		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		startdate.sendKeys(sdate);
 		enddate.sendKeys(edate);

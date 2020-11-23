@@ -9,6 +9,8 @@ import com.dca.base.BaseClass;
 
 public class AnnouncementPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[contains(text(),'New Announcement')]")
 	WebElement addnew;
 	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-update-announcements[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[3]/input[1]")
@@ -53,7 +55,8 @@ public class AnnouncementPage extends BaseClass {
 		
 	}
 	
-	public void announcement(String announcements,String descriptions,String dates,String times,String details,String venus,String edate ) throws InterruptedException {
+	public void announcement(String selproject1, String announcements,String descriptions,String dates,String times,String details,String venus,String edate ) throws InterruptedException {
+		ad.selByVisibleText(selproject, selproject1);
 		Thread.sleep(3000);
 		addnew.click();
 		announcementfor.click();

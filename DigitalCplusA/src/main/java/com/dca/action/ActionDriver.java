@@ -1,6 +1,7 @@
 package com.dca.action;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -53,6 +54,14 @@ FileUtils.copyFile(source, new File(destination));
 e.getMessage();
 }
 return destination;
+}
+public void upload() throws IOException, InterruptedException {
+	
+	
+
+	Thread.sleep(3000);
+	Runtime.getRuntime().exec("C:\\Users\\Amaze Inc Lap 03\\Downloads\\FileUpload1.exe");
+	Thread.sleep(3000);
 }
 }
 

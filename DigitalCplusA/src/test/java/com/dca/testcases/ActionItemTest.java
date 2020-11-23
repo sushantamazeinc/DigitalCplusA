@@ -15,15 +15,13 @@ public class ActionItemTest extends BaseClass {
 	PropertyActionsPage projectpage;
 	ActionItemPage actionitem;
 	@Test(dataProvider = "ActionItem", dataProviderClass = DataProviders.class)
-	public void actionitem(String item,String task,String priorities ,String assign,String date,String des,String status1,String chat1  ) throws InterruptedException {
+	public void actionitem(String selproject1,String item,String task,String priorities ,String assign,String date,String des,String status1,String chat1  ) throws InterruptedException {
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
 		actionitem=projectpage.dropactionitem();
-		actionitem.actionItem(item, task, priorities, assign, date, des, status1,chat1);
+		actionitem.actionItem(selproject1,item, task, priorities, assign, date, des, status1,chat1);
 		
-		
-		
-	}
+		}
 	@BeforeMethod()
 	public void setup() {
 	launchApp();

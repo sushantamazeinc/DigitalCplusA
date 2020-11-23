@@ -16,13 +16,13 @@ public class ArchitecturalstageMasterTest extends BaseClass {
 	ArchitecturalstagemasterPage architectstagemasterpage;
 	@Test(dataProvider = "Architecturalstagemaster", dataProviderClass = DataProviders.class)
 	
-	public void stagemaster(String stage,String descriptions) throws InterruptedException {
+	public void stagemaster(String selproject1,String stage,String descriptions) throws InterruptedException {
 		Log.startTestCase("stagemaster");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();	
 		Log.info("login is successful");
 		architectstagemasterpage=projectpage.droparchitecturalstagemaster();
-		architectstagemasterpage.architecturalmaster(stage, descriptions);
+		architectstagemasterpage.architecturalmaster(selproject1,stage, descriptions);
 		Log.endTestCase("stagemaster ");
 		
 	}

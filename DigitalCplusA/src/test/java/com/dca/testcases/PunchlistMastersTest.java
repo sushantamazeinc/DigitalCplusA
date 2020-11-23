@@ -16,12 +16,12 @@ public class PunchlistMastersTest extends BaseClass {
 	PropertyActionsPage projectpage;
 	PunchlistMastersPage punchlistmasterpage;
 	@Test(dataProvider = "Punchlistmaster", dataProviderClass = DataProviders.class)
-	public void punchlistmaster(String names,String locations,String descriptions,String reviewtypes,String ename ) throws InterruptedException {
+	public void punchlistmaster(String selproject1,String names,String locations,String descriptions,String reviewtypes,String ename ) throws InterruptedException {
 		Log.startTestCase("punchlistmaster");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
 		punchlistmasterpage=projectpage.droppunchlistmastert();
-		punchlistmasterpage.punchlistmaster(names, locations, descriptions, reviewtypes,ename);
+		punchlistmasterpage.punchlistmaster(selproject1,names, locations, descriptions, reviewtypes,ename);
 		
 		Log.endTestCase("punchlistmaster");
 		

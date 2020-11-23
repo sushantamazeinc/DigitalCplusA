@@ -9,6 +9,8 @@ import com.dca.base.BaseClass;
 
 public class ProjectActivitiesPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
+	@FindBy(xpath="//select[@id='ProjectID']")
+	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
 	WebElement addnew;
 	@FindBy(xpath="//select[@id='StageID']")
@@ -56,9 +58,9 @@ public class ProjectActivitiesPage extends BaseClass {
 	}
 	
 	
-	public void projectTeam1(String stages, String stafftypes, String staffs, String sdate, String edate, String des,String eddate) throws InterruptedException {
+	public void projectTeam1(String selproject1, String stages, String stafftypes, String staffs, String sdate, String edate, String des,String eddate) throws InterruptedException {
 		// TODO Auto-generated method stub
-		
+		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		ad.selByVisibleText(stage,stages );
 		ad.selByVisibleText(stafftype, stafftypes );

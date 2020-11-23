@@ -15,16 +15,15 @@ public class SiteVisitTest extends BaseClass {
 	PropertyActionsPage projectpage;
 	SiteVisitPage sitevisit;
 	@Test(dataProvider = "SiteVisits", dataProviderClass = DataProviders.class)
-	public void sitevisittest(String stages,String types,String staffs,String des,String vdate,String eddate ) throws InterruptedException {
+	public void sitevisittest(String selproject1,String stages,String types,String staffs,String des,String vdate,String eddate ) throws InterruptedException {
 		Log.startTestCase("sitevisit");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
 		sitevisit=projectpage.dropsitevisits();
-		sitevisit.siteVisit(stages, types, staffs, des, vdate, eddate);
+		sitevisit.siteVisit(selproject1, stages, types, staffs, vdate, des, eddate);
 		Log.endTestCase("sitevisit");
 		
-		
-	}
+		}
 	@BeforeMethod()
 	public void setup() {
 	launchApp();
