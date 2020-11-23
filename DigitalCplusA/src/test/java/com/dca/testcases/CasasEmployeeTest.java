@@ -1,5 +1,7 @@
 package com.dca.testcases;
 
+import java.io.IOException;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,7 +20,7 @@ public class CasasEmployeeTest extends BaseClass {
 	public void casasemployee(String selproject1,String name1,String phoneno1,String email1,String selstafftype11,
 			String address1,String selsupervisor1,String joiningdate1,String leavesperyear1,String workingtimings1,
 			String dob1,String tinno1,String employeestatus1,String location1,String emergencycontact,String ratehr1,String basicsalary1,
-			String allowance1) throws InterruptedException {
+			String allowance1) throws InterruptedException, IOException {
 		Log.startTestCase("casasemployees");
 		LoginPage lp=new LoginPage();
 		projectpage=	lp.login();
