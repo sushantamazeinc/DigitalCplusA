@@ -1,5 +1,7 @@
 package com.dca.testcases;
 
+import java.io.IOException;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -13,7 +15,7 @@ import com.dca.utility.Log;
 public class PropertyactionsTest extends BaseClass{
 	PropertyActionsPage projectpage;
 	@Test()
-	public void adnew() throws InterruptedException {
+	public void adnew() throws InterruptedException, IOException {
 		Log.startTestCase("propertyactions");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
@@ -28,6 +30,8 @@ public class PropertyactionsTest extends BaseClass{
 	@AfterMethod()
 	public void tearDown() {
 	getDriver().quit();
+	
+	
 	}
 	
 	

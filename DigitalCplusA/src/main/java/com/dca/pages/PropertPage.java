@@ -139,6 +139,7 @@ public class PropertPage extends BaseClass {
 		Thread.sleep(1000);
 		savebtn.click();
 		propsaved.click();
+
 		return new PropertyActionsPage();
 		
 		
