@@ -3,6 +3,7 @@ package com.dca.pages;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -45,7 +46,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement updatebtn;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	WebElement popupupdate;
-	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-building[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/input[1]")
+	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-building[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/ngx-dropzone[1]/div[1]/p[1]")
 	WebElement updatephoto;
 	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-building[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/button[1]")
 	WebElement photoupdatebtn;
@@ -53,7 +54,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement photoupdatesuccessbtn;
 	@FindBy(xpath="//button[contains(text(),'Yes, delete it!')]")
 	WebElement confirmdelete;
-	@FindBy(xpath="//input[@id='adddocument']")
+	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-building[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/ngx-dropzone[1]/div[1]")
 	WebElement addPhotoNew;
 	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-building[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/button[1]")
 	WebElement addphotobtn;
@@ -166,9 +167,10 @@ public class PropertyActionsPage extends BaseClass {
 		return new PropertPage();
 	}
 	/**
+	 * @throws IOException 
 	 * 	 
 	 */
-	public void paction() throws InterruptedException {
+	public void paction() throws InterruptedException, IOException {
 		//Select select7=new Select(selproject);
 		/**
 		 * 	 Update projectname here
@@ -200,14 +202,21 @@ public class PropertyActionsPage extends BaseClass {
 		
 		Thread.sleep(2000);
 		addphoto.click();
-		addPhotoNew.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		//addPhotoNew.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		addPhotoNew.click();
+		ac.upload();
+		
+		
 		addphotobtn.click();
 		addphotook.click();
 		Thread.sleep(3000);
 		
 		attachment.click();
 		attachmentupdate.click();
-		updatephoto.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		//updatephoto.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		updatephoto.click();
+		ac.upload();
+		
 		photoupdatebtn.click();
 		photoupdatesuccessbtn.click();
 		//Thread.sleep(2000);
