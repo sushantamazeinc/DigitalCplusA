@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.dca.testcases.Announcementtest">
+      <class name="com.dca.testcases.ProjectTimelines1Test">
         <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="announcements" invocation-numbers="0"/>
           <include name="afterSuite"/>
           <include name="loadConfig"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="protimeline" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.dca.testcases.Announcementtest -->
+      </class> <!-- com.dca.testcases.ProjectTimelines1Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

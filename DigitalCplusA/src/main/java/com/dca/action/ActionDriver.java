@@ -60,7 +60,7 @@ public void upload() throws IOException, InterruptedException {
 	
 
 	Thread.sleep(3000);
-	Runtime.getRuntime().exec("C:\\Users\\Amaze Inc Lap 03\\Downloads\\FileUpload1.exe");
+	Runtime.getRuntime().exec("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\uploadexefile\\FileUpload1.exe");
 	Thread.sleep(3000);
 }
 }

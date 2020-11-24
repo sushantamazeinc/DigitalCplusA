@@ -1,0 +1,5 @@
+ControlFocus("Open","","Edit1")
+Sleep(3000)
+ControlSetText("Open","","Edit1","C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\Imagesrc\flower.jpg")
+Sleep(5000)
+ControlClick("Open","","Button1")

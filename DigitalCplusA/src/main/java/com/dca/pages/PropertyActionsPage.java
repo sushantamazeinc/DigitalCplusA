@@ -72,7 +72,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement dropconstructionproject;
 	@FindBy(xpath = "//a[contains(text(),'Project Files')]")
 	WebElement selprojectfile;
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[2]/ul[1]/li[6]/a[1]")
+	@FindBy(xpath = "//a[@href='#/ArchitecturalProjectTimelineDasboard']")
 	WebElement selprojecttimeline;
 	@FindBy(linkText = "Communication")
 	WebElement communication;
@@ -138,7 +138,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement dropassetsmain;
 	@FindBy(linkText = "Asset")
 	WebElement dropasset;
-	@FindBy(css = "div.wrapper:nth-child(3) div:nth-child(1) nav.navbarCustomProperties ul.list-unstyled.components li.submenuAlingment:nth-child(15) > a.hoverchangeproperty")
+	@FindBy(xpath="//a[@href='#Announcements']")
 	WebElement dropannouncementsmain;
 	@FindBy(xpath = "//a[@routerlink='/Announcements']")
 	WebElement dropannouncements;
@@ -154,7 +154,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement droptechsupport;
 
 	///////////////////////////
-	@FindBy(partialLinkText = "Construction Projec")
+	@FindBy(xpath="//a[@href='#pageSubmenu']")
 	WebElement constpro;
 
 	////////////////////////////////////////
@@ -232,13 +232,13 @@ public class PropertyActionsPage extends BaseClass {
 	public ProjectFilesPages droprojectfile() {
 		// Select select12=new Select(dropprojectfile);
 		// select12.selectByIndex(1);
-		dropconstructionproject.click();
+		constpro.click();
 		selprojectfile.click();
 		return new ProjectFilesPages();
 	}
 
 	public ProjectTimelines1page droptimeline() throws InterruptedException {
-		dropconstructionproject.click();
+		constpro.click();
 		selprojecttimeline.click();
 		Thread.sleep(3000);
 		return new ProjectTimelines1page();
@@ -411,7 +411,7 @@ public class PropertyActionsPage extends BaseClass {
 		dropannouncementsmain.click();
 		Thread.sleep(3000);
 		Robot robot = new Robot();
-		for (int i = 0; i < 1; i++) {
+		for (int i = 0; i < 2; i++) {
 			robot.keyPress(KeyEvent.VK_PAGE_DOWN);
 
 			Thread.sleep(3000);

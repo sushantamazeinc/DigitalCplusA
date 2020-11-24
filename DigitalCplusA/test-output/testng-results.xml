@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24273" started-at="2020-11-24T10:06:44 IST" finished-at="2020-11-24T10:07:09 IST">
+  <suite name="Default suite" duration-ms="87783" started-at="2020-11-24T11:04:25 IST" finished-at="2020-11-24T11:05:53 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24273" started-at="2020-11-24T10:06:44 IST" finished-at="2020-11-24T10:07:09 IST">
-      <class name="com.dca.testcases.Announcementtest">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.Announcementtest@2781e022]" name="loadConfig" is-config="true" duration-ms="296" started-at="2020-11-24T10:06:44 IST" finished-at="2020-11-24T10:06:44 IST">
+    <test name="Default test" duration-ms="87783" started-at="2020-11-24T11:04:25 IST" finished-at="2020-11-24T11:05:53 IST">
+      <class name="com.dca.testcases.ProjectTimelines1Test">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="loadConfig" is-config="true" duration-ms="238" started-at="2020-11-24T11:04:25 IST" finished-at="2020-11-24T11:04:25 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.Announcementtest@2781e022]" name="setup" is-config="true" duration-ms="10478" started-at="2020-11-24T10:06:46 IST" finished-at="2020-11-24T10:06:56 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="setup" is-config="true" duration-ms="11559" started-at="2020-11-24T11:04:26 IST" finished-at="2020-11-24T11:04:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="announcements(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.Announcementtest@2781e022]" name="announcements" duration-ms="12325" started-at="2020-11-24T10:06:56 IST" data-provider="Announcements" finished-at="2020-11-24T10:07:09 IST">
+        <test-method status="FAIL" signature="protimeline(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="protimeline" duration-ms="74951" started-at="2020-11-24T11:04:38 IST" data-provider="Projecttimeline" finished-at="2020-11-24T11:05:53 IST">
           <params>
             <param index="0">
               <value>
@@ -24,78 +24,53 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Hoilday]]>
+                <![CDATA[PRE-DESIGN PHASE ]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[holiday for all the staffs due to corona]]>
+                <![CDATA[Site Familiarization ]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[25112020]]>
+                <![CDATA[20122020]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[1300]]>
+                <![CDATA[21122020]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[it will be paid leave]]>
+                <![CDATA[Valerie Valdez ]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[office]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[26112020]]>
+                <![CDATA[none]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (145, 672)
-  (Session info: chrome=86.0.4240.198)
+              <![CDATA[Cannot locate element with text: Site Familiarization 
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61296}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 9bab42abd1f649f3e4166964a3f8f178]]>
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (145, 672)
-  (Session info: chrome=86.0.4240.198)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Site Familiarization 
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61296}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 9bab42abd1f649f3e4166964a3f8f178
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy12.click(Unknown Source)
-at com.dca.pages.PropertyActionsPage.dropannouncement(PropertyActionsPage.java:411)
-at com.dca.testcases.Announcementtest.announcements(Announcementtest.java:33)
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+at com.dca.action.ActionDriver.selByVisibleText(ActionDriver.java:28)
+at com.dca.pages.ProjectTimelines1page.projecttimeline(ProjectTimelines1page.java:156)
+at com.dca.testcases.ProjectTimelines1Test.protimeline(ProjectTimelines1Test.java:32)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -126,19 +101,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- announcements -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.Announcementtest@2781e022]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-11-24T10:07:09 IST" finished-at="2020-11-24T10:07:09 IST">
+        </test-method> <!-- protimeline -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-11-24T11:05:53 IST" finished-at="2020-11-24T11:05:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.Announcementtest@2781e022]" name="afterSuite" is-config="true" duration-ms="4" started-at="2020-11-24T10:07:09 IST" finished-at="2020-11-24T10:07:09 IST">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="afterSuite" is-config="true" duration-ms="3" started-at="2020-11-24T11:05:53 IST" finished-at="2020-11-24T11:05:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.dca.testcases.Announcementtest -->
+      </class> <!-- com.dca.testcases.ProjectTimelines1Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
