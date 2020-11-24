@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39002" started-at="2020-11-24T11:45:44 IST" finished-at="2020-11-24T11:46:23 IST">
+  <suite name="Default suite" duration-ms="49490" started-at="2020-11-24T11:48:53 IST" finished-at="2020-11-24T11:49:43 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39002" started-at="2020-11-24T11:45:44 IST" finished-at="2020-11-24T11:46:23 IST">
+    <test name="Default test" duration-ms="49490" started-at="2020-11-24T11:48:53 IST" finished-at="2020-11-24T11:49:43 IST">
       <class name="com.dca.testcases.PropertyPageTest">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="loadConfig" is-config="true" duration-ms="225" started-at="2020-11-24T11:45:44 IST" finished-at="2020-11-24T11:45:44 IST">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="loadConfig" is-config="true" duration-ms="328" started-at="2020-11-24T11:48:53 IST" finished-at="2020-11-24T11:48:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="setup" is-config="true" duration-ms="10711" started-at="2020-11-24T11:45:45 IST" finished-at="2020-11-24T11:45:56 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="setup" is-config="true" duration-ms="12884" started-at="2020-11-24T11:48:55 IST" finished-at="2020-11-24T11:49:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="propertyreg(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="propertyreg" duration-ms="27003" started-at="2020-11-24T11:45:56 IST" data-provider="credentials" finished-at="2020-11-24T11:46:23 IST">
+        <test-method status="FAIL" signature="propertyreg(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="propertyreg" duration-ms="34405" started-at="2020-11-24T11:49:08 IST" data-provider="credentials" finished-at="2020-11-24T11:49:43 IST">
           <params>
             <param index="0">
               <value>
@@ -73,26 +73,28 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[stale element reference: element is not attached to the page document
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#ProejectType"}
   (Session info: chrome=86.0.4240.198)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52724}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 6e8346f67df9d084d5ddb8ba2a6852a0]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53537}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 1a7257af0a3430059b54da95028f8f6b
+*** Element info: {Using=id, value=ProejectType}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#ProejectType"}
   (Session info: chrome=86.0.4240.198)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52724}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 6e8346f67df9d084d5ddb8ba2a6852a0
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53537}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 1a7257af0a3430059b54da95028f8f6b
+*** Element info: {Using=id, value=ProejectType}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -103,15 +105,15 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy12.click(Unknown Source)
-at com.dca.pages.PropertPage.details(PropertPage.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.getTagName(Unknown Source)
+at org.openqa.selenium.support.ui.Select.<init>(Select.java:45)
+at com.dca.pages.PropertPage.details(PropertPage.java:68)
 at com.dca.testcases.PropertyPageTest.propertyreg(PropertyPageTest.java:26)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -143,15 +145,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- propertyreg -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-11-24T11:46:23 IST" finished-at="2020-11-24T11:46:23 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-11-24T11:49:43 IST" finished-at="2020-11-24T11:49:43 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="afterSuite" is-config="true" duration-ms="3" started-at="2020-11-24T11:46:23 IST" finished-at="2020-11-24T11:46:23 IST">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="afterSuite" is-config="true" duration-ms="7" started-at="2020-11-24T11:49:43 IST" finished-at="2020-11-24T11:49:43 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
