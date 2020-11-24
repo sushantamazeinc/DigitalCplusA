@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="87783" started-at="2020-11-24T11:04:25 IST" finished-at="2020-11-24T11:05:53 IST">
+  <suite name="Default suite" duration-ms="89879" started-at="2020-11-24T11:12:39 IST" finished-at="2020-11-24T11:14:09 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="87783" started-at="2020-11-24T11:04:25 IST" finished-at="2020-11-24T11:05:53 IST">
+    <test name="Default test" duration-ms="89879" started-at="2020-11-24T11:12:39 IST" finished-at="2020-11-24T11:14:09 IST">
       <class name="com.dca.testcases.ProjectTimelines1Test">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="loadConfig" is-config="true" duration-ms="238" started-at="2020-11-24T11:04:25 IST" finished-at="2020-11-24T11:04:25 IST">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="loadConfig" is-config="true" duration-ms="229" started-at="2020-11-24T11:12:39 IST" finished-at="2020-11-24T11:12:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="setup" is-config="true" duration-ms="11559" started-at="2020-11-24T11:04:26 IST" finished-at="2020-11-24T11:04:38 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="setup" is-config="true" duration-ms="11568" started-at="2020-11-24T11:12:41 IST" finished-at="2020-11-24T11:12:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="protimeline(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="protimeline" duration-ms="74951" started-at="2020-11-24T11:04:38 IST" data-provider="Projecttimeline" finished-at="2020-11-24T11:05:53 IST">
+        <test-method status="FAIL" signature="protimeline(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="protimeline" duration-ms="77050" started-at="2020-11-24T11:12:52 IST" data-provider="Projecttimeline" finished-at="2020-11-24T11:14:09 IST">
           <params>
             <param index="0">
               <value>
@@ -105,11 +105,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- protimeline -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-11-24T11:05:53 IST" finished-at="2020-11-24T11:05:53 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-11-24T11:14:09 IST" finished-at="2020-11-24T11:14:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="afterSuite" is-config="true" duration-ms="3" started-at="2020-11-24T11:05:53 IST" finished-at="2020-11-24T11:05:53 IST">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="afterSuite" is-config="true" duration-ms="3" started-at="2020-11-24T11:14:09 IST" finished-at="2020-11-24T11:14:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
