@@ -60,6 +60,7 @@ public class FieldManagementToolPage extends BaseClass {
 			String edate,String punchlista,String fieldn,String stat,String upstat) throws InterruptedException, AWTException {
 		ac.selByVisibleText(selproject, selproject1);
 		addnew.click();
+		Thread.sleep(3000);
 		ac.selByVisibleText(floor, floor1);
 		ac.selByVisibleText(punchlist, punchlist1);
 		ac.selByVisibleText(staff, staff1);

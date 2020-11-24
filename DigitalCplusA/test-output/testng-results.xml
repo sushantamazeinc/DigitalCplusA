@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49490" started-at="2020-11-24T11:48:53 IST" finished-at="2020-11-24T11:49:43 IST">
+  <suite name="Default suite" duration-ms="45972" started-at="2020-11-24T15:51:16 IST" finished-at="2020-11-24T15:52:01 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="49490" started-at="2020-11-24T11:48:53 IST" finished-at="2020-11-24T11:49:43 IST">
-      <class name="com.dca.testcases.PropertyPageTest">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="loadConfig" is-config="true" duration-ms="328" started-at="2020-11-24T11:48:53 IST" finished-at="2020-11-24T11:48:53 IST">
+    <test name="Default test" duration-ms="45972" started-at="2020-11-24T15:51:16 IST" finished-at="2020-11-24T15:52:01 IST">
+      <class name="com.dca.testcases.StaffLeaveTest">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.StaffLeaveTest@2781e022]" name="loadConfig" is-config="true" duration-ms="233" started-at="2020-11-24T15:51:15 IST" finished-at="2020-11-24T15:51:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="setup" is-config="true" duration-ms="12884" started-at="2020-11-24T11:48:55 IST" finished-at="2020-11-24T11:49:08 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.StaffLeaveTest@2781e022]" name="setup" is-config="true" duration-ms="19439" started-at="2020-11-24T15:51:17 IST" finished-at="2020-11-24T15:51:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="propertyreg(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="propertyreg" duration-ms="34405" started-at="2020-11-24T11:49:08 IST" data-provider="credentials" finished-at="2020-11-24T11:49:43 IST">
+        <test-method status="PASS" signature="staff_leave(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.StaffLeaveTest@2781e022]" name="staff_leave" duration-ms="24003" started-at="2020-11-24T15:51:36 IST" data-provider="StaffLeave" finished-at="2020-11-24T15:52:00 IST">
           <params>
             <param index="0">
               <value>
@@ -24,140 +24,57 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[bangalore]]>
+                <![CDATA[Valerie Valdez]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[1234567899]]>
+                <![CDATA[Casual Leave]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[sushant]]>
+                <![CDATA[2020-12-11]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[1234567899]]>
+                <![CDATA[2020-12-19]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[xyz@gmail.com]]>
+                <![CDATA[Ann Dumaual]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[2]]>
+                <![CDATA[Testing]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[2]]>
+                <![CDATA[Reject]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[240]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[90]]>
+                <![CDATA[Test]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#ProejectType"}
-  (Session info: chrome=86.0.4240.198)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53537}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 1a7257af0a3430059b54da95028f8f6b
-*** Element info: {Using=id, value=ProejectType}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#ProejectType"}
-  (Session info: chrome=86.0.4240.198)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53537}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 1a7257af0a3430059b54da95028f8f6b
-*** Element info: {Using=id, value=ProejectType}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy12.getTagName(Unknown Source)
-at org.openqa.selenium.support.ui.Select.<init>(Select.java:45)
-at com.dca.pages.PropertPage.details(PropertPage.java:68)
-at com.dca.testcases.PropertyPageTest.propertyreg(PropertyPageTest.java:26)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- propertyreg -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-11-24T11:49:43 IST" finished-at="2020-11-24T11:49:43 IST">
+        </test-method> <!-- staff_leave -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.StaffLeaveTest@2781e022]" name="tearDown" is-config="true" duration-ms="1203" started-at="2020-11-24T15:52:00 IST" finished-at="2020-11-24T15:52:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.PropertyPageTest@2781e022]" name="afterSuite" is-config="true" duration-ms="7" started-at="2020-11-24T11:49:43 IST" finished-at="2020-11-24T11:49:43 IST">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.StaffLeaveTest@2781e022]" name="afterSuite" is-config="true" duration-ms="4" started-at="2020-11-24T15:52:02 IST" finished-at="2020-11-24T15:52:02 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.dca.testcases.PropertyPageTest -->
+      </class> <!-- com.dca.testcases.StaffLeaveTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

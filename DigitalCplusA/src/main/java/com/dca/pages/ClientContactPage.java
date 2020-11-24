@@ -80,6 +80,7 @@ public class ClientContactPage extends BaseClass{
 		search.sendKeys(firstname1);
 		Thread.sleep(3000);
 		edit.click();
+		Thread.sleep(3000);
 		update.click();
 		Thread.sleep(3000);
 		updateok.click();

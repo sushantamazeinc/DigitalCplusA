@@ -38,7 +38,7 @@ public class AssetsPage extends BaseClass{
 	WebElement vendorphno;
 	@FindBy(css="#txt_VendorEmail")
 	WebElement vendoremail;
-	@FindBy(xpath="//input[@id='txt_VendorName']")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-update-assets[1]/div[1]/div[3]/div[1]/form[1]/div[15]/div[3]/input[1]")
 	WebElement warrantyfor;
 	@FindBy(xpath="//input[@id='txt_usr']")
 	WebElement warrantytill;
@@ -79,6 +79,13 @@ public class AssetsPage extends BaseClass{
 	WebElement update;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	WebElement updateok;
+	@FindBy(css="div.wrapper:nth-child(3) div.RouterContent div.container-fluid div.shadow.p-3.mb-5.bg-white.rounded.col-lg-12.maincard:nth-child(3) div.table-responsive:nth-child(5) table.table.table-bordered.table-hover.table-condensed tbody:nth-child(2) tr:nth-child(1) td.TableActions:nth-child(11) a:nth-child(5) > i.far.fa-trash-alt")
+	WebElement delete;
+	@FindBy(xpath="//button[contains(text(),'Yes, delete it!')]")
+	WebElement deleteok;
+	@FindBy(xpath="//button[contains(text(),'OK')]")
+	WebElement deletelast;
+	
 	
 	
 	public AssetsPage() {
@@ -86,7 +93,7 @@ public class AssetsPage extends BaseClass{
 		
 	}
 	public void assets(String selproject1, String assets,String type,String floors,String parentassets,
-			String modelnames,String serialnos,String purchasedates,String vendorcontactnames,String vendorphnos,
+			String modelnames,String serialnos,String purchasedates,String vname,String vendorcontactnames,String vendorphnos,
 			String vendoremails,String warrantyfors,String warrantytills,String firstservicedues,String nextservicedues,
 			String barcodes,String assetscosts,String depriciations,String remindins,
 			String exisitingvendornames,String vendor) throws Exception{
@@ -107,7 +114,7 @@ public class AssetsPage extends BaseClass{
 			
 		}
 		else {
-			//newvendorname.click();
+			newvendorname.sendKeys(vname);
 			vendorcontactname.sendKeys(vendorcontactnames);
 			vendorphno.sendKeys(vendorphnos);
 			vendoremail.sendKeys(vendoremails);
@@ -130,18 +137,24 @@ public class AssetsPage extends BaseClass{
 		ad.upload();
 		Thread.sleep(3000);
 		assetphoto.click();
+		Thread.sleep(3000);
 		ad.upload();
-		
+		Thread.sleep(3000);
 		save.click();
+		Thread.sleep(3000);
 		saveok.click();
 		search.sendKeys(assets);
 		floorfilter.sendKeys(floors);
 		
 		edit.click();
+		Thread.sleep(3000);
 		update.click();	
+		Thread.sleep(3000);
 		updateok.click();
 		
-			
+		delete.click();	
+		deleteok.click();
+		deletelast.click();
 		
 		//error in edit page need to fix
 	

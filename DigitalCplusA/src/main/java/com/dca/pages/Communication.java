@@ -20,9 +20,6 @@ public class Communication extends BaseClass{
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	
-	
-	
-	
 	@FindBy(xpath="//button[@id='btn_button']")
 	WebElement addtransmits;
 	
@@ -39,9 +36,9 @@ public class Communication extends BaseClass{
 	WebElement description;
 	@FindBy(xpath="//textarea[@id='Remarks']")
 	WebElement remarks;
-	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-transmittals[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[8]/div[3]/input[1]")
-	WebElement attachment;
-	@FindBy(xpath="//button[contains(text(),'Save')]")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-transmittals[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[8]/div[3]/ngx-dropzone[1]/div[1]")
+	WebElement attachment1;
+	@FindBy(xpath="//button[@type='submit']")
 	WebElement save;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	WebElement saveok;
@@ -59,7 +56,7 @@ public class Communication extends BaseClass{
 	WebElement exporttoexcel;
 	
 	
-	@FindBy(xpath="//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[5]/ul[1]/li[2]/a[1]")
+	@FindBy(xpath="//a[@href='#/infoexchangedash']")
 	WebElement emails;
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-info-exchangedash[1]/div[1]/div[1]/div[2]/div[1]/button[1]")
 	WebElement addemail;
@@ -67,7 +64,7 @@ public class Communication extends BaseClass{
 	WebElement clientcontact;
 	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-info-exchange[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[4]/div[3]/angular-editor[1]/div[1]/div[1]/div[1]")
 	WebElement msgbody;
-	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-info-exchange[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[5]/div[3]/input[1]")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-info-exchange[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[5]/div[3]/ngx-dropzone[1]/div[1]")
 	WebElement attachmnet;
 	@FindBy(xpath="//button[contains(text(),'Save')]")
 	WebElement save1;
@@ -97,43 +94,65 @@ public class Communication extends BaseClass{
 		ac.selByVisibleText(selproject, project);
 		
 		addtransmits.click();
-		subject.sendKeys(subject1);
-		ac.selByVisibleText(from, from1);
-		ac.selByVisibleText(to, to1);
-		date.sendKeys(datesend);
-		description.sendKeys(desc);
-		remarks.sendKeys(remark);
-		//attachment.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
-		attachment.click();
-		ac.upload();
-		save.click();
-		saveok.click();
-		Thread.sleep(3000);
-		edit.click();
-		updatesubject.sendKeys(updatesub);
-		update.click();
-		updateok.click();
-		Thread.sleep(3000);
-		//exporttoexcel.click();
-		 Robot robot=new Robot();
-		 for(int i=0;i<1;i++) {
-			 robot.keyPress(KeyEvent.VK_PAGE_UP);
-			 Thread.sleep(3000);
-		 }
+		
+		  subject.sendKeys(subject1);
+		  ac.selByVisibleText(from, from1);
+		  ac.selByVisibleText(to, to1);
+		  date.sendKeys(datesend);
+		  description.sendKeys(desc); 
+		  remarks.sendKeys(remark); 
+		  Robot robot=new
+		  Robot(); for(int i=0;i<2;i++)
+		  { robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+		  Thread.sleep(3000); } 
+		  
+		  //attachment.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg"); 
+		  attachment1.click(); 
+		  Thread.sleep(3000); 
+		  ac.upload(); 
+		  Thread.sleep(7000);
+		  save.click(); 
+		  saveok.click(); 
+		  Thread.sleep(3000);
+		  edit.click();
+		  updatesubject.sendKeys(updatesub);
+		  update.click(); 
+		  updateok.click();
+		  //Thread.sleep(3000); //exporttoexcel.click(); 
+		  Robot robot1=new Robot();
+		  for(int i=0;i<1;i++) 
+		  { 
+			  robot1.keyPress(KeyEvent.VK_PAGE_UP);
+		  Thread.sleep(3000);
+		  }
+		 
 		emails.click();
 		Thread.sleep(3000);
 		Actions actions=new Actions(getDriver());
 		//actions.keyUp(Keys.ARROW_UP);
 		actions.moveToElement(getDriver().findElement(By.xpath("//button[@id='btn_button']")));
-		//actions.keyUp(Keys.ARROW_UP);
+		Robot robot11=new Robot();
+		  for(int i=0;i<1;i++) 
+		  { 
+			  robot11.keyPress(KeyEvent.VK_PAGE_UP);
+		  Thread.sleep(3000); }
 		
 		
 		addemail.click();
 		ac.selByVisibleText(clientcontact,clientcon);
 		msgbody.sendKeys(messageby);
-		//attachmnet.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		 Robot robot111=new Robot();
+		  for(int i=0;i<1;i++) 
+		  { 
+			  robot111.keyPress(KeyEvent.VK_PAGE_DOWN);
+		  Thread.sleep(3000); 
+		  }
+		  Thread.sleep(3000);
+		  
 		attachmnet.click();
+		Thread.sleep(3000);
 		ac.upload();
+		Thread.sleep(7000);
 		save1.click();
 		Thread.sleep(3000);
 		update1ok.click();

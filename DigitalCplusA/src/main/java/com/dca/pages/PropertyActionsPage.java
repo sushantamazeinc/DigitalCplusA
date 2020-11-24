@@ -78,7 +78,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement communication;
 	@FindBy(xpath = "//a[contains(text(),'Transmittals')]")
 	WebElement transmittals;
-	@FindBy(xpath = "//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[5]/ul[1]/li[3]/a[1]")
+	@FindBy(xpath = "//a[@href='#/MeetingMinutesdash']")
 	WebElement minutesofmeeting;
 	@FindBy(linkText = "Project Emails")
 
@@ -91,7 +91,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement sellocatorrequest;
 	@FindBy(linkText = "Field Management Tool")
 	WebElement dropfieldmanagement;
-	@FindBy(xpath = "//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[8]/ul[1]/li[1]/a[1]")
+	@FindBy(xpath = "//a[@href='#/PunchListAssignDashboard']")
 	WebElement fieldmanagementtool;
 	@FindBy(partialLinkText = "Expens")
 	WebElement dropexpence;
