@@ -142,7 +142,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement dropannouncementsmain;
 	@FindBy(xpath = "//a[@routerlink='/Announcements']")
 	WebElement dropannouncements;
-	@FindBy(xpath = "//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[14]/a[1]")
+	@FindBy(xpath = "//a[@href='#mATERS']")
 	WebElement dropmaster;
 	@FindBy(xpath = "//a[contains(text(),'Punch List')]")
 	WebElement droppunchlistmaster;

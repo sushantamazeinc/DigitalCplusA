@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45972" started-at="2020-11-24T15:51:16 IST" finished-at="2020-11-24T15:52:01 IST">
+  <suite name="Default suite" duration-ms="52068" started-at="2020-11-24T16:47:25 IST" finished-at="2020-11-24T16:48:17 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45972" started-at="2020-11-24T15:51:16 IST" finished-at="2020-11-24T15:52:01 IST">
-      <class name="com.dca.testcases.StaffLeaveTest">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.StaffLeaveTest@2781e022]" name="loadConfig" is-config="true" duration-ms="233" started-at="2020-11-24T15:51:15 IST" finished-at="2020-11-24T15:51:16 IST">
+    <test name="Default test" duration-ms="52068" started-at="2020-11-24T16:47:25 IST" finished-at="2020-11-24T16:48:17 IST">
+      <class name="com.dca.testcases.PunchlistMastersTest">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.PunchlistMastersTest@2781e022]" name="loadConfig" is-config="true" duration-ms="244" started-at="2020-11-24T16:47:25 IST" finished-at="2020-11-24T16:47:25 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.StaffLeaveTest@2781e022]" name="setup" is-config="true" duration-ms="19439" started-at="2020-11-24T15:51:17 IST" finished-at="2020-11-24T15:51:36 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.PunchlistMastersTest@2781e022]" name="setup" is-config="true" duration-ms="32184" started-at="2020-11-24T16:47:26 IST" finished-at="2020-11-24T16:47:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="staff_leave(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.StaffLeaveTest@2781e022]" name="staff_leave" duration-ms="24003" started-at="2020-11-24T15:51:36 IST" data-provider="StaffLeave" finished-at="2020-11-24T15:52:00 IST">
+        <test-method status="PASS" signature="punchlistmaster(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.PunchlistMastersTest@2781e022]" name="punchlistmaster" duration-ms="17854" started-at="2020-11-24T16:47:59 IST" data-provider="Punchlistmaster" finished-at="2020-11-24T16:48:16 IST">
           <params>
             <param index="0">
               <value>
@@ -24,57 +24,42 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Valerie Valdez]]>
+                <![CDATA[floor checking]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Casual Leave]]>
+                <![CDATA[manila]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[2020-12-11]]>
+                <![CDATA[floor checking at manila]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[2020-12-19]]>
+                <![CDATA[internal]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[Ann Dumaual]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Testing]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Reject]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[Test]]>
+                <![CDATA[floor tiles checking]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- staff_leave -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.StaffLeaveTest@2781e022]" name="tearDown" is-config="true" duration-ms="1203" started-at="2020-11-24T15:52:00 IST" finished-at="2020-11-24T15:52:01 IST">
+        </test-method> <!-- punchlistmaster -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.PunchlistMastersTest@2781e022]" name="tearDown" is-config="true" duration-ms="758" started-at="2020-11-24T16:48:16 IST" finished-at="2020-11-24T16:48:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.StaffLeaveTest@2781e022]" name="afterSuite" is-config="true" duration-ms="4" started-at="2020-11-24T15:52:02 IST" finished-at="2020-11-24T15:52:02 IST">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.PunchlistMastersTest@2781e022]" name="afterSuite" is-config="true" duration-ms="6" started-at="2020-11-24T16:48:17 IST" finished-at="2020-11-24T16:48:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.dca.testcases.StaffLeaveTest -->
+      </class> <!-- com.dca.testcases.PunchlistMastersTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
