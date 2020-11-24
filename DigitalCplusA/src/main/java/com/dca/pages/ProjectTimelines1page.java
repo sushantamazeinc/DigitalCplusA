@@ -145,14 +145,14 @@ public class ProjectTimelines1page extends BaseClass {
 		
 	
 
-	public void projecttimeline(String selproject1, String selstage, String procheck, String selsdate,String enddate, String coff,
+	public void projecttimeline(String selproject1, String selstage, String procheck
+, String selsdate,String enddate, String coff,
 
 			String comm) throws InterruptedException {
 		ac.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		ac.selByVisibleText(selectstage, selstage);
-		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		ac.selByVisibleText(selprocesscheck, procheck);
 		
 		Thread.sleep(3000);
