@@ -76,7 +76,12 @@ public class SupplierOnlyPage extends BaseClass {
 	WebElement update;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	WebElement updateok;
-	
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-vendor[1]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[8]/div[1]/div[2]/a[1]/i[1]")
+	WebElement deletesupp;
+	@FindBy(xpath="//button[contains(text(),'Yes, delete it!')]")
+	WebElement deletesuppok;
+	@FindBy(xpath="//button[contains(text(),'OK')]")
+	WebElement delsuppok;
 //////////////////////////////////////////////////////////////////////////////////////
 	
 	@FindBy(partialLinkText = "Expens")
@@ -258,7 +263,10 @@ public class SupplierOnlyPage extends BaseClass {
 	Thread.sleep(3000);
 	update.click();
 	updateok.click();
-
+	Thread.sleep(3000);
+	deletesupp.click();
+	deletesuppok.click();
+	delsuppok.click();
 	}
 	
 	

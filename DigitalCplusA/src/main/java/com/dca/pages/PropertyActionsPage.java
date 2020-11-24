@@ -114,7 +114,7 @@ public class PropertyActionsPage extends BaseClass {
 
 	@FindBy(linkText = "Suppliers")
 	WebElement suppliers;
-	@FindBy(css = "div.wrapper:nth-child(3) nav.navbarCustomProperties ul.list-unstyled.components li.submenuAlingment:nth-child(13) ul.list-unstyled.submenuAlingment.collapse.in li:nth-child(1) > a:nth-child(1)")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[11]/ul[1]/li[1]/a[1]")
 	WebElement supply;
 	@FindBy(xpath = "//a[contains(text(),'Supplier Invoice')]")
 	WebElement supplierinvoice;
