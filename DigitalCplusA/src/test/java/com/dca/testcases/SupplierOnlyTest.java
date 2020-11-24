@@ -2,10 +2,13 @@ package com.dca.testcases;
 
 import java.awt.AWTException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
 import com.dca.dataprovider.DataProviders;
 import com.dca.pages.LoginPage;
@@ -18,6 +21,7 @@ public class SupplierOnlyTest extends BaseClass{
 	//InventoryPage inventorypage;
 	PropertyActionsPage projectpage;
 	SupplierOnlyPage sop;
+	ActionDriver ac=new ActionDriver();
 	@Test(priority = 1,dataProvider = "SupplierOnly", dataProviderClass = DataProviders.class)
 public void supplier_only_test(String selproject1, String name1, String email11, String phoneo1, 
 		String servicearea1, String address1, 
@@ -29,6 +33,9 @@ public void supplier_only_test(String selproject1, String name1, String email11,
 	Log.startTestCase("supplier");
 	LoginPage login=new LoginPage();
 	projectpage=login.login();
+	WebElement selectproject=	getDriver().findElement(By.xpath("//select[@id='ProjectID']"));
+	ac.selByVisibleText(selectproject, selproject1);
+	Thread.sleep(3000);
 	sop=	projectpage.supplier();
 			sop.supplieronlypage(selproject1, name1, email11, phoneo1, servicearea1, address1, 
 					website1, contactname1, suppliertype1, bankname1, Accountno1, accounttype1, 
@@ -44,6 +51,9 @@ public void supplier_only_test(String selproject1, String name1, String email11,
 			String cfo1,String servicedesc1,String financedirector1,String selsupptypee) throws InterruptedException, AWTException {
 		LoginPage lp=new LoginPage();
 		projectpage=lp.login();
+		WebElement selectproject=	getDriver().findElement(By.xpath("//select[@id='ProjectID']"));
+		ac.selByVisibleText(selectproject, selproject1);
+		Thread.sleep(3000);
 		sop=projectpage.inventory();
 		sop.inventorypage(selproject1, category1, subcategory1, itemname1, 
 				itemdescri1, expirydate1, mrp1, selpotype1, date11,
@@ -62,7 +72,7 @@ public void setup() {
 
 @AfterMethod()
 public void tearDown() {
-	//getDriver().quit();
+	getDriver().quit();
 }
 
 }

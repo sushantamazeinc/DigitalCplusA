@@ -200,8 +200,8 @@ public class SupplierInvoice extends BaseClass {
 			String mfname1, String partno1, String actualquanity1, String mrp1, String discount1, String comments1,
 			String selpaymenttype1, String comment1, String returnquanity1, String remarks1, String address11,
 			String floor1, String location1, String currentquanity1, String minimumquantity, String expirydate12,
-			String assignedto1, String description1, String selcat, String selty, String staff1)
-			throws InterruptedException, AWTException, IOException {
+			String assignedto1, String description1, String selcat, String selty, String staff1) throws IOException, InterruptedException, AWTException
+			 {
 		ac.selByVisibleText(selproject, selproject1);
 		// clicking.click();
 
@@ -221,8 +221,9 @@ public class SupplierInvoice extends BaseClass {
 		 date.sendKeys(date1);
 		  invoiceno.sendKeys(invoiceno1); 
 		  attachement.click();
+		  Thread.sleep(3000);
 		  ac.upload();
-		  
+		  Thread.sleep(5000);
 		  ac.selByIndex(itemname, 1);
 		  warrentydate.sendKeys(warrentydate1); 
 		  mfname.sendKeys(mfname1);

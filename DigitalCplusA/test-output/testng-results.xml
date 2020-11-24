@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="87783" started-at="2020-11-24T11:04:25 IST" finished-at="2020-11-24T11:05:53 IST">
+  <suite started-at="2020-11-24T11:34:45 IST" name="Default suite" finished-at="2020-11-24T11:35:20 IST" duration-ms="34569">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="87783" started-at="2020-11-24T11:04:25 IST" finished-at="2020-11-24T11:05:53 IST">
-      <class name="com.dca.testcases.ProjectTimelines1Test">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="loadConfig" is-config="true" duration-ms="238" started-at="2020-11-24T11:04:25 IST" finished-at="2020-11-24T11:04:25 IST">
+    <test started-at="2020-11-24T11:34:45 IST" name="Default test" finished-at="2020-11-24T11:35:20 IST" duration-ms="34569">
+      <class name="com.dca.testcases.SupplierInvoiceTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.dca.testcases.SupplierInvoiceTest@26275bef]" started-at="2020-11-24T11:34:45 IST" name="loadConfig" finished-at="2020-11-24T11:34:45 IST" duration-ms="413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="setup" is-config="true" duration-ms="11559" started-at="2020-11-24T11:04:26 IST" finished-at="2020-11-24T11:04:38 IST">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.dca.testcases.SupplierInvoiceTest@26275bef]" started-at="2020-11-24T11:34:46 IST" name="setup" finished-at="2020-11-24T11:34:56 IST" duration-ms="10051" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="protimeline(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="protimeline" duration-ms="74951" started-at="2020-11-24T11:04:38 IST" data-provider="Projecttimeline" finished-at="2020-11-24T11:05:53 IST">
+        <test-method signature="supplier_invoice_test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.SupplierInvoiceTest@26275bef]" started-at="2020-11-24T11:34:56 IST" name="supplier_invoice_test" data-provider="SupplierInvoice" finished-at="2020-11-24T11:35:20 IST" duration-ms="23264" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -24,57 +24,143 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[PRE-DESIGN PHASE ]]>
+                <![CDATA[1.212202E7]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Site Familiarization ]]>
+                <![CDATA[199979.0]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[20122020]]>
+                <![CDATA[1.215202E7]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[21122020]]>
+                <![CDATA[Test]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[Valerie Valdez ]]>
+                <![CDATA[12.0]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[none]]>
+                <![CDATA[5.0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1500.0]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0.0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Cash]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Floor 1]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[bangalore]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[5.0]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[2.0]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[1.212202E7]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[Staff]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[Drawing Materials]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[Drawing]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[Valerie Valdez]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <exception class="java.io.IOException">
             <message>
-              <![CDATA[Cannot locate element with text: Site Familiarization 
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: driver.version: ActionDriver]]>
+              <![CDATA[Cannot run program "C:\Users\Dell\git\DigitalCplusA\DigitalCplusA\uploadexefile\FileUpload1.au3": CreateProcess error=193, %1 is not a valid Win32 application]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Site Familiarization 
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: driver.version: ActionDriver
-at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-at com.dca.action.ActionDriver.selByVisibleText(ActionDriver.java:28)
-at com.dca.pages.ProjectTimelines1page.projecttimeline(ProjectTimelines1page.java:156)
-at com.dca.testcases.ProjectTimelines1Test.protimeline(ProjectTimelines1Test.java:32)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
+              <![CDATA[java.io.IOException: Cannot run program "C:\Users\Dell\git\DigitalCplusA\DigitalCplusA\uploadexefile\FileUpload1.au3": CreateProcess error=193, %1 is not a valid Win32 application
+at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+at java.base/java.lang.Runtime.exec(Runtime.java:590)
+at java.base/java.lang.Runtime.exec(Runtime.java:414)
+at java.base/java.lang.Runtime.exec(Runtime.java:311)
+at com.dca.action.ActionDriver.upload(ActionDriver.java:63)
+at com.dca.pages.SupplierInvoice.supplierinvoice(SupplierInvoice.java:225)
+at com.dca.testcases.SupplierInvoiceTest.supplier_invoice_test(SupplierInvoiceTest.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
 at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
@@ -83,7 +169,7 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:766)
 at org.testng.TestRunner.run(TestRunner.java:587)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
@@ -99,21 +185,27 @@ at org.testng.TestNG.run(TestNG.java:1007)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.io.IOException: CreateProcess error=193, %1 is not a valid Win32 application
+at java.base/java.lang.ProcessImpl.create(Native Method)
+at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:483)
+at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:158)
+at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+... 35 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.io.IOException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- protimeline -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-11-24T11:05:53 IST" finished-at="2020-11-24T11:05:53 IST">
+        </test-method> <!-- supplier_invoice_test -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dca.testcases.SupplierInvoiceTest@26275bef]" started-at="2020-11-24T11:35:20 IST" name="tearDown" finished-at="2020-11-24T11:35:20 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@2781e022]" name="afterSuite" is-config="true" duration-ms="3" started-at="2020-11-24T11:05:53 IST" finished-at="2020-11-24T11:05:53 IST">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.dca.testcases.SupplierInvoiceTest@26275bef]" started-at="2020-11-24T11:35:20 IST" name="afterSuite" finished-at="2020-11-24T11:35:20 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.dca.testcases.ProjectTimelines1Test -->
+      </class> <!-- com.dca.testcases.SupplierInvoiceTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

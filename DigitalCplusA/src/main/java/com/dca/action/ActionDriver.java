@@ -58,9 +58,9 @@ return destination;
 public void upload() throws IOException, InterruptedException {
 	
 	
-
+	String home=System.getProperty("user.dir");
 	Thread.sleep(3000);
-	Runtime.getRuntime().exec("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\uploadexefile\\FileUpload1.exe");
+	Runtime.getRuntime().exec(home + "\\uploadexefile\\FileUpload1.au3");
 	Thread.sleep(3000);
 }
 }
