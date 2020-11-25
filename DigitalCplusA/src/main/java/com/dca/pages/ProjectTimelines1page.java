@@ -152,7 +152,7 @@ public class ProjectTimelines1page extends BaseClass {
 		ac.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		ac.selByVisibleText(selectstage, selstage);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		ac.selByVisibleText(selprocesscheck, procheck);
 		
 		Thread.sleep(3000);

@@ -97,9 +97,9 @@ public class ClientContactPage extends BaseClass{
 		Thread.sleep(3000);
 		sendmailok.click();
 		Thread.sleep(2000);
-		delete.click();
+		/*delete.click();
 		yesdelete.click();
-		deleteok.click();
+		deleteok.click();*/
 	}
 
 }

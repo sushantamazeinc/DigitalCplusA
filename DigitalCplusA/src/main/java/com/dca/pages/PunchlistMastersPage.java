@@ -47,7 +47,7 @@ public class PunchlistMastersPage extends BaseClass {
 	}
 	
 	
-	public void punchlistmaster(String selproject1,String names,String locations,String descriptions,String reviewtypes,String ename ) {
+	public void punchlistmaster(String selproject1,String names,String locations,String descriptions,String reviewtypes,String ename ) throws InterruptedException {
 		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
 		name.sendKeys(names);
@@ -56,10 +56,12 @@ public class PunchlistMastersPage extends BaseClass {
 		reviewtype.sendKeys(reviewtypes);
 		save.click();
 		saveok.click();
+		Thread.sleep(3000);
 		edit.click();
 		editname.sendKeys(ename);
 		update.click();
 		updateok.click();
+		Thread.sleep(3000);
 		delete.click();
 		deleteok.click();
 		deleteoklast.click();

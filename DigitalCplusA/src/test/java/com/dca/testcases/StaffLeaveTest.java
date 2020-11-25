@@ -33,7 +33,7 @@ public class StaffLeaveTest extends BaseClass{
 		staffleavepage.staffleave(selproject1, staffname1, leavetype1,
 				sdate1, edate1, coveringstaff, reason1, status,resonforcancel1);
 		Log.endTestCase("staffleaves");
-		//anjali
+		
 	}
 	@BeforeMethod()
 	public void setup() {

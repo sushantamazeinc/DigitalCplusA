@@ -137,7 +137,7 @@ public class PropertPage extends BaseClass {
 		//Select select8=new Select(executed);
 		//select8.selectByIndex(2);
 		
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		savebtn.click();
 		propsaved.click();
 		Thread.sleep(3000);

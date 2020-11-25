@@ -154,6 +154,8 @@ public class SupplierOnlyPage extends BaseClass {
 	WebElement addnewitem1;
 	@FindBy(xpath="//tbody/tr[2]/td[2]/select[1]")
 	WebElement selitem1;
+	@FindBy(xpath="//button[contains(text(),'OK')]")
+	WebElement miniumquanityok;
 	@FindBy(name = "quantity")
 	WebElement quantity;
 	@FindBy(xpath="//tbody/tr[2]/td[4]/input[1]")
@@ -264,9 +266,9 @@ public class SupplierOnlyPage extends BaseClass {
 	update.click();
 	updateok.click();
 	Thread.sleep(3000);
-	deletesupp.click();
-	deletesuppok.click();
-	delsuppok.click();
+	/*
+	 * deletesupp.click(); deletesuppok.click(); delsuppok.click();
+	 */
 	}
 	
 	
@@ -327,6 +329,11 @@ public class SupplierOnlyPage extends BaseClass {
 			date1.sendKeys(date11);
 			addnewitem1.click();
 			ac.selByVisibleText(selitem1, itemname1);
+			try {
+				miniumquanityok.click();
+			} catch (Exception e) {
+				System.out.println(e);
+			}
 			//itemdetailsok.click();
 			quantity.sendKeys(quantity1);
 			comments.sendKeys(comments1);

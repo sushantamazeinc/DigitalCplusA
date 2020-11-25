@@ -74,6 +74,7 @@ public class AnnouncementPage extends BaseClass {
 		venu.sendKeys(venus);
 		attachment.click();
 		ad.upload();
+		Thread.sleep(7000);
 		save.click();
 		saveok.click();
 		search.sendKeys(announcements);

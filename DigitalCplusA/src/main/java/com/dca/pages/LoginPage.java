@@ -42,7 +42,7 @@ public class LoginPage extends BaseClass
 		pswd.sendKeys(prop.getProperty("password"));
 		signin.click();
 		String verify= projecttest.getText();
-		Assert.assertEquals(verify, "PROJECT");
+		Assert.assertEquals(verify, "PROJEC");
 		return new PropertyActionsPage();
 		
 	

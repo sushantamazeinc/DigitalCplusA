@@ -72,7 +72,7 @@ public void setup() {
 
 @AfterMethod()
 public void tearDown() {
-	getDriver().quit();
+	//getDriver().quit();
 }
 
 }

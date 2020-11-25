@@ -28,16 +28,16 @@ public class SupplierInvoice extends BaseClass {
 	// WebElement selsupplier2;
 	@FindBy(css = "#ddl_invoiceSearchPO")
 	WebElement searchpono;
-	@FindBy(css="#txt_purchaseitemDate")
+	@FindBy(css = "#txt_purchaseitemDate")
 	WebElement date;
 
 	@FindBy(xpath = "//body/app-root[1]/div[2]/div[2]/div[1]/app-update-vendor-invoice[1]/div[1]/div[3]/div[2]/div[1]/div[2]/input[1]")
 	WebElement invoiceno;
 	@FindBy(xpath = "//body/app-root[1]/div[2]/div[2]/div[1]/app-update-vendor-invoice[1]/div[1]/div[3]/div[2]/div[1]/div[3]/input[1]")
 	WebElement suppliercontact;
-	@FindBy(xpath="//p[contains(text(),'Drop your files here (or click)')]")
+	@FindBy(xpath = "//p[contains(text(),'Drop your files here (or click)')]")
 	WebElement attachement;
-	
+
 	@FindBy(xpath = "//body/app-root[1]/div[2]/div[2]/div[1]/app-update-vendor-invoice[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/select[1]")
 	WebElement itemname;
 	@FindBy(xpath = "//body/app-root[1]/div[2]/div[2]/div[1]/app-update-vendor-invoice[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/input[1]")
@@ -75,7 +75,7 @@ public class SupplierInvoice extends BaseClass {
 	@FindBy(xpath = "//button[contains(text(),'Payment Reports')]")
 	WebElement paymentreports;
 
-	@FindBy(css="#inlineradio02")
+	@FindBy(css = "#inlineradio02")
 	WebElement pay;
 	@FindBy(xpath = "//*[@id=\"ddl_VendorName\"]")
 	WebElement selpaymenttype;
@@ -99,7 +99,7 @@ public class SupplierInvoice extends BaseClass {
 	WebElement selsupplier12;
 	@FindBy(xpath = "//tbody/tr[1]/td[7]/div[1]/div[2]/a[1]/i[1]")
 	WebElement download1;
-	@FindBy(partialLinkText = "Supplier Retu")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[11]/ul[1]/li[5]/a[1]")
 	WebElement supplierreturn;
 	@FindBy(xpath = "//button[contains(text(),'Add New')]")
 	WebElement addnew;
@@ -127,7 +127,7 @@ public class SupplierInvoice extends BaseClass {
 	WebElement returnok;
 
 	///////////////////////////////////////////////////////////
-	@FindBy(xpath = "//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[12]/ul[1]/li[4]/a[1]")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[10]/ul[1]/li[4]/a[1]")
 	WebElement inventory1;
 	@FindBy(css = "#btn_button")
 	WebElement addnewinventory;
@@ -200,128 +200,135 @@ public class SupplierInvoice extends BaseClass {
 			String mfname1, String partno1, String actualquanity1, String mrp1, String discount1, String comments1,
 			String selpaymenttype1, String comment1, String returnquanity1, String remarks1, String address11,
 			String floor1, String location1, String currentquanity1, String minimumquantity, String expirydate12,
-			String assignedto1, String description1, String selcat, String selty, String staff1) throws IOException, InterruptedException, AWTException
-			 {
+			String assignedto1, String description1, String selcat, String selty, String staff1)
+			throws IOException, InterruptedException, AWTException {
 		ac.selByVisibleText(selproject, selproject1);
 		// clicking.click();
 
 		
-		 addsupplierinvoice.click(); 
+		  addsupplierinvoice.click(); 
+		  Thread.sleep(3000); 
+		  Select select22=new Select(selsupplier); 
+		  int selectoptions= select22.getOptions().size();
+		  select22.selectByIndex(selectoptions - 1);
+		  //selsupplier.click();
 		 Thread.sleep(3000);
-		 Select select22=new Select(selsupplier);
-		 int selectoptions= select22.getOptions().size();
-		 select22.selectByIndex(selectoptions - 1); 
-		 //selsupplier.click();
-		 Thread.sleep(3000);
-		 Select select23=new Select(searchpono);
-		 int selectop=select23.getOptions().size(); 
+		 Select select23=new Select(searchpono); 
+		 int selectop=select23.getOptions().size();
 		 select23.selectByIndex(selectop - 1);
 		  //ac.selByVisibleText(selsupplier2, suppname);
 		  //ac.selByVisibleText(searchpono, ponumbb); 
 		 date.sendKeys(date1);
 		  invoiceno.sendKeys(invoiceno1); 
-		  attachement.click();
-		  Thread.sleep(3000);
-		  ac.upload();
+		  // attachement.click(); 
+		  // Thread.sleep(3000);
+		  // ac.upload(); 
 		  Thread.sleep(5000);
 		  ac.selByIndex(itemname, 1);
-		  warrentydate.sendKeys(warrentydate1); 
+		  warrentydate.sendKeys(warrentydate1);
 		  mfname.sendKeys(mfname1);
-		  partno.sendKeys(partno1); 
+		  partno.sendKeys(partno1);
 		  actualquantity.sendKeys(actualquanity1);
 		  mrp.sendKeys(mrp1);
-		  discount.sendKeys(discount1);
+		  discount.sendKeys(discount1); 
 		  comments.sendKeys(comments1); 
-		  save1.click(); 
-		  saveok1.click();
-		  Thread.sleep(3000);
-		  search1.sendKeys(invoiceno1);
-		  //ac.selByVisibleText(selsuppliers3, text);
-		  download12.click();
+		  save1.click();
+		  saveok1.click(); 
 		  Thread.sleep(3000); 
+		  search1.sendKeys(invoiceno1);
+		  //ac.selByVisibleText(selsuppliers3, text); 
+		  download12.click();
+		  Thread.sleep(5000); 
 		  supplieroutstanding.click();
-		  Thread.sleep(3000); Select
-		  select27=new Select(selsuppliers4);
+		  Thread.sleep(3000); 
+		  Select select27=new Select(selsuppliers4); 
 		  int sel27=select27.getOptions().size();
 		  select27.selectByIndex(sel27 - 1);
 		  
-		  //ac.selByVisibleText(selsuppliers4, text);
+		  //ac.selByVisibleText(selsuppliers4, text); 
 		  Robot robot=new Robot();
-		  for(int i=0;i<2;i++) {
-		  robot.keyPress(KeyEvent.VK_PAGE_UP);
+		  for(int i=0;i<2;i++) 
+		  { 
+			  robot.keyPress(KeyEvent.VK_PAGE_UP);
+			  Thread.sleep(3000);
+			  }
+		  //export1.click();
 		  Thread.sleep(3000);
-		  }
-		  //export1.click(); 
-		  Thread.sleep(3000);
-		  pay.click();
-		  Thread.sleep(3000);
+		  pay.click(); 
+		  Thread.sleep(3000); 
 		  Robot robot1=new Robot();
-		  for(int i=0;i<1;i++) {
+		  for(int i=0;i<1;i++)
+		  {
 		  robot1.keyPress(KeyEvent.VK_PAGE_DOWN);
-		  Thread.sleep(3000);
+		  Thread.sleep(3000); 
 		  }
-		  ac.selByVisibleText(selpaymenttype, selpaymenttype1); 
-		  String
-		  payable=getamount.getAttribute("value");
+		  ac.selByVisibleText(selpaymenttype, selpaymenttype1);
+		  String payable=getamount.getAttribute("value"); 
 		  payableamount.clear();
-		  Thread.sleep(3000);
+		  Thread.sleep(3000); 
 		  payableamount.sendKeys(payable);
-		  comment.sendKeys(comment1);
+		  comment.sendKeys(comment1); 
 		  payment.click();
 		  paymentok.click();
 		  //paymentreports.click(); 
 		  Thread.sleep(3000); 
-		  ac.selByIndex(selsupplier12,1); 
-		  Thread.sleep(3000); export12.click();
+		  ac.selByIndex(selsupplier12,1);
+		  Thread.sleep(3000); 
+		  export12.click(); 
 		  //ac.selByIndex(selsupplier12, 1);
 		  //ac.selByVisibleText(selsupplier12, text); 
 		  download1.click();
 		  Thread.sleep(3000);
-		  
-		  
-		  supplierreturn.click();
-		  Robot robot11=new Robot();
-		  for(int i=0;i<1;i++) {
-		  robot11.keyPress(KeyEvent.VK_PAGE_UP); 
-		  Thread.sleep(3000);
-		  } addnew.click();
-		  Thread.sleep(3000);
-		  //ac.selByIndex(selsupplier123, 11); Thread.sleep(3000);
-		  Select select28=new Select(selsupplier123);
-		  int sel289=select28.getOptions().size(); 
-		  select28.selectByIndex(sel289-1);
-		  
-		  
-		  
-		  Select select30=new Select(selinvoicenumber); 
-		  int  sel30=select30.getOptions().size(); 
-		  select30.selectByIndex(sel30-1);
-		  //ac.selByVisibleText(selsupplier123, text);
-		  //ac.selByVisibleText(selinvoicenumber, invoiceno1);
-		  //ac.selByIndex(selinvoicenumber, 1); 
-		  returnquanity.sendKeys(returnquanity1);
-		  remarks.sendKeys(remarks1); 
-		  sel.click(); 
-		  returnpro.click();
-		  yesreturn.click();
-		  returnok.click(); 
-		  Thread.sleep(3000);
 		 
-		assertclick.click();
+		Robot robot411 = new Robot();
+		for (int i = 0; i < 1; i++) {
+			robot411.keyPress(KeyEvent.VK_PAGE_DOWN);
+			Thread.sleep(3000);
+		}
+
+		supplierreturn.click();
 		Robot robot111 = new Robot();
+		for (int i = 0; i < 1; i++) {
+			robot111.keyPress(KeyEvent.VK_PAGE_UP);
+			Thread.sleep(3000);
+		}
+		addnew.click();
+		Thread.sleep(3000);
+		// ac.selByIndex(selsupplier123, 11); 
+		Thread.sleep(3000);
+		Select select28 = new Select(selsupplier123);
+		int sel289 = select28.getOptions().size();
+		select28.selectByIndex(sel289 - 1);
+
+		Select select30 = new Select(selinvoicenumber);
+		int sel30 = select30.getOptions().size();
+		select30.selectByIndex(sel30 - 1);
+		// ac.selByVisibleText(selsupplier123, text);
+		// ac.selByVisibleText(selinvoicenumber, invoiceno1);
+		// ac.selByIndex(selinvoicenumber, 1);
+		returnquanity.sendKeys(returnquanity1);
+		remarks.sendKeys(remarks1);
+		sel.click();
+		returnpro.click();
+		yesreturn.click();
+		returnok.click();
+		Thread.sleep(3000);
+
+		assertclick.click();
+		Robot robot1111 = new Robot();
 		for (int i = 0; i < 2; i++) {
-			robot111.keyPress(KeyEvent.VK_PAGE_DOWN);
+			robot1111.keyPress(KeyEvent.VK_PAGE_DOWN);
 			Thread.sleep(3000);
 		}
 
 		inventorylink.click();
 		inventory1.click();
-		Robot robot1111 = new Robot();
+		Robot robot11111 = new Robot();
 		for (int i = 0; i < 2; i++) {
-			robot1111.keyPress(KeyEvent.VK_PAGE_UP);
+			robot11111.keyPress(KeyEvent.VK_PAGE_UP);
 			Thread.sleep(3000);
 		}
-
+Thread.sleep(5000);
 		addnewinventory.click();
 		Thread.sleep(3000);
 		Select select29 = new Select(itemname1);
@@ -339,6 +346,7 @@ public class SupplierInvoice extends BaseClass {
 		description.sendKeys(description1);
 		invoiceattachment.click();
 		ac.upload();
+		Thread.sleep(7000);
 		save123.click();
 		saveok12.click();
 		Thread.sleep(3000);
@@ -359,7 +367,7 @@ public class SupplierInvoice extends BaseClass {
 		// ac.selByVisibleText(staff, staff1);
 		ac.selByIndex(staff, 1);
 		Thread.sleep(3000);
-		
+
 		saveconsume.click();
 		// Thread.sleep(3000);
 		// consumeok.click();

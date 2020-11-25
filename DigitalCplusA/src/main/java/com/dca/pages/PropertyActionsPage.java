@@ -70,7 +70,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement filedelok;
 	@FindBy(xpath = "//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[2]/a[1]")
 	WebElement dropconstructionproject;
-	@FindBy(xpath = "//a[contains(text(),'Project Files')]")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[1]/ul[1]/li[2]/a[1]")
 	WebElement selprojectfile;
 	@FindBy(xpath = "//a[@href='#/ArchitecturalProjectTimelineDasboard']")
 	WebElement selprojecttimeline;
@@ -83,7 +83,7 @@ public class PropertyActionsPage extends BaseClass {
 	@FindBy(linkText = "Project Emails")
 
 	WebElement projectemails;
-	@FindBy(xpath = "//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[6]/ul[1]/li[1]/a[1]")
+	@FindBy(linkText = "Project Emails")
 	WebElement projectmail;
 	@FindBy(linkText = "Locator Request")
 	WebElement locatorrequest;
@@ -112,7 +112,7 @@ public class PropertyActionsPage extends BaseClass {
 	@FindBy(xpath = "//a[contains(text(),'Item Master')]")
 	WebElement itemMaster;
 
-	@FindBy(linkText = "Suppliers")
+	@FindBy(xpath="//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[11]/a[1]")
 	WebElement suppliers;
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[11]/ul[1]/li[1]/a[1]")
 	WebElement supply;
@@ -154,9 +154,10 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement droptechsupport;
 
 	///////////////////////////
-	@FindBy(xpath="//a[@href='#pageSubmenu']")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[1]/a[1]")
 	WebElement constpro;
-
+@FindBy(linkText ="Project Files")
+WebElement profiles;
 	////////////////////////////////////////
 
 	public PropertyActionsPage() {
@@ -209,7 +210,7 @@ public class PropertyActionsPage extends BaseClass {
 
 		addPhotoNew.click();
 		ac.upload();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 
 		addphotobtn.click();
 		addphotook.click();
@@ -257,7 +258,7 @@ public class PropertyActionsPage extends BaseClass {
 	}
 
 	public ProjectEmailsPage project_emails() {
-		projectemails.click();
+		profiles.click();
 		projectmail.click();
 		return new ProjectEmailsPage();
 

@@ -28,7 +28,7 @@ public class Communication extends BaseClass{
 	WebElement subject;
 	@FindBy(xpath="//select[@id='StaffID']")
 	WebElement from;
-	@FindBy(xpath="//select[@id='To']")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-transmittals[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[4]/div[3]/select[1]")
 	WebElement to;
 	@FindBy(xpath="//input[@id='txt_SentDate']")
 	WebElement date;
@@ -97,6 +97,7 @@ public class Communication extends BaseClass{
 		
 		  subject.sendKeys(subject1);
 		  ac.selByVisibleText(from, from1);
+		  Thread.sleep(3000);
 		  ac.selByVisibleText(to, to1);
 		  date.sendKeys(datesend);
 		  description.sendKeys(desc); 

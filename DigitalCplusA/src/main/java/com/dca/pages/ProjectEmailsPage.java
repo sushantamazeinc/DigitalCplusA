@@ -1,5 +1,7 @@
 package com.dca.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,8 +21,10 @@ public class ProjectEmailsPage extends BaseClass {
 	WebElement subject;
 	@FindBy(xpath="//input[@id='Date']")
 	WebElement date;
-	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-project-email[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[5]/div[3]/input[1]")
+	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-project-email[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[5]/div[3]/ngx-dropzone[1]/div[1]")
 	WebElement emailattach;
+	@FindBy(xpath="//button[contains(text(),'OK')]")
+	WebElement attactmenisbig;
 	@FindBy(xpath="//button[contains(text(),'Save')]")
 	WebElement save;
 	//put some sleep
@@ -42,13 +46,18 @@ public class ProjectEmailsPage extends BaseClass {
 		
 	}
 	
-	public void projectemail(String selpro,String recipiet,String sub,String date1) throws InterruptedException {
+	public void projectemail(String selpro,String recipiet,String sub,String date1) throws InterruptedException, IOException {
 		ac.selByVisibleText(selproject, selpro);
 		addnew.click();
 		recipient.sendKeys(recipiet);
 		subject.sendKeys(sub);
 		date.sendKeys(date1);
-		emailattach.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		
+		//emailattach.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		emailattach.click();
+		ac.upload();
+		Thread.sleep(7000);
+		attactmenisbig.click();
 		save.click();
 		Thread.sleep(5000);
 		ok.click();
