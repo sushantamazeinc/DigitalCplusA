@@ -15,6 +15,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.dca.pages.LoginPage;
 import com.dca.utility.ExtentManager;
 
@@ -23,6 +24,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	
 	public LoginPage loginpage;
+	public static ExtentTest test;
 	
 	public static Properties prop;
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();

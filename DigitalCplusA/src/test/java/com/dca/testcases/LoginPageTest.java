@@ -8,7 +8,7 @@ import com.dca.base.BaseClass;
 import com.dca.pages.LoginPage;
 import com.dca.utility.Log;
 
-public class LoginPageTest extends BaseClass {
+public class LoginPageTest extends BaseClass  {
 	
 	
 	@Test()

@@ -6,11 +6,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.ITestListener;
 
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
+import com.dca.utility.Log;
 
-public class LoginPage extends BaseClass 
+public class LoginPage extends BaseClass implements ITestListener
 {
+	ListenerClass lc=new ListenerClass();
 	WebDriver driver;
 	//WebElement selcompany=driver.findElement(By.id("ddl_LoginLanguageName"));
 	@FindBy(id="ddl_LoginLanguageName")
@@ -39,10 +43,14 @@ public class LoginPage extends BaseClass
 		Select select1=new Select(Seltype);
 		select1.selectByIndex(2);
 		uname.sendKeys(prop.getProperty("username"));
+		
+		lc.logs("Username is"+" "+prop.getProperty("username"));
 		pswd.sendKeys(prop.getProperty("password"));
+		lc.logs("Password is"+" "+prop.getProperty("password"));
 		signin.click();
+		lc.logs("Clicked On SignIn");
 		String verify= projecttest.getText();
-		Assert.assertEquals(verify, "PROJEC");
+		Assert.assertEquals(verify, "PROJECT");
 		return new PropertyActionsPage();
 		
 	

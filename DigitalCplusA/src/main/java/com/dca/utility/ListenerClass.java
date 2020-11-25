@@ -65,4 +65,7 @@ public class ListenerClass extends ExtentManager implements ITestListener {
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
 	}
+	public void logs(String details) {
+		test.info(details);
+	}
 }

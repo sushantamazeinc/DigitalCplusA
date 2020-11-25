@@ -26,10 +26,12 @@ public class ExtentManager {
 		
 		extent.setSystemInfo("HostName", "AmazeInc");
 		extent.setSystemInfo("ProjectName", "DigiC+A");
-		extent.setSystemInfo("Tester", "Test");
+		extent.setSystemInfo("Tester", "Anjali & Sushant");
 		extent.setSystemInfo("OS", "Win10");
 		extent.setSystemInfo("Browser", "Chrome");
 	}
+	
+	
 	public static void endReport() {
 		extent.flush();
 	}
