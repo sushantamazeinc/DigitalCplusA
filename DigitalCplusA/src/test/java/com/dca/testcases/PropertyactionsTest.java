@@ -19,7 +19,7 @@ public class PropertyactionsTest extends BaseClass{
 	PropertyActionsPage projectpage;
 	ActionDriver ac=new ActionDriver();
 	@Test()
-	public void adnew() throws InterruptedException, IOException {
+	public void propertyActions() throws InterruptedException, IOException {
 		Log.startTestCase("propertyactions");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
@@ -35,7 +35,7 @@ public class PropertyactionsTest extends BaseClass{
 
 	@AfterMethod()
 	public void tearDown() {
-	//getDriver().quit();
+	getDriver().quit();
 	
 	
 	}

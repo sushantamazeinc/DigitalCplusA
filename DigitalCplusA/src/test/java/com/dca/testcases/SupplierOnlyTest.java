@@ -33,6 +33,7 @@ public void supplier_only_test(String selproject1, String name1, String email11,
 	Log.startTestCase("supplier");
 	LoginPage login=new LoginPage();
 	projectpage=login.login();
+	
 	WebElement selectproject=	getDriver().findElement(By.xpath("//select[@id='ProjectID']"));
 	ac.selByVisibleText(selectproject, selproject1);
 	Thread.sleep(3000);
@@ -41,7 +42,7 @@ public void supplier_only_test(String selproject1, String name1, String email11,
 					website1, contactname1, suppliertype1, bankname1, Accountno1, accounttype1, 
 					bankaddress1, btxn1, branchname1, paymentterms1, creditlimit1, creditdays1, 
 					supplierservices, suppliersupplies);
-	
+			Log.endTestCase("supplier ");
 	
 }
 	@Test(priority = 2,dataProvider = "Inventory", dataProviderClass = DataProviders.class)
@@ -51,6 +52,7 @@ public void supplier_only_test(String selproject1, String name1, String email11,
 			String cfo1,String servicedesc1,String financedirector1,String selsupptypee) throws InterruptedException, AWTException {
 		LoginPage lp=new LoginPage();
 		projectpage=lp.login();
+		Log.startTestCase("item master");
 		WebElement selectproject=	getDriver().findElement(By.xpath("//select[@id='ProjectID']"));
 		ac.selByVisibleText(selectproject, selproject1);
 		Thread.sleep(3000);
@@ -59,7 +61,7 @@ public void supplier_only_test(String selproject1, String name1, String email11,
 				itemdescri1, expirydate1, mrp1, selpotype1, date11,
 				quantity1, comments1, serviceamount1, financemanager1, 
 				cfo1, servicedesc1, financedirector1,selsupptypee);
-		Log.endTestCase("supplier ");
+		Log.endTestCase("item master ");
 		
 		
 	}
@@ -72,7 +74,7 @@ public void setup() {
 
 @AfterMethod()
 public void tearDown() {
-	//getDriver().quit();
+	getDriver().quit();
 }
 
 }

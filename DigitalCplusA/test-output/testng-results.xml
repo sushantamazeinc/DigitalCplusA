@@ -1,38 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results skipped="0" failed="14" ignored="48" total="74" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-24T19:21:48 IST" name="Suite" finished-at="2020-11-24T19:22:18 IST" duration-ms="30124">
+  <suite name="Suite" duration-ms="1713971" started-at="2020-11-25T17:45:06 IST" finished-at="2020-11-25T18:13:40 IST">
     <groups>
     </groups>
-    <test started-at="2020-11-24T19:21:48 IST" name="Test" finished-at="2020-11-24T19:22:18 IST" duration-ms="30124">
-      <class name="com.dca.testcases.LoginPageTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.dca.testcases.LoginPageTest@77eca502]" started-at="2020-11-24T19:21:47 IST" name="loadConfig" finished-at="2020-11-24T19:21:48 IST" duration-ms="332" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.dca.testcases.LoginPageTest@77eca502]" started-at="2020-11-24T19:21:48 IST" name="setup" finished-at="2020-11-24T19:22:08 IST" duration-ms="20393" status="PASS">
+    <test name="Test" duration-ms="1713971" started-at="2020-11-25T17:45:06 IST" finished-at="2020-11-25T18:13:40 IST">
+      <class name="com.dca.testcases.PunchlistMastersTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.PunchlistMastersTest@51e2adc7]" name="setup" is-config="true" duration-ms="7813" started-at="2020-11-25T17:59:02 IST" finished-at="2020-11-25T17:59:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest()[pri:0, instance:com.dca.testcases.LoginPageTest@77eca502]" started-at="2020-11-24T19:22:08 IST" name="loginTest" finished-at="2020-11-24T19:22:16 IST" duration-ms="8172" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="punchlistmaster(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.PunchlistMastersTest@51e2adc7]" name="punchlistmaster" duration-ms="40305" started-at="2020-11-25T17:59:10 IST" data-provider="Punchlistmaster" finished-at="2020-11-25T17:59:50 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[floor checking]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[manila]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[floor checking at manila]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[internal]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[floor tiles checking]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[expected [PROJEC] but found [PROJECT]]]>
+              <![CDATA[element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63007}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4e0344ce22751e4bbefe6868dc0d0558]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [PROJEC] but found [PROJECT]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at com.dca.pages.LoginPage.login(LoginPage.java:45)
-at com.dca.testcases.LoginPageTest.loginTest(LoginPageTest.java:18)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63007}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4e0344ce22751e4bbefe6868dc0d0558
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.dca.pages.PropertyActionsPage.droppunchlistmastert(PropertyActionsPage.java:433)
+at com.dca.testcases.PunchlistMastersTest.punchlistmaster(PunchlistMastersTest.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
 at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
@@ -41,7 +93,7 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.util.ArrayList.forEach(Unknown Source)
 at org.testng.TestRunner.privateRun(TestRunner.java:766)
 at org.testng.TestRunner.run(TestRunner.java:587)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
@@ -59,19 +111,2403 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dca.testcases.LoginPageTest@77eca502]" started-at="2020-11-24T19:22:17 IST" name="tearDown" finished-at="2020-11-24T19:22:18 IST" duration-ms="853" status="PASS">
+        </test-method> <!-- punchlistmaster -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.PunchlistMastersTest@51e2adc7]" name="tearDown" is-config="true" duration-ms="743" started-at="2020-11-25T17:59:51 IST" finished-at="2020-11-25T17:59:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.dca.testcases.LoginPageTest@77eca502]" started-at="2020-11-24T19:22:18 IST" name="afterSuite" finished-at="2020-11-24T19:22:18 IST" duration-ms="456" status="PASS">
+      </class> <!-- com.dca.testcases.PunchlistMastersTest -->
+      <class name="com.dca.testcases.BudgetDashboardTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.BudgetDashboardTest@467aecef]" name="setup" is-config="true" duration-ms="9483" started-at="2020-11-25T17:50:58 IST" finished-at="2020-11-25T17:51:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="budgetDTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.BudgetDashboardTest@467aecef]" name="budgetDTest" duration-ms="42798" started-at="2020-11-25T17:51:08 IST" data-provider="BudgetDashboard" finished-at="2020-11-25T17:51:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SCHEMATIC DESIGN PHASE]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[none]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62442}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 97a5201520f4871c79938e2a63c9824a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62442}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 97a5201520f4871c79938e2a63c9824a
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.dca.pages.PropertyActionsPage.dropbupage(PropertyActionsPage.java:349)
+at com.dca.testcases.BudgetDashboardTest.budgetDTest(BudgetDashboardTest.java:31)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- budgetDTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.BudgetDashboardTest@467aecef]" name="tearDown" is-config="true" duration-ms="927" started-at="2020-11-25T17:51:51 IST" finished-at="2020-11-25T17:51:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.BudgetDashboardTest -->
+      <class name="com.dca.testcases.ProjectActivitiesTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.ProjectActivitiesTest@36b4cef0]" name="setup" is-config="true" duration-ms="7877" started-at="2020-11-25T18:05:52 IST" finished-at="2020-11-25T18:06:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="projectactivitytest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ProjectActivitiesTest@36b4cef0]" name="projectactivitytest" duration-ms="179837" started-at="2020-11-25T18:06:00 IST" data-provider="ProjectActivities" finished-at="2020-11-25T18:09:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[PRE-DESIGN PHASE ]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Architect ]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ann Dumaual ]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[11122020]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[15122020]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[none]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[20122020]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- projectactivitytest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.ProjectActivitiesTest@36b4cef0]" name="tearDown" is-config="true" duration-ms="691" started-at="2020-11-25T18:09:00 IST" finished-at="2020-11-25T18:09:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.ProjectActivitiesTest -->
+      <class name="com.dca.testcases.FieldManagementToolTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.FieldManagementToolTest@1a8a8f7c]" name="setup" is-config="true" duration-ms="7948" started-at="2020-11-25T17:59:52 IST" finished-at="2020-11-25T18:00:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="fieldmanagetool(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.FieldManagementToolTest@1a8a8f7c]" name="fieldmanagetool" duration-ms="71915" started-at="2020-11-25T18:00:00 IST" data-provider="FieldManagementTool" finished-at="2020-11-25T18:01:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Floor 1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[floor checking]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Valerie Valdez]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[15122020]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[17122020]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[220]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Assigned]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Completed]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate element with text: floor checking
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: floor checking
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+at com.dca.action.ActionDriver.selByVisibleText(ActionDriver.java:28)
+at com.dca.pages.FieldManagementToolPage.fieldmanage(FieldManagementToolPage.java:65)
+at com.dca.testcases.FieldManagementToolTest.fieldmanagetool(FieldManagementToolTest.java:33)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fieldmanagetool -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.FieldManagementToolTest@1a8a8f7c]" name="tearDown" is-config="true" duration-ms="676" started-at="2020-11-25T18:01:12 IST" finished-at="2020-11-25T18:01:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.FieldManagementToolTest -->
+      <class name="com.dca.testcases.ClientContactTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.ClientContactTest@7a187f14]" name="setup" is-config="true" duration-ms="8281" started-at="2020-11-25T17:56:59 IST" finished-at="2020-11-25T17:57:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="client_contact(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ClientContactTest@7a187f14]" name="client_contact" duration-ms="35933" started-at="2020-11-25T17:57:07 IST" data-provider="ClientContacts" finished-at="2020-11-25T17:57:43 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sushant]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Software Test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[xyz@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1234512345]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- client_contact -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.ClientContactTest@7a187f14]" name="tearDown" is-config="true" duration-ms="675" started-at="2020-11-25T17:57:43 IST" finished-at="2020-11-25T17:57:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.ClientContactTest -->
+      <class name="com.dca.testcases.LabourTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.LabourTest@3d921e20]" name="setup" is-config="true" duration-ms="9319" started-at="2020-11-25T18:04:58 IST" finished-at="2020-11-25T18:05:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="labour_test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.LabourTest@3d921e20]" name="labour_test" duration-ms="44131" started-at="2020-11-25T18:05:07 IST" data-provider="Labour" finished-at="2020-11-25T18:05:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Architect]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ann Dumaual]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//tbody/tr[2]/td[7]/i[2]"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63499}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: f25ec41edb1dbd5f46d3003d1a174dfe
+*** Element info: {Using=xpath, value=//tbody/tr[2]/td[7]/i[2]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//tbody/tr[2]/td[7]/i[2]"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63499}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: f25ec41edb1dbd5f46d3003d1a174dfe
+*** Element info: {Using=xpath, value=//tbody/tr[2]/td[7]/i[2]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.dca.pages.LabourPage.labour(LabourPage.java:38)
+at com.dca.testcases.LabourTest.labour_test(LabourTest.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- labour_test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.LabourTest@3d921e20]" name="tearDown" is-config="true" duration-ms="760" started-at="2020-11-25T18:05:52 IST" finished-at="2020-11-25T18:05:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.LabourTest -->
+      <class name="com.dca.testcases.AseetsTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.AseetsTest@307f6b8c]" name="setup" is-config="true" duration-ms="28984" started-at="2020-11-25T17:55:47 IST" finished-at="2020-11-25T17:56:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="assets(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.AseetsTest@307f6b8c]" name="assets" duration-ms="41066" started-at="2020-11-25T17:56:16 IST" data-provider="Assets" finished-at="2020-11-25T17:56:57 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Tv]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Electrical]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Floor 1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Electrical]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[samsung]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1111]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[12112020]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[sam]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[sam ele]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[8129981409]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[sam@gmail.com]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[12112021]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[12122020]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[12012021]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[11122]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[20000]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[3 Months Before ]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[Milan Paper Suppliers ]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[new vendor]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Asset"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 839f740c908fedb5db30af18a72b79b2
+*** Element info: {Using=link text, value=Asset}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Asset"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 839f740c908fedb5db30af18a72b79b2
+*** Element info: {Using=link text, value=Asset}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
+at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.dca.pages.PropertyActionsPage.dropasset(PropertyActionsPage.java:400)
+at com.dca.testcases.AseetsTest.assets(AseetsTest.java:33)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assets -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.AseetsTest@307f6b8c]" name="tearDown" is-config="true" duration-ms="766" started-at="2020-11-25T17:56:58 IST" finished-at="2020-11-25T17:56:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.AseetsTest -->
+      <class name="com.dca.testcases.SupplierOnlyTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.SupplierOnlyTest@2173f6d9]" name="setup" is-config="true" duration-ms="8735" started-at="2020-11-25T17:54:25 IST" finished-at="2020-11-25T17:54:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="supplier_only_test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.dca.testcases.SupplierOnlyTest@2173f6d9]" name="supplier_only_test" duration-ms="24765" started-at="2020-11-25T17:54:33 IST" data-provider="SupplierOnly" finished-at="2020-11-25T17:54:58 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vendor company]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[xyz@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234512345]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[LancapeYard Area]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[xyz.com]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Anjali]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Civil Contractor]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[SBI]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[123123]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Savings Account]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[1200]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[45]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[Civil Contractor Service]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- supplier_only_test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.SupplierOnlyTest@2173f6d9]" name="tearDown" is-config="true" duration-ms="690" started-at="2020-11-25T17:54:58 IST" finished-at="2020-11-25T17:54:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.SupplierOnlyTest@2173f6d9]" name="setup" is-config="true" duration-ms="9675" started-at="2020-11-25T17:54:59 IST" finished-at="2020-11-25T17:55:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="inventory(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.dca.testcases.SupplierOnlyTest@2173f6d9]" name="inventory" duration-ms="36064" started-at="2020-11-25T17:55:09 IST" data-provider="Inventory" finished-at="2020-11-25T17:55:45 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Drawing Materials]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Drawing]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[mobile]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[20112020]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Inventory PO]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[13122020]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[5000.0]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[rahul]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Sanath]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Testing ]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Srikanth]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[Civil Contractor]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62719}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 27e56d2f3f027377607b1b95dc1cb7a0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62719}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 27e56d2f3f027377607b1b95dc1cb7a0
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.dca.pages.PropertyActionsPage.inventory(PropertyActionsPage.java:319)
+at com.dca.testcases.SupplierOnlyTest.inventory(SupplierOnlyTest.java:59)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inventory -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.SupplierOnlyTest@2173f6d9]" name="tearDown" is-config="true" duration-ms="750" started-at="2020-11-25T17:55:46 IST" finished-at="2020-11-25T17:55:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.SupplierOnlyTest -->
+      <class name="com.dca.testcases.LoginPageTest">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.LoginPageTest@480bdb19]" name="loadConfig" is-config="true" duration-ms="249" started-at="2020-11-25T17:45:06 IST" finished-at="2020-11-25T17:45:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.LoginPageTest@480bdb19]" name="setup" is-config="true" duration-ms="9142" started-at="2020-11-25T17:45:06 IST" finished-at="2020-11-25T17:45:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.dca.testcases.LoginPageTest@480bdb19]" name="loginTest" duration-ms="2536" started-at="2020-11-25T17:45:16 IST" finished-at="2020-11-25T17:45:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.LoginPageTest@480bdb19]" name="tearDown" is-config="true" duration-ms="1165" started-at="2020-11-25T17:45:18 IST" finished-at="2020-11-25T17:45:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.LoginPageTest@480bdb19]" name="afterSuite" is-config="true" duration-ms="1130" started-at="2020-11-25T18:13:40 IST" finished-at="2020-11-25T18:13:42 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.dca.testcases.LoginPageTest -->
+      <class name="com.dca.testcases.ProjectTeamTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.ProjectTeamTest@3cb1ffe6]" name="setup" is-config="true" duration-ms="7501" started-at="2020-11-25T17:48:19 IST" finished-at="2020-11-25T17:48:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="projectteamtest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ProjectTeamTest@3cb1ffe6]" name="projectteamtest" duration-ms="118160" started-at="2020-11-25T17:48:27 IST" data-provider="ProjectTeam" finished-at="2020-11-25T17:50:25 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Company Staff]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Architect ]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ann Dumaual ]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[main staff]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[hey]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[hey,there]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Valerie Valdez ]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[hey]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- projectteamtest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.ProjectTeamTest@3cb1ffe6]" name="tearDown" is-config="true" duration-ms="690" started-at="2020-11-25T17:50:25 IST" finished-at="2020-11-25T17:50:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.ProjectTeamTest -->
+      <class name="com.dca.testcases.ProjectTimelines1Test">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@4d50efb8]" name="setup" is-config="true" duration-ms="11661" started-at="2020-11-25T17:51:52 IST" finished-at="2020-11-25T17:52:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="protimeline(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@4d50efb8]" name="protimeline" duration-ms="111432" started-at="2020-11-25T17:52:04 IST" data-provider="Projecttimeline" finished-at="2020-11-25T17:53:55 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[PRE-DESIGN PHASE ]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[PAWB]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[20122020]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[21122020]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Valerie Valdez ]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[none]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate element with text: Valerie Valdez 
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Valerie Valdez 
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+at com.dca.action.ActionDriver.selByVisibleText(ActionDriver.java:28)
+at com.dca.pages.ProjectTimelines1page.projecttimeline(ProjectTimelines1page.java:162)
+at com.dca.testcases.ProjectTimelines1Test.protimeline(ProjectTimelines1Test.java:32)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- protimeline -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.ProjectTimelines1Test@4d50efb8]" name="tearDown" is-config="true" duration-ms="669" started-at="2020-11-25T17:53:56 IST" finished-at="2020-11-25T17:53:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.ProjectTimelines1Test -->
+      <class name="com.dca.testcases.LocatorRequestTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.LocatorRequestTest@c46bcd4]" name="setup" is-config="true" duration-ms="10592" started-at="2020-11-25T18:04:11 IST" finished-at="2020-11-25T18:04:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="locator_test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.LocatorRequestTest@c46bcd4]" name="locator_test" duration-ms="15321" started-at="2020-11-25T18:04:21 IST" data-provider="LocatorRequest" finished-at="2020-11-25T18:04:37 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[11112020]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[bangalore]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[meeting]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[12121]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[13121]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- locator_test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.LocatorRequestTest@c46bcd4]" name="tearDown" is-config="true" duration-ms="771" started-at="2020-11-25T18:04:37 IST" finished-at="2020-11-25T18:04:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.LocatorRequestTest -->
+      <class name="com.dca.testcases.Communication_meetingtest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.Communication_meetingtest@631330c]" name="setup" is-config="true" duration-ms="11718" started-at="2020-11-25T18:02:33 IST" finished-at="2020-11-25T18:02:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="comm_meeting(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.Communication_meetingtest@631330c]" name="comm_meeting" duration-ms="16513" started-at="2020-11-25T18:02:44 IST" data-provider="Communicationmeet" finished-at="2020-11-25T18:03:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Virtual Meeting]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[xyz.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Conference]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[15122020]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sushant]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[11111]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[boardmeet]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[bangalore]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Virtual Meeting]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- comm_meeting -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.Communication_meetingtest@631330c]" name="tearDown" is-config="true" duration-ms="813" started-at="2020-11-25T18:03:01 IST" finished-at="2020-11-25T18:03:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.Communication_meetingtest -->
+      <class name="com.dca.testcases.CommunicationTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.CommunicationTest@2353b3e6]" name="setup" is-config="true" duration-ms="8280" started-at="2020-11-25T18:01:13 IST" finished-at="2020-11-25T18:01:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="commtest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.CommunicationTest@2353b3e6]" name="commtest" duration-ms="70508" started-at="2020-11-25T18:01:21 IST" data-provider="Communication" finished-at="2020-11-25T18:02:31 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Valerie Valdez]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sushant]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[11122020]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[tesing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[testing 1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Sushant]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate element with text: Valerie Valdez
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Valerie Valdez
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+at com.dca.action.ActionDriver.selByVisibleText(ActionDriver.java:28)
+at com.dca.pages.Communication.communicate(Communication.java:99)
+at com.dca.testcases.CommunicationTest.commtest(CommunicationTest.java:34)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- commtest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.CommunicationTest@2353b3e6]" name="tearDown" is-config="true" duration-ms="672" started-at="2020-11-25T18:02:32 IST" finished-at="2020-11-25T18:02:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.CommunicationTest -->
+      <class name="com.dca.testcases.StaffLeaveTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.StaffLeaveTest@6f195bc3]" name="setup" is-config="true" duration-ms="8497" started-at="2020-11-25T17:57:44 IST" finished-at="2020-11-25T17:57:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="staff_leave(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.StaffLeaveTest@6f195bc3]" name="staff_leave" duration-ms="68208" started-at="2020-11-25T17:57:53 IST" data-provider="StaffLeave" finished-at="2020-11-25T17:59:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Valerie Valdez]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Casual Leave]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2020-12-11]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2020-12-19]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Ann Dumaual]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Reject]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate element with text: Valerie Valdez
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Valerie Valdez
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+at com.dca.action.ActionDriver.selByVisibleText(ActionDriver.java:28)
+at com.dca.pages.StaffLeavePage.staffleave(StaffLeavePage.java:94)
+at com.dca.testcases.StaffLeaveTest.staff_leave(StaffLeaveTest.java:33)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- staff_leave -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.StaffLeaveTest@6f195bc3]" name="tearDown" is-config="true" duration-ms="650" started-at="2020-11-25T17:59:01 IST" finished-at="2020-11-25T17:59:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.StaffLeaveTest -->
+      <class name="com.dca.testcases.SiteVisitTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.SiteVisitTest@fad74ee]" name="setup" is-config="true" duration-ms="7982" started-at="2020-11-25T18:09:01 IST" finished-at="2020-11-25T18:09:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="sitevisittest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.SiteVisitTest@fad74ee]" name="sitevisittest" duration-ms="180208" started-at="2020-11-25T18:09:09 IST" data-provider="SiteVisits" finished-at="2020-11-25T18:12:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[PRE-DESIGN PHASE ]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Architect ]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ann Dumaual ]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[11122020]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[visited]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[20122020]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sitevisittest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.SiteVisitTest@fad74ee]" name="tearDown" is-config="true" duration-ms="728" started-at="2020-11-25T18:12:09 IST" finished-at="2020-11-25T18:12:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.SiteVisitTest -->
+      <class name="com.dca.testcases.LabourExpencetest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.LabourExpencetest@3234e239]" name="setup" is-config="true" duration-ms="7905" started-at="2020-11-25T18:04:38 IST" finished-at="2020-11-25T18:04:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="labour_expence(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.LabourExpencetest@3234e239]" name="labour_expence" duration-ms="11519" started-at="2020-11-25T18:04:45 IST" data-provider="LabourExpences" finished-at="2020-11-25T18:04:57 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Labour]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[13112020]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Architect]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Ann Dumaual]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- labour_expence -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.LabourExpencetest@3234e239]" name="tearDown" is-config="true" duration-ms="773" started-at="2020-11-25T18:04:57 IST" finished-at="2020-11-25T18:04:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.LabourExpencetest -->
+      <class name="com.dca.testcases.PropertyactionsTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.PropertyactionsTest@7d70d1b1]" name="setup" is-config="true" duration-ms="8085" started-at="2020-11-25T17:46:04 IST" finished-at="2020-11-25T17:46:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="propertyActions()[pri:0, instance:com.dca.testcases.PropertyactionsTest@7d70d1b1]" name="propertyActions" duration-ms="26071" started-at="2020-11-25T17:46:12 IST" finished-at="2020-11-25T17:46:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- propertyActions -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.PropertyactionsTest@7d70d1b1]" name="tearDown" is-config="true" duration-ms="703" started-at="2020-11-25T17:46:38 IST" finished-at="2020-11-25T17:46:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.PropertyactionsTest -->
+      <class name="com.dca.testcases.SupplierInvoiceTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.SupplierInvoiceTest@37d31475]" name="setup" is-config="true" duration-ms="10362" started-at="2020-11-25T18:12:44 IST" finished-at="2020-11-25T18:12:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="supplier_invoice_test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.SupplierInvoiceTest@37d31475]" name="supplier_invoice_test" duration-ms="45415" started-at="2020-11-25T18:12:54 IST" data-provider="SupplierInvoice" finished-at="2020-11-25T18:13:39 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12152020]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[inv11109006]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12152020]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[51]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Cash]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Floor 1]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[bangalore]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[12122020]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[Staff]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[Drawing Materials]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[Drawing]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[Valerie Valdez]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate option with index: 1
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 1
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver
+at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:297)
+at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:172)
+at com.dca.action.ActionDriver.selByIndex(ActionDriver.java:24)
+at com.dca.pages.SupplierInvoice.supplierinvoice(SupplierInvoice.java:235)
+at com.dca.testcases.SupplierInvoiceTest.supplier_invoice_test(SupplierInvoiceTest.java:38)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- supplier_invoice_test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.SupplierInvoiceTest@37d31475]" name="tearDown" is-config="true" duration-ms="670" started-at="2020-11-25T18:13:40 IST" finished-at="2020-11-25T18:13:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.SupplierInvoiceTest -->
+      <class name="com.dca.testcases.MyTaskTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.MyTaskTest@1a1d6a08]" name="setup" is-config="true" duration-ms="10671" started-at="2020-11-25T18:12:10 IST" finished-at="2020-11-25T18:12:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="mytasktest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.MyTaskTest@1a1d6a08]" name="mytasktest" duration-ms="22033" started-at="2020-11-25T18:12:21 IST" data-provider="MyVisit" finished-at="2020-11-25T18:12:43 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[19122020]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[23122020]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[floor checking]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[check properly]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[25122020]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mytasktest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.MyTaskTest@1a1d6a08]" name="tearDown" is-config="true" duration-ms="750" started-at="2020-11-25T18:12:43 IST" finished-at="2020-11-25T18:12:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.MyTaskTest -->
+      <class name="com.dca.testcases.Announcementtest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.Announcementtest@7e2d773b]" name="setup" is-config="true" duration-ms="7901" started-at="2020-11-25T17:53:57 IST" finished-at="2020-11-25T17:54:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="announcements(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.Announcementtest@7e2d773b]" name="announcements" duration-ms="18950" started-at="2020-11-25T17:54:04 IST" data-provider="Announcements" finished-at="2020-11-25T17:54:23 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hoilday]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[holiday for all the staffs due to corona]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[25112020]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1300]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[it will be paid leave]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[office]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[26112020]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element is not clickable at point (157, 627)
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62593}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 27682c184250488ff7e084c484fa4283]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (157, 627)
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62593}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 27682c184250488ff7e084c484fa4283
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.dca.pages.PropertyActionsPage.dropannouncement(PropertyActionsPage.java:421)
+at com.dca.testcases.Announcementtest.announcements(Announcementtest.java:33)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- announcements -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.Announcementtest@7e2d773b]" name="tearDown" is-config="true" duration-ms="662" started-at="2020-11-25T17:54:24 IST" finished-at="2020-11-25T17:54:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.Announcementtest -->
+      <class name="com.dca.testcases.PropertyPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.PropertyPageTest@2a556333]" name="setup" is-config="true" duration-ms="7813" started-at="2020-11-25T17:45:20 IST" finished-at="2020-11-25T17:45:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="propertyreg(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.PropertyPageTest@2a556333]" name="propertyreg" duration-ms="34738" started-at="2020-11-25T17:45:28 IST" data-provider="credentials" finished-at="2020-11-25T17:46:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[bangalore]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234567899]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sushant]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1234567899]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[xyz@gmail.com]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[240]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[90]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- propertyreg -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.PropertyPageTest@2a556333]" name="tearDown" is-config="true" duration-ms="774" started-at="2020-11-25T17:46:03 IST" finished-at="2020-11-25T17:46:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.PropertyPageTest -->
+      <class name="com.dca.testcases.ArchitecturalstageMasterTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.ArchitecturalstageMasterTest@3dfc5fb8]" name="setup" is-config="true" duration-ms="7965" started-at="2020-11-25T17:50:26 IST" finished-at="2020-11-25T17:50:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="stagemaster(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ArchitecturalstageMasterTest@3dfc5fb8]" name="stagemaster" duration-ms="21544" started-at="2020-11-25T17:50:34 IST" data-provider="Architecturalstagemaster" finished-at="2020-11-25T17:50:55 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SCHEMATIC DESIGN PHASE]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[design phase]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <i _ngcontent-efj-c4="" class="far fa-trash-alt" data-toggle="tooltip" title="Delete"></i> is not clickable at point (1243, 339). Other element would receive the click: <td _ngcontent-efj-c4="">...</td>
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62339}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 507320e37025e837c3f8fa18a56f472f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <i _ngcontent-efj-c4="" class="far fa-trash-alt" data-toggle="tooltip" title="Delete"></i> is not clickable at point (1243, 339). Other element would receive the click: <td _ngcontent-efj-c4="">...</td>
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62339}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 507320e37025e837c3f8fa18a56f472f
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.dca.pages.ArchitecturalstagemasterPage.architecturalmaster(ArchitecturalstagemasterPage.java:44)
+at com.dca.testcases.ArchitecturalstageMasterTest.stagemaster(ArchitecturalstageMasterTest.java:32)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stagemaster -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.ArchitecturalstageMasterTest@3dfc5fb8]" name="tearDown" is-config="true" duration-ms="2182" started-at="2020-11-25T17:50:56 IST" finished-at="2020-11-25T17:50:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.ArchitecturalstageMasterTest -->
+      <class name="com.dca.testcases.CasasEmployeeTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.CasasEmployeeTest@2a742aa2]" name="setup" is-config="true" duration-ms="7745" started-at="2020-11-25T17:46:39 IST" finished-at="2020-11-25T17:46:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="casasemployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.CasasEmployeeTest@2a742aa2]" name="casasemployee" duration-ms="91063" started-at="2020-11-25T17:46:47 IST" data-provider="CasasEmployee" finished-at="2020-11-25T17:48:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sushant]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1.234512345E9]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[xyz@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Architect]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Ann Dumaual]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[2020-12-10]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[24]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[15121996]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[23.0]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Full Time Employemnt]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[1.234512345E9]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[45]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[5000]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1200]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'OK')]"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62069}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2a9fa74d0485e702a86094316fd9a85c
+*** Element info: {Using=xpath, value=//button[contains(text(),'OK')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'OK')]"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62069}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2a9fa74d0485e702a86094316fd9a85c
+*** Element info: {Using=xpath, value=//button[contains(text(),'OK')]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.dca.pages.CasasEmployeePage.casasemployee(CasasEmployeePage.java:156)
+at com.dca.testcases.CasasEmployeeTest.casasemployee(CasasEmployeeTest.java:35)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- casasemployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.CasasEmployeeTest@2a742aa2]" name="tearDown" is-config="true" duration-ms="726" started-at="2020-11-25T17:48:18 IST" finished-at="2020-11-25T17:48:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.CasasEmployeeTest -->
+      <class name="com.dca.testcases.ProjectEmailsTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.ProjectEmailsTest@42f93a98]" name="setup" is-config="true" duration-ms="7937" started-at="2020-11-25T18:03:02 IST" finished-at="2020-11-25T18:03:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="emailTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ProjectEmailsTest@42f93a98]" name="emailTest" duration-ms="59929" started-at="2020-11-25T18:03:10 IST" data-provider="ProjectEmails" finished-at="2020-11-25T18:04:10 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Testing123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[11112020]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'OK')]"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63299}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ed61d92ae8342bd2fd2a344f8a4c1f9b
+*** Element info: {Using=xpath, value=//button[contains(text(),'OK')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'OK')]"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63299}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ed61d92ae8342bd2fd2a344f8a4c1f9b
+*** Element info: {Using=xpath, value=//button[contains(text(),'OK')]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.dca.pages.ProjectEmailsPage.projectemail(ProjectEmailsPage.java:68)
+at com.dca.testcases.ProjectEmailsTest.emailTest(ProjectEmailsTest.java:32)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.ProjectEmailsTest@42f93a98]" name="tearDown" is-config="true" duration-ms="645" started-at="2020-11-25T18:04:10 IST" finished-at="2020-11-25T18:04:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dca.testcases.ProjectEmailsTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

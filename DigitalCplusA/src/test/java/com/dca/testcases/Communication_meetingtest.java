@@ -40,7 +40,7 @@ public class Communication_meetingtest extends BaseClass {
 
 	@AfterMethod()
 	public void tearDown() {
-	//getDriver().quit();
+	getDriver().quit();
 	}
 
 }

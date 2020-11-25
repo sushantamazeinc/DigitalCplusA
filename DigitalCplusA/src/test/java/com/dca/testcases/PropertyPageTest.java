@@ -26,8 +26,8 @@ public class PropertyPageTest extends BaseClass{
 		Log.startTestCase("property");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
-		WebElement selectproject=	getDriver().findElement(By.xpath("//select[@id='ProjectID']"));
-		ac.selByVisibleText(selectproject, proname1);
+		//WebElement selectproject=	getDriver().findElement(By.xpath("//select[@id='ProjectID']"));
+		//ac.selByVisibleText(selectproject, proname1);
 		Thread.sleep(5000);
 		propertypage=	projectpage.add();
 		propertypage.details(proname1, proadd1, phone1, conname1, conphone1, mail1, nofloor1, noofunit1, unitfloor1, buildarea1,budgethr1);
@@ -41,7 +41,7 @@ public class PropertyPageTest extends BaseClass{
 
 	@AfterMethod()
 	public void tearDown() {
-	//getDriver().quit();
+	getDriver().quit();
 	}
 	
 

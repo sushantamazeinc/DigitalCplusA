@@ -6,8 +6,8 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-    <class name="com.dca.testcases.LoginPageTest"/> 
-   		<!-- <class name="com.dca.testcases.PropertyPageTest"/>
+<class name="com.dca.testcases.LoginPageTest"/> 
+   		 <class name="com.dca.testcases.PropertyPageTest"/>
       <class name="com.dca.testcases.PropertyactionsTest"/>
        <class name="com.dca.testcases.CasasEmployeeTest"/>
       <class name="com.dca.testcases.ProjectTeamTest"/>
@@ -16,9 +16,9 @@
    
      <class name="com.dca.testcases.ProjectTimelines1Test"/>
       <class name="com.dca.testcases.Announcementtest"/>
-   
+
       <class name="com.dca.testcases.SupplierOnlyTest"/>
-    
+  
          <class name="com.dca.testcases.AseetsTest"/>
      <class name="com.dca.testcases.ClientContactTest"/>
      <class name="com.dca.testcases.StaffLeaveTest"/>
@@ -37,13 +37,13 @@
      
            <class name="com.dca.testcases.ProjectActivitiesTest"/>
         <class name="com.dca.testcases.SiteVisitTest"/>
-            <class name="com.dca.testcases.MyTaskTest"/>
+            <class name="com.dca.testcases.MyTaskTest"/> 
          <class name="com.dca.testcases.SupplierInvoiceTest"/>
-    -->
     
     
     
-  <!--   sushant -->
+    
+
       
     </classes>
   </test> <!-- Test -->

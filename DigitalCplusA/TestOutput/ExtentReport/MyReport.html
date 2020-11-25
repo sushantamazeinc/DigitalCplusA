@@ -54,7 +54,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Nov 24, 2020 07:21:48 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Nov 25, 2020 05:45:06 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,7 +69,8 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -112,10 +113,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='46.154%'><span class='strong'>12</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='53.846%'>14</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -133,17 +134,122 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>loginTest</span>
-						<span class='test-time'>Nov 24, 2020 07:22:08 PM</span>
+						<span class='test-time'>Nov 25, 2020 05:45:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:45:16 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:45:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+530ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:45:18 PM</td>
+				<td class='step-details'>
+						Pass Test case is: loginTest
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>propertyreg</span>
+						<span class='test-time'>Nov 25, 2020 05:45:28 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:45:28 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:46:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+740ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:46:03 PM</td>
+				<td class='step-details'>
+						Pass Test case is: propertyreg
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>propertyActions</span>
+						<span class='test-time'>Nov 25, 2020 05:46:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:46:12 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:46:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+72ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:46:38 PM</td>
+				<td class='step-details'>
+						Pass Test case is: propertyActions
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>casasemployee</span>
+						<span class='test-time'>Nov 25, 2020 05:46:47 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Nov 24, 2020 07:22:08 PM</span>
-	<span class='label end-time'>Nov 24, 2020 07:22:17 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+815ms</span>
+	<span class='label start-time'>Nov 25, 2020 05:46:47 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:48:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 31s+399ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -157,26 +263,1086 @@
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:22:16 PM</td>
+				<td class='timestamp'>5:48:18 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>loginTest - Test Case Failed</span>
+						<span class='badge white-text red'>casasemployee - Test Case Failed</span>
 					
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:22:16 PM</td>
+				<td class='timestamp'>5:48:18 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>java.lang.AssertionError: expected [PROJEC] but found [PROJECT] - Test Case Failed</span>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'OK')]"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62069}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2a9fa74d0485e702a86094316fd9a85c
+*** Element info: {Using=xpath, value=//button[contains(text(),'OK')]} - Test Case Failed</span>
 					
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:22:17 PM</td>
+				<td class='timestamp'>5:48:18 PM</td>
 				<td class='step-details'>
 						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Dell\git\DigitalCplusA\DigitalCplusA\ScreenShots\loginTest_20201124072216.png' src='C:\Users\Dell\git\DigitalCplusA\DigitalCplusA\ScreenShots\loginTest_20201124072216.png' data-src='C:\Users\Dell\git\DigitalCplusA\DigitalCplusA\ScreenShots\loginTest_20201124072216.png'>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\casasemployee_20201125054818.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\casasemployee_20201125054818.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\casasemployee_20201125054818.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>projectteamtest</span>
+						<span class='test-time'>Nov 25, 2020 05:48:27 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:48:27 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:50:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 58s+160ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:50:25 PM</td>
+				<td class='step-details'>
+						Pass Test case is: projectteamtest
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>stagemaster</span>
+						<span class='test-time'>Nov 25, 2020 05:50:34 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:50:34 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:50:56 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+18ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:50:55 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>stagemaster - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:50:55 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <i _ngcontent-efj-c4="" class="far fa-trash-alt" data-toggle="tooltip" title="Delete"></i> is not clickable at point (1243, 339). Other element would receive the click: <td _ngcontent-efj-c4="">...</td>
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62339}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 507320e37025e837c3f8fa18a56f472f - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:50:56 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\stagemaster_20201125055055.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\stagemaster_20201125055055.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\stagemaster_20201125055055.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>budgetDTest</span>
+						<span class='test-time'>Nov 25, 2020 05:51:08 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:51:08 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:51:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 43s+473ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:51:51 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>budgetDTest - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:51:51 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62442}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 97a5201520f4871c79938e2a63c9824a - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:51:51 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\budgetDTest_20201125055151.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\budgetDTest_20201125055151.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\budgetDTest_20201125055151.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>protimeline</span>
+						<span class='test-time'>Nov 25, 2020 05:52:04 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:52:04 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:53:56 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 51s+759ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:53:55 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>protimeline - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:53:55 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Valerie Valdez 
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:53:56 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\protimeline_20201125055355.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\protimeline_20201125055355.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\protimeline_20201125055355.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>announcements</span>
+						<span class='test-time'>Nov 25, 2020 05:54:04 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:54:04 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:54:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+296ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:54:23 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>announcements - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:54:23 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (157, 627)
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62593}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 27682c184250488ff7e084c484fa4283 - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:54:24 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\announcements_20201125055423.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\announcements_20201125055423.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\announcements_20201125055423.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>supplier_only_test</span>
+						<span class='test-time'>Nov 25, 2020 05:54:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:54:33 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:54:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+765ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:54:58 PM</td>
+				<td class='step-details'>
+						Pass Test case is: supplier_only_test
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>inventory</span>
+						<span class='test-time'>Nov 25, 2020 05:55:09 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:55:09 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:55:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+436ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:55:45 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>inventory - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:55:45 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62719}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 27e56d2f3f027377607b1b95dc1cb7a0 - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:55:46 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\inventory_20201125055545.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\inventory_20201125055545.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\inventory_20201125055545.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>assets</span>
+						<span class='test-time'>Nov 25, 2020 05:56:16 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:56:16 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:56:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 42s+201ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:56:57 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>assets - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:56:57 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Asset"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 839f740c908fedb5db30af18a72b79b2
+*** Element info: {Using=link text, value=Asset} - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:56:58 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\assets_20201125055657.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\assets_20201125055657.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\assets_20201125055657.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>client_contact</span>
+						<span class='test-time'>Nov 25, 2020 05:57:07 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:57:07 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:57:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+936ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:57:43 PM</td>
+				<td class='step-details'>
+						Pass Test case is: client_contact
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>staff_leave</span>
+						<span class='test-time'>Nov 25, 2020 05:57:53 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:57:53 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:59:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 8s+527ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:59:01 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>staff_leave - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:59:01 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Valerie Valdez
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:59:01 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\staff_leave_20201125055901.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\staff_leave_20201125055901.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\staff_leave_20201125055901.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>punchlistmaster</span>
+						<span class='test-time'>Nov 25, 2020 05:59:10 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 05:59:10 PM</span>
+	<span class='label end-time'>Nov 25, 2020 05:59:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 41s+7ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:59:50 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>punchlistmaster - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:59:50 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63007}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4e0344ce22751e4bbefe6868dc0d0558 - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:59:51 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\punchlistmaster_20201125055950.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\punchlistmaster_20201125055950.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\punchlistmaster_20201125055950.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>fieldmanagetool</span>
+						<span class='test-time'>Nov 25, 2020 06:00:00 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:00:00 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:01:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 12s+230ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:01:12 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>fieldmanagetool - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:01:12 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: floor checking
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:01:12 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\fieldmanagetool_20201125060112.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\fieldmanagetool_20201125060112.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\fieldmanagetool_20201125060112.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>commtest</span>
+						<span class='test-time'>Nov 25, 2020 06:01:21 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:01:21 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:02:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 10s+833ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:02:31 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>commtest - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:02:31 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Valerie Valdez
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:02:32 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\commtest_20201125060231.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\commtest_20201125060231.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\commtest_20201125060231.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>comm_meeting</span>
+						<span class='test-time'>Nov 25, 2020 06:02:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:02:44 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:03:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+514ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:03:01 PM</td>
+				<td class='step-details'>
+						Pass Test case is: comm_meeting
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>emailTest</span>
+						<span class='test-time'>Nov 25, 2020 06:03:10 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:03:10 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:04:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 0s+296ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:04:10 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>emailTest - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:04:10 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'OK')]"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63299}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ed61d92ae8342bd2fd2a344f8a4c1f9b
+*** Element info: {Using=xpath, value=//button[contains(text(),'OK')]} - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:04:10 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\emailTest_20201125060410.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\emailTest_20201125060410.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\emailTest_20201125060410.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>locator_test</span>
+						<span class='test-time'>Nov 25, 2020 06:04:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:04:21 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:04:37 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+321ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:04:37 PM</td>
+				<td class='step-details'>
+						Pass Test case is: locator_test
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>labour_expence</span>
+						<span class='test-time'>Nov 25, 2020 06:04:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:04:45 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:04:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+519ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:04:57 PM</td>
+				<td class='step-details'>
+						Pass Test case is: labour_expence
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>labour_test</span>
+						<span class='test-time'>Nov 25, 2020 06:05:07 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:05:07 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:05:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+457ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:05:51 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>labour_test - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:05:51 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//tbody/tr[2]/td[7]/i[2]"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\AMAZEI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63499}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: f25ec41edb1dbd5f46d3003d1a174dfe
+*** Element info: {Using=xpath, value=//tbody/tr[2]/td[7]/i[2]} - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:05:52 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\labour_test_20201125060551.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\labour_test_20201125060551.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\labour_test_20201125060551.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>projectactivitytest</span>
+						<span class='test-time'>Nov 25, 2020 06:06:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:06:00 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:09:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 59s+839ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:09:00 PM</td>
+				<td class='step-details'>
+						Pass Test case is: projectactivitytest
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>sitevisittest</span>
+						<span class='test-time'>Nov 25, 2020 06:09:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:09:09 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:12:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 0s+209ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:09 PM</td>
+				<td class='step-details'>
+						Pass Test case is: sitevisittest
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>mytasktest</span>
+						<span class='test-time'>Nov 25, 2020 06:12:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:12:21 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:12:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+33ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:43 PM</td>
+				<td class='step-details'>
+						Pass Test case is: mytasktest
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>supplier_invoice_test</span>
+						<span class='test-time'>Nov 25, 2020 06:12:54 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 25, 2020 06:12:54 PM</span>
+	<span class='label end-time'>Nov 25, 2020 06:13:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 45s+727ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:13:39 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>supplier_invoice_test - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:13:39 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 1
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I5DTRDH', ip: '192.168.1.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ActionDriver - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:13:40 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\supplier_invoice_test_20201125061339.png' src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\supplier_invoice_test_20201125061339.png' data-src='C:\Users\Amaze Inc Lap 03\git\DigitalCplusA\DigitalCplusA\ScreenShots\supplier_invoice_test_20201125061339.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -212,7 +1378,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>26</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -224,19 +1390,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 24, 2020 07:21:48 PM</div>
+					<div class='panel-lead'>Nov 25, 2020 05:45:06 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 24, 2020 07:22:18 PM</div>
+			 		<div class='panel-lead'>Nov 25, 2020 06:13:40 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 30s+422ms</div>
+					<div class='panel-lead'>0h 28m 34s+228ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -279,14 +1445,14 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+                parentCount: 26,
+				passParent: 12,
+				failParent: 14,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 14,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -311,7 +1477,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "loginTest":8.815
+			        "loginTest":2.53,"propertyreg":34.74,"propertyActions":26.072,"casasemployee":91.399,"projectteamtest":118.16,"stagemaster":22.018,"budgetDTest":43.473,"protimeline":111.759,"announcements":19.296,"supplier_only_test":24.765,"inventory":37.436,"assets":42.201,"client_contact":35.936,"staff_leave":68.527,"punchlistmaster":41.007,"fieldmanagetool":72.23,"commtest":70.833,"comm_meeting":16.514,"emailTest":60.296,"locator_test":15.321,"labour_expence":11.519,"labour_test":44.457,"projectactivitytest":179.839,"sitevisittest":180.209,"mytasktest":22.033,"supplier_invoice_test":45.727
 			};
 		</script>
 		<script src='http://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
