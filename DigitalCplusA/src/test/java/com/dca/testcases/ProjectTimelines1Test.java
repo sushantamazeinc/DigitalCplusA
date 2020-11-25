@@ -39,6 +39,6 @@ public class ProjectTimelines1Test extends BaseClass {
 
 	@AfterMethod()
 	public void tearDown() {
-	//getDriver().quit();
+	getDriver().quit();
 	}
 }

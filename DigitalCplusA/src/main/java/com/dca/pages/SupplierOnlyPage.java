@@ -295,6 +295,7 @@ public class SupplierOnlyPage extends BaseClass {
 		mrp.sendKeys(mrp1);
 		Thread.sleep(3000);
 		save1.click();
+		Thread.sleep(3000);
 		saveok11.click();
 		Thread.sleep(3000);
 		ac.selByVisibleText(selcategory, category1);

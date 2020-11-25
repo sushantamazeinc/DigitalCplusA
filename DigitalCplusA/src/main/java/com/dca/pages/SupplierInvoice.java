@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -66,8 +67,8 @@ public class SupplierInvoice extends BaseClass {
 	@FindBy(xpath = "//tbody/tr[1]/td[8]/div[1]/div[2]/a[1]/i[1]")
 	WebElement download12;
 	/////////////////////////////////////////////
-	@FindBy(partialLinkText = "Supplier Outstanding")
-	WebElement supplieroutstanding;
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-invoice-dashboard[1]/div[1]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/div[2]/button[1]")
+	WebElement supplieroutstandingpay;
 	@FindBy(xpath = "//select[@id='ddl_vendorpaymentVendor']")
 	WebElement selsuppliers4;
 	@FindBy(xpath = "//button[contains(text(),'Export To Excel')]")
@@ -191,6 +192,13 @@ public class SupplierInvoice extends BaseClass {
 
 	@FindBy(xpath = "//input[@id='txt_TotalAmount']")
 	WebElement getamount;
+	@FindBy(xpath = "//a[@href='#/Vendor']")
+	WebElement supplier;
+	
+	
+	
+	
+	
 
 	public SupplierInvoice() {
 		PageFactory.initElements(getDriver(), this);
@@ -232,14 +240,15 @@ public class SupplierInvoice extends BaseClass {
 		  mrp.sendKeys(mrp1);
 		  discount.sendKeys(discount1); 
 		  comments.sendKeys(comments1); 
+		  Thread.sleep(7000); 
 		  save1.click();
 		  saveok1.click(); 
 		  Thread.sleep(3000); 
-		  search1.sendKeys(invoiceno1);
+		  //search1.sendKeys(invoiceno1);
 		  //ac.selByVisibleText(selsuppliers3, text); 
 		  download12.click();
 		  Thread.sleep(5000); 
-		  supplieroutstanding.click();
+		  supplieroutstandingpay.click();
 		  Thread.sleep(3000); 
 		  Select select27=new Select(selsuppliers4); 
 		  int sel27=select27.getOptions().size();
@@ -277,18 +286,20 @@ public class SupplierInvoice extends BaseClass {
 		  export12.click(); 
 		  //ac.selByIndex(selsupplier12, 1);
 		  //ac.selByVisibleText(selsupplier12, text); 
-		  download1.click();
-		  Thread.sleep(3000);
-		 
+		  //download1.click();
+		  Thread.sleep(6000);
+		  
+		  supplier.click();
 		Robot robot411 = new Robot();
-		for (int i = 0; i < 1; i++) {
+		for (int i = 0; i < 3; i++) {
 			robot411.keyPress(KeyEvent.VK_PAGE_DOWN);
-			Thread.sleep(3000);
-		}
-
+			Thread.sleep(3000);}
+		
+		/*Dimension dm = new Dimension(1200, 730);
+		getDriver().manage().window().setSize(dm);*/
 		supplierreturn.click();
 		Robot robot111 = new Robot();
-		for (int i = 0; i < 1; i++) {
+		for (int i = 0; i < 2; i++) {
 			robot111.keyPress(KeyEvent.VK_PAGE_UP);
 			Thread.sleep(3000);
 		}
