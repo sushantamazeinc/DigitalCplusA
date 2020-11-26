@@ -6,9 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class ProjectTimelines1page extends BaseClass {
 	ActionDriver ac=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//button[contains(text(),'View Timeline Excel')]")
@@ -151,38 +153,58 @@ public class ProjectTimelines1page extends BaseClass {
 			String comm) throws InterruptedException {
 		ac.selByVisibleText(selproject, selproject1);
 		addnew.click();
+		lc.logs("Clicked on Add new");
 		ac.selByVisibleText(selectstage, selstage);
+		lc.logs("Selected Stage"+" "+selstage);
 		Thread.sleep(3000);
 		ac.selByVisibleText(selprocesscheck, procheck);
+		lc.logs("Select Process Check"+" "+procheck);
 		
 		Thread.sleep(3000);
 		sdate.sendKeys(selsdate);
+		String a1=sdate.getText();
+		lc.logs("StartDate"+" "+a1);
 		Thread.sleep(3000);
 		edate.sendKeys(enddate);
+		String a2=edate.getText();
+		lc.logs("EndDate"+" "+a2);
 		ac.selByVisibleText(careof, coff);
+		lc.logs("careof"+" "+coff);
 		
 		milestone.click();
+		lc.logs("Clicked on MileStone");
 		Thread.sleep(3000);
 		comments.sendKeys(comm);
+		String a3=comments.getText();
+		lc.logs("Comments"+" "+a3);
 		Thread.sleep(3000);
 		save.click();
 		Thread.sleep(5000);
 		saveok.click();
+		lc.logs("Saved Success");
 		selstage1.sendKeys(selstage);
 		//staffname.sendKeys(coff);
 		Thread.sleep(3000);
 		try {
 			addaccomplishment.click();
+			lc.logs("Clicked Add Accomplishment");
 			ac.selByIndex(accomplishment, 3);
+			String a4=accomplishment.getText();
+			lc.logs("Add Accomplishment"+" "+a4);
 			Thread.sleep(3000);
 			accompsave.click();
 			accsaveok.click();
+			lc.logs("Saved Success");
 			Thread.sleep(3000);
 			edit.click();
+			lc.logs("Clicked on Edit");
 			updatecareof.sendKeys(coff);
+			String a5=updatecareof.getText();
+			lc.logs("Updated careOf"+" "+a5);
 			update.click();
 			Thread.sleep(3000);
 			updateok.click();
+			lc.logs("Updated Success");
 			Thread.sleep(3000);
 			getDriver().navigate().refresh();
 			//exportexcel1.click();
@@ -190,22 +212,29 @@ public class ProjectTimelines1page extends BaseClass {
 			//exportexcel1.click();
 			//Thread.sleep(3000);
 			del.click();
+			lc.logs("Clicked on Delete");
 			yesdel.click();
 			delok.click();
+			lc.logs("Delete Success");
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		Thread.sleep(3000);
 		viewtimelineexcel.click();
+		lc.logs("Export sucess");
 		tpaddnew.click();
+		lc.logs("Clicked on AddNew");
 		Thread.sleep(3000);
 		tpplanupload.sendKeys("C:\\Users\\Mac\\Desktop\\empty-shelf-illustration_1284-9525.jpg");
 		tpsave.click();
 		tpsaveok.click();
+		lc.logs("Plan Upload Success");
 		getDriver().navigate().refresh();
 		tpdel.click();
+		lc.logs("Clicked on Delete");
 		tpyesdelete.click();
 		tpdelok.click();
+		lc.logs("Delete Success");
 		
 		
 		

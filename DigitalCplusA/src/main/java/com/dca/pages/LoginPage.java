@@ -43,11 +43,12 @@ public class LoginPage extends BaseClass implements ITestListener
 		Select select1=new Select(Seltype);
 		select1.selectByIndex(2);
 		uname.sendKeys(prop.getProperty("username"));
-		
-		lc.logs("Username is"+" "+prop.getProperty("username"));
+		String a1=uname.getText();
+		lc.logs("Username is"+" "+a1);
 		
 		pswd.sendKeys(prop.getProperty("password"));
-		lc.logs("Password is"+" "+prop.getProperty("password"));
+		String a2=pswd.getText();
+		lc.logs("Password is"+" "+a2);
 		signin.click();
 		lc.logs("Clicked On SignIn");
 		String verify= projecttest.getText();

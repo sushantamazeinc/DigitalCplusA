@@ -6,9 +6,9 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-<!-- <class name="com.dca.testcases.LoginPageTest"/>  -->
+<class name="com.dca.testcases.LoginPageTest"/> 
    		<!--  <class name="com.dca.testcases.PropertyPageTest"/> -->
-      <class name="com.dca.testcases.PropertyactionsTest"/>
+     <!--  <class name="com.dca.testcases.PropertyactionsTest"/> -->
    <!--     <class name="com.dca.testcases.CasasEmployeeTest"/>
       <class name="com.dca.testcases.ProjectTeamTest"/> -->
      <!--  <class name="com.dca.testcases.ArchitecturalstageMasterTest"/> -->

@@ -13,9 +13,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class SupplierInvoice extends BaseClass {
 	ActionDriver ac = new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath = "//select[@id='ProjectID']")
 	WebElement selproject;
 
@@ -215,10 +217,13 @@ public class SupplierInvoice extends BaseClass {
 
 		
 		  addsupplierinvoice.click(); 
+		  lc.logs("Clicked on Supplier invoice");
 		  Thread.sleep(3000); 
 		  Select select22=new Select(selsupplier); 
 		  int selectoptions= select22.getOptions().size();
 		  select22.selectByIndex(selectoptions - 1);
+		  String a1=selsupplier.getText();
+		  lc.logs("Select Supplier"+" "+a1);
 		  //selsupplier.click();
 		 Thread.sleep(3000);
 		 Select select23=new Select(searchpono); 
@@ -226,34 +231,60 @@ public class SupplierInvoice extends BaseClass {
 		 select23.selectByIndex(selectop - 1);
 		  //ac.selByVisibleText(selsupplier2, suppname);
 		  //ac.selByVisibleText(searchpono, ponumbb); 
+		 String a2=searchpono.getText();
+		 lc.logs("Search Po Number"+" "+a2);
 		 date.sendKeys(date1);
+		 String a3=date.getText();
+		 lc.logs("date"+" "+a3);
 		  invoiceno.sendKeys(invoiceno1); 
+		  String a4=invoiceno.getText();
+		  lc.logs("Invoice number"+" "+a4);
 		  // attachement.click(); 
 		  // Thread.sleep(3000);
 		  // ac.upload(); 
 		  Thread.sleep(5000);
 		  ac.selByIndex(itemname, 1);
+		  String a5=itemname.getText();
+		  lc.logs("Item Name"+" "+a5);
 		  warrentydate.sendKeys(warrentydate1);
+		  String a6=warrentydate.getText();
+		  lc.logs("Warrenty Date"+" "+a6);
 		  mfname.sendKeys(mfname1);
+		  String a7=mfname.getText();
+		  lc.logs("MF name"+" "+a7);
 		  partno.sendKeys(partno1);
+		 String a8= partno.getText();
+		  lc.logs("Part number"+" "+a8);
 		  actualquantity.sendKeys(actualquanity1);
+		  String a9=actualquantity.getText();
+		  lc.logs("Actual Quantity"+" "+a9);
 		  mrp.sendKeys(mrp1);
+		  String a10=mrp.getText();
+		  lc.logs("Mrp"+" "+a10);
 		  discount.sendKeys(discount1); 
+		  String a11=discount.getText();
+		  lc.logs("Discount"+" "+a11);
 		  comments.sendKeys(comments1); 
+		  String a12=comments.getText();
+		  lc.logs("Comments"+" "+a12);
 		  Thread.sleep(7000); 
 		  save1.click();
 		  saveok1.click(); 
+		  lc.logs("Save Success");
 		  Thread.sleep(3000); 
 		  //search1.sendKeys(invoiceno1);
 		  //ac.selByVisibleText(selsuppliers3, text); 
 		  download12.click();
+		  lc.logs("Export Success");
 		  Thread.sleep(5000); 
 		  supplieroutstandingpay.click();
+		  lc.logs("Clicked on Supplier Outstanding Pay");
 		  Thread.sleep(3000); 
 		  Select select27=new Select(selsuppliers4); 
 		  int sel27=select27.getOptions().size();
 		  select27.selectByIndex(sel27 - 1);
-		  
+		  String a13=selsuppliers4.getText();
+		  lc.logs("Select Supplier"+" "+a13);
 		  //ac.selByVisibleText(selsuppliers4, text); 
 		  Robot robot=new Robot();
 		  for(int i=0;i<2;i++) 
@@ -264,6 +295,7 @@ public class SupplierInvoice extends BaseClass {
 		  //export1.click();
 		  Thread.sleep(3000);
 		  pay.click(); 
+		  lc.logs("Clicked on Pay");
 		  Thread.sleep(3000); 
 		  Robot robot1=new Robot();
 		  for(int i=0;i<1;i++)
@@ -272,18 +304,24 @@ public class SupplierInvoice extends BaseClass {
 		  Thread.sleep(3000); 
 		  }
 		  ac.selByVisibleText(selpaymenttype, selpaymenttype1);
+		  lc.logs("Select Payment type"+" "+selpaymenttype1);
 		  String payable=getamount.getAttribute("value"); 
 		  payableamount.clear();
 		  Thread.sleep(3000); 
 		  payableamount.sendKeys(payable);
+		  lc.logs("Payable Amount"+" "+payable);
 		  comment.sendKeys(comment1); 
+		 String a14= comment.getText();
+		  lc.logs("Comment"+" "+a14);
 		  payment.click();
 		  paymentok.click();
+		  lc.logs("Payment Success");
 		  //paymentreports.click(); 
 		  Thread.sleep(3000); 
 		  ac.selByIndex(selsupplier12,1);
 		  Thread.sleep(3000); 
 		  export12.click(); 
+		  lc.logs("Export Success");
 		  //ac.selByIndex(selsupplier12, 1);
 		  //ac.selByVisibleText(selsupplier12, text); 
 		  //download1.click();
@@ -298,31 +336,43 @@ public class SupplierInvoice extends BaseClass {
 		/*Dimension dm = new Dimension(1200, 730);
 		getDriver().manage().window().setSize(dm);*/
 		supplierreturn.click();
+		lc.logs("Clicked on Supplier Return");
 		Robot robot111 = new Robot();
 		for (int i = 0; i < 2; i++) {
 			robot111.keyPress(KeyEvent.VK_PAGE_UP);
 			Thread.sleep(3000);
 		}
 		addnew.click();
+		lc.logs("Clicked on Add new");
 		Thread.sleep(3000);
 		// ac.selByIndex(selsupplier123, 11); 
 		Thread.sleep(3000);
 		Select select28 = new Select(selsupplier123);
 		int sel289 = select28.getOptions().size();
 		select28.selectByIndex(sel289 - 1);
-
+		String a15=selsupplier123.getText();
+		lc.logs("Select Supplier"+" "+a15);
 		Select select30 = new Select(selinvoicenumber);
 		int sel30 = select30.getOptions().size();
 		select30.selectByIndex(sel30 - 1);
+		String a16=selinvoicenumber.getText();
+		lc.logs("Select invoice number"+" "+a16);
 		// ac.selByVisibleText(selsupplier123, text);
 		// ac.selByVisibleText(selinvoicenumber, invoiceno1);
 		// ac.selByIndex(selinvoicenumber, 1);
 		returnquanity.sendKeys(returnquanity1);
+		String a17=returnquanity.getText();
+		lc.logs("Return Quantity"+" "+a17);
 		remarks.sendKeys(remarks1);
+		String a18=remarks.getText();
+		lc.logs("Remarks"+" "+a18);
 		sel.click();
+		
 		returnpro.click();
+		lc.logs("Clicked on Return");
 		yesreturn.click();
 		returnok.click();
+		lc.logs("Return Success");
 		Thread.sleep(3000);
 
 		assertclick.click();
@@ -334,6 +384,7 @@ public class SupplierInvoice extends BaseClass {
 
 		inventorylink.click();
 		inventory1.click();
+		lc.logs("Clicked on inventory");
 		Robot robot11111 = new Robot();
 		for (int i = 0; i < 2; i++) {
 			robot11111.keyPress(KeyEvent.VK_PAGE_UP);
@@ -341,27 +392,48 @@ public class SupplierInvoice extends BaseClass {
 		}
 Thread.sleep(5000);
 		addnewinventory.click();
+		lc.logs("Clicked on Add New Inventory");
 		Thread.sleep(3000);
 		Select select29 = new Select(itemname1);
 		int sel29 = select29.getOptions().size();
 		select29.selectByIndex(sel29 - 1);
 		Thread.sleep(3000);
+		String a19=itemname1.getText();
+		lc.logs("ItemName"+" "+a19);
 		// ac.selByVisibleText(itemname1, text);
 		address1.sendKeys(address11);
+		String a20=address1.getText();
+		lc.logs("Address"+" "+a20);
 		ac.selByVisibleText(floor, floor1);
+		lc.logs("Floor"+" "+floor1);
 		location.sendKeys(location1);
+		String a21=location.getText();
+		lc.logs("Location"+" "+a21);
 		currentqty.sendKeys(currentquanity1);
+		String a22=currentqty.getText();
+		lc.logs("Current Quantity"+" "+a22);
 		minimumqty.sendKeys(minimumquantity);
+		String a23=minimumqty.getText();
+		lc.logs("Minimum Quantity"+" "+a23);
 		expirydate.sendKeys(expirydate12);
+		String a24=expirydate.getText();
+		lc.logs("ExpiryDate"+" "+a24);
 		ac.selByVisibleText(assignedto, assignedto1);
+		lc.logs("Assigned To"+" "+assignedto1);
 		description.sendKeys(description1);
+		String a25=description.getText();
+		lc.logs("Description"+" "+a25);
 		invoiceattachment.click();
 		ac.upload();
 		Thread.sleep(7000);
+		lc.logs("Invoice Attachment Success");
 		save123.click();
 		saveok12.click();
 		Thread.sleep(3000);
+		lc.logs("Form Save Success");
 		search123.sendKeys(location1);
+		String a26=search123.getText();
+		lc.logs("Searching"+" "+a26);
 		ac.selByVisibleText(selcategory, selcat);
 		ac.selByVisibleText(selype, selty);
 		Thread.sleep(3000);
@@ -371,15 +443,21 @@ Thread.sleep(5000);
 
 		// ac.selByVisibleText(selinventory, text);
 		consume.click();
+		lc.logs("Clicked on Consume");
 		Thread.sleep(3000);
 		consumecount.sendKeys("1");
+		String a27=consumecount.getText();
+		lc.logs("Consume Count"+" "+a27);
 		Thread.sleep(3000);
 		// consumecount.sendKeys(keysToSend);
 		// ac.selByVisibleText(staff, staff1);
 		ac.selByIndex(staff, 1);
+		String a28=staff.getText();
+		lc.logs("Staff"+" "+a28);
 		Thread.sleep(3000);
 
 		saveconsume.click();
+		lc.logs("Consume Saved Success");
 		// Thread.sleep(3000);
 		// consumeok.click();
 

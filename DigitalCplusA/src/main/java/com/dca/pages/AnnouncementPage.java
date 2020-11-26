@@ -8,9 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class AnnouncementPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;	
 	@FindBy(xpath="//button[contains(text(),'New Announcement')]")
@@ -65,26 +67,49 @@ public class AnnouncementPage extends BaseClass {
 		ad.selByVisibleText(selproject, selproject1);
 		Thread.sleep(5000);
 		addnew.click();
+		lc.logs("Clicked On AddNew");
 		announcementfor.click();
+		lc.logs("Clicked on Annocement For");
 		announcement.sendKeys(announcements);
+		String a1=announcement.getText();
+		lc.logs("Announcement"+" "+a1);
 		description.sendKeys(descriptions);
+		String a2=description.getText();
+		lc.logs("Description"+" "+a2);
 		date.sendKeys(dates);
+		String a3=date.getText();
+		lc.logs("Date"+" "+a3);
 		time.sendKeys(times);
+		String a4=time.getText();
+		lc.logs("Time"+" "+a4);
 		announcementdetails.sendKeys(details);
+		String a5=announcementdetails.getText();
+		lc.logs("Announcement Details"+" "+a5);
 		venu.sendKeys(venus);
+		String a6=venu.getText();
+		lc.logs("Venue"+" "+a6);
 		attachment.click();
+		lc.logs("Clicked on Attachment");
 		ad.upload();
+		lc.logs("Attachment Upload Success");
 		Thread.sleep(7000);
 		save.click();
 		saveok.click();
+		lc.logs("Save Success");
 		search.sendKeys(announcements);
 		edit.click();
+		lc.logs("Clicked on Edit");
 		editdate.sendKeys(edate);
+		String a7=editdate.getText();
+		lc.logs("Updated Date"+" "+a7);
 		update.click();
 		updateok.click();
+		lc.logs("Update Success");
 		delete.click();
+		lc.logs("Clicked on Delete");
 		deleteok.click();
 		deleteoklast.click();
+		lc.logs("Delete Success");
 		
 		
 		

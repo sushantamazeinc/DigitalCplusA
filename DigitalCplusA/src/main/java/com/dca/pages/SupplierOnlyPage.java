@@ -10,11 +10,13 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class SupplierOnlyPage extends BaseClass {
 	//public static String suppliername1;
 	//public String selsupptypee;
 	ActionDriver ac=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//input[@id='txt_vendorSearch']")
@@ -231,40 +233,76 @@ public class SupplierOnlyPage extends BaseClass {
 			String suppliersupplies) throws InterruptedException {
 	ac.selByVisibleText(selproject, selproject1);
 	addsupplier.click();
+	lc.logs("Clicked on Add Supplier");
 	suppliername.sendKeys(name1);
+	String a1=suppliername.getText();
+	lc.logs("SupplierName"+" "+a1);
 	//suppliername1=suppliername.getAttribute("value");
 	//System.out.println(suppliername1);
 	//z=supplier;
 	supplieremail.sendKeys(email11);
+	String a2=supplieremail.getText();
+	lc.logs("SupplierEmail"+" "+a2);
 	supplierphone.sendKeys(phoneo1);
+	String a3=supplierphone.getText();
+	lc.logs("Supplier Home"+" "+a3);
 	ac.selByVisibleText(supplierservicearea, servicearea1);
+	lc.logs("SupplierServiceAre"+" "+servicearea1);
 	supplieraddress.sendKeys(address1);
+	String a4=supplieraddress.getText();
+	lc.logs("Supplier Address"+" "+a4);
 	supplierwebsite.sendKeys(website1);
+	String a5=supplierwebsite.getText();
+	lc.logs("Supplier Website"+" "+a5);
 	contactname.sendKeys(contactname1);
+	String a6=contactname.getText();
+	lc.logs("Contact Name"+" "+a6);
 	ac.selByVisibleText(selsuppliertype1, suppliertype1);
+	lc.logs("Select Supplier type"+" "+suppliertype1);
 	//selsupptypee=selsuppliertype1.getAttribute("value");
 	//y=selsupptype;
 	ac.selByVisibleText(bankname, bankname1);
+	lc.logs("Select Bank name"+" "+bankname1);
 	
 	accountnumber.sendKeys(Accountno1);
+	String a7=accountnumber.getText();
+	lc.logs("Account number"+" "+a7);
 	ac.selByVisibleText(selaccounttype, accounttype1);
+	lc.logs("Select Account type"+" "+ accounttype1);
 	bankaddress.sendKeys(bankaddress1);
+	String a8=bankaddress.getText();
+	lc.logs("Bank Address"+" "+a8);
 	btsn.sendKeys(btxn1);
+	String a9=btsn.getText();
+	lc.logs("Bxtn"+" "+a9);
 	branchname.sendKeys(branchname1);
+	String a10=branchname.getText();
+	lc.logs("Branch name"+" "+a10);
 	paymentterms.sendKeys(paymentterms1);
+	String a11=paymentterms.getText();
+	lc.logs("Payment Terms"+" "+a11);
 	creditlimit.sendKeys(creditlimit1);
+	String a12=creditlimit.getText();
+	lc.logs("Credit limit"+" "+a12);
 	creditdays.sendKeys(creditdays1);
+	String a13=creditdays.getText();
+	lc.logs("Credit Days"+" "+a13);
 	ac.selByVisibleText(supplierservice, supplierservices);
+	lc.logs("Supplier Service"+" "+supplierservices);
 	suppliersuplies.sendKeys(suppliersupplies);
+	lc.logs("Supplier Supplies"+" "+suppliersupplies);
 	save.click();
 	saveok.click();
+	lc.logs("Save Success");
 	Thread.sleep(3000);
 	search.sendKeys(name1);
 	ac.selByVisibleText(selsuppliertype, suppliertype1);
 	edit.click();
+	lc.logs("Clicked on Edit");
 	Thread.sleep(3000);
 	update.click();
 	updateok.click();
+	lc.logs("Update Success");
 	Thread.sleep(3000);
 	/*
 	 * deletesupp.click(); deletesuppok.click(); delsuppok.click();
@@ -287,16 +325,28 @@ public class SupplierOnlyPage extends BaseClass {
 			String financemanager1,String cfo1,String servicedesc1,
 			String financedirector1,String selsupptypee) throws InterruptedException, AWTException {
 		addnew.click();
+		lc.logs("Clicked on AddNew");
 		ac.selByVisibleText(category, category1);
+		lc.logs("Category"+" "+category1);
 		ac.selByVisibleText(subcategory, subcategory1);
+		lc.logs("SubCategory"+" "+subcategory1);
 		itemname.sendKeys(itemname1);
+		String a14=itemname.getText();
+		lc.logs("ItemName"+" "+a14);
 		itemdescri.sendKeys(itemdescri1);
+		String a15=itemdescri.getText();
+		lc.logs("Item Description"+" "+a15);
 		expirydate.sendKeys(expirydate1);
+		String a16=expirydate.getText();
+		lc.logs("ExpiryDate"+" "+a16);
 		mrp.sendKeys(mrp1);
+		String a17=mrp.getText();
+		lc.logs("MRP"+" "+a17);
 		Thread.sleep(3000);
 		save1.click();
 		Thread.sleep(3000);
 		saveok11.click();
+		lc.logs("Saved Success");
 		Thread.sleep(3000);
 		ac.selByVisibleText(selcategory, category1);
 		Thread.sleep(3000);
@@ -304,9 +354,12 @@ public class SupplierOnlyPage extends BaseClass {
 		ac.selByVisibleText(selitem, itemname1);
 		Thread.sleep(3000);
 		edit1.click();
+		lc.logs("Clicked on Edit");
 		update1.click();
 		updateok1.click();
+		lc.logs("Update Success");
 		export.click();
+		lc.logs("Export Success");
 		Thread.sleep(3000);
 		scrol.click();
 		 Robot robot=new Robot();
@@ -315,6 +368,7 @@ public class SupplierOnlyPage extends BaseClass {
 			 Thread.sleep(3000);
 		 }
 		 purchaseorder.click();
+		 lc.logs("Clicked on Purchase Order");
 		 clickmain.click();
 		 Robot robot1=new Robot();
 		 for(int i=0;i<1;i++) {
@@ -323,35 +377,57 @@ public class SupplierOnlyPage extends BaseClass {
 		 }
 		 
 		 newpo.click();
+		 lc.logs("Clicked on new po");
 		 ac.selByVisibleText(selpotype, selpotype1);
 		 if(selpotype1.contentEquals("Inventory PO")) {
 			ac.selByVisibleText(selitemcategory, subcategory1);
+			lc.logs("Select item Category"+" "+subcategory1);
 			ac.selByIndex(selsupplier3, 1);
+			String a18=selsupplier3.getText();
+			lc.logs("Select Supplier"+" "+a18);
 			date1.sendKeys(date11);
+			String a19=date1.getText();
+			lc.logs("Date"+" "+a19);
 			addnewitem1.click();
+			lc.logs("Clicked on Add new");
 			ac.selByVisibleText(selitem1, itemname1);
+			lc.logs("Select Item"+" "+itemname1);
 			try {
 				miniumquanityok.click();
+				lc.logs("Clicked on Minimum Quanity");
 			} catch (Exception e) {
 				System.out.println(e);
 			}
 			//itemdetailsok.click();
 			quantity.sendKeys(quantity1);
+			String a20=quantity.getText();
+			lc.logs("Quanity"+" "+a20);
 			comments.sendKeys(comments1);
+			String a21=comments.getText();
+			lc.logs("Comments"+" "+a21);
 			savepo.click();
 			saveok1.click();
+			lc.logs("Save Success");
 		 }else {
 			 ac.selByVisibleText(property, selproject1);
 			 ac.selByVisibleText(suppliertype, selsupptypee);
+			 lc.logs("SupplierType"+" "+selsupptypee);
 			 serviceamount.sendKeys(serviceamount1);
+			String a22= serviceamount.getText();
+			lc.logs("Service Amount"+" "+a22);
 			 ac.selByVisibleText(financemanager, financemanager1);
+			 lc.logs("Finance Manager"+" "+financemanager1);
 			ac.selByVisibleText(cfo, cfo1);
+			lc.logs("CFO"+" "+cfo1);
 			ac.selByIndex(selsupplier2, 1);
+			String a23=selsupplier2.getText();
+			lc.logs("Select Supplier"+" "+a23);
 			//servicedesc.sendKeys(servicedesc1);
 			ac.selByVisibleText(financedirector, financedirector1);
+			lc.logs("FinanaceDirector"+" "+financedirector1);
 			save4.click();
 			saveok4.click();
-			
+			lc.logs("Save Success");
 			
 			
 		 }

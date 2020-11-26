@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-26T12:54:40 IST" name="Suite" finished-at="2020-11-26T12:55:19 IST" duration-ms="38516">
+  <suite started-at="2020-11-26T15:35:01 IST" name="Suite" finished-at="2020-11-26T15:35:15 IST" duration-ms="13868">
     <groups>
     </groups>
-    <test started-at="2020-11-26T12:54:40 IST" name="Test" finished-at="2020-11-26T12:55:19 IST" duration-ms="38516">
-      <class name="com.dca.testcases.PropertyactionsTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.dca.testcases.PropertyactionsTest@77eca502]" started-at="2020-11-26T12:54:40 IST" name="loadConfig" finished-at="2020-11-26T12:54:40 IST" duration-ms="310" status="PASS">
+    <test started-at="2020-11-26T15:35:01 IST" name="Test" finished-at="2020-11-26T15:35:15 IST" duration-ms="13868">
+      <class name="com.dca.testcases.LoginPageTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.dca.testcases.LoginPageTest@77eca502]" started-at="2020-11-26T15:35:00 IST" name="loadConfig" finished-at="2020-11-26T15:35:01 IST" duration-ms="456" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.dca.testcases.PropertyactionsTest@77eca502]" started-at="2020-11-26T12:54:40 IST" name="setup" finished-at="2020-11-26T12:54:50 IST" duration-ms="10046" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.dca.testcases.LoginPageTest@77eca502]" started-at="2020-11-26T15:35:01 IST" name="setup" finished-at="2020-11-26T15:35:10 IST" duration-ms="9206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="propertyActions()[pri:0, instance:com.dca.testcases.PropertyactionsTest@77eca502]" started-at="2020-11-26T12:54:50 IST" name="propertyActions" finished-at="2020-11-26T12:55:18 IST" duration-ms="27525" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:com.dca.testcases.LoginPageTest@77eca502]" started-at="2020-11-26T15:35:10 IST" name="loginTest" finished-at="2020-11-26T15:35:13 IST" duration-ms="3448" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- propertyActions -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dca.testcases.PropertyactionsTest@77eca502]" started-at="2020-11-26T12:55:18 IST" name="tearDown" finished-at="2020-11-26T12:55:19 IST" duration-ms="902" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dca.testcases.LoginPageTest@77eca502]" started-at="2020-11-26T15:35:13 IST" name="tearDown" finished-at="2020-11-26T15:35:15 IST" duration-ms="1162" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.dca.testcases.PropertyactionsTest@77eca502]" started-at="2020-11-26T12:55:19 IST" name="afterSuite" finished-at="2020-11-26T12:55:19 IST" duration-ms="442" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.dca.testcases.LoginPageTest@77eca502]" started-at="2020-11-26T15:35:15 IST" name="afterSuite" finished-at="2020-11-26T15:35:15 IST" duration-ms="639" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.dca.testcases.PropertyactionsTest -->
+      </class> <!-- com.dca.testcases.LoginPageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
