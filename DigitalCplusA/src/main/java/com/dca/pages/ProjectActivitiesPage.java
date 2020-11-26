@@ -6,9 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class ProjectActivitiesPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
@@ -62,28 +64,55 @@ public class ProjectActivitiesPage extends BaseClass {
 		// TODO Auto-generated method stub
 		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
+		lc.logs("clicked on add new");
+		
 		ad.selByVisibleText(stage,stages );
+		lc.logs("selected stage"+" "+stages);
+		
 		ad.selByVisibleText(stafftype, stafftypes );
+		lc.logs("selected staff type"+" "+stafftypes);
+		
 		ad.selByVisibleText(staff, staffs );
+		lc.logs("selected staff"+" "+staffs);
+		
 		startdate.sendKeys(sdate);
+		String d=startdate.getText();
+		lc.logs("startdate is picked"+" "+d);
 		Thread.sleep(3000);
+		
 		enddate.sendKeys(edate);
+		String e=enddate.getText();
+		lc.logs("enddate is picked"+" "+e);
+		
 		Thread.sleep(3000);
 		description.sendKeys(des);
+		String des1=description.getText();
+		lc.logs("description entered"+" "+des1);
+		
+		
 		save.click();
 		saveok.click();
+		lc.logs("saved successfully");
+		
 		ad.selByVisibleText(stagefilter, stages);
 		ad.selByVisibleText(stafftypefilter, stafftypes);
 		Thread.sleep(3000);
+		
 		//ad.selByVisibleText(stafffilter, staffs);
 		editclick.click();
 		editsdate.sendKeys(eddate);
+		String ed=editsdate.getText();
+		lc.logs("date is edited"+" "+ed);
+		
 		update.click();
 		updateok.click();
 		Thread.sleep(3000);
+		lc.logs("updated successfully");
+		
 		delete.click();
 		deleteok.click();
 		deletelast.click();
+		lc.logs("deleted successfully");
 		
 		
 		

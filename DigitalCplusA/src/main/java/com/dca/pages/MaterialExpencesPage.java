@@ -11,9 +11,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class MaterialExpencesPage extends BaseClass {
 	ActionDriver ac=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
@@ -82,24 +84,51 @@ public class MaterialExpencesPage extends BaseClass {
 			 Thread.sleep(3000);
 		 }
 		addexpence.click();
+		lc.logs("clicked on add new");
+		
 		ac.selByVisibleText(expencetype, expencetype1);
+		lc.logs("expence type selected"+" "+expencetype1);
 		
 		date.sendKeys(date1);
+		String a1=date.getText();
+		lc.logs("picked date"+" "+a1);
+		
 		category.sendKeys(cat);
+		String b1=category.getText();
+		lc.logs("entered category"+" "+b1);
+		
 		subcategory.sendKeys(subcat);
+		String c1=subcategory.getText();
+		lc.logs("entered sub category"+" "+c1);
+		
 		ac.selByIndex(item, 1);
+		String d1=item.getText();
+		lc.logs("selected item"+" "+d1);
+		
 		quantity.sendKeys(quant);
+		String e1=quantity.getText();
+		lc.logs("entered quantity"+" "+e1);
+		
 		amount.sendKeys(amoun);
+		String f1=amount.getText();
+		lc.logs("entered amount"+" "+f1);
+		
 		add.click();
+		lc.logs("click add button");
+		
 		save.click();
 		saveok.click();
 		Thread.sleep(3000);
+		lc.logs("saved successfully");
+		
 		ac.selByVisibleText(selcateg, cat);
 		ac.selByVisibleText(subcateg, subcat);
 		Thread.sleep(3000);
+		
 		edit.click();
 		update.click();
 		updateok.click();
+		lc.logs("updated successfully");
 		
 		//JavascriptExecutor js=(JavascriptExecutor)getDriver();
 		//js.executeScript("windows.scrollBy(0,350", "350");

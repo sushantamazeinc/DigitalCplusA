@@ -23,6 +23,7 @@ public class ProjectTeamTest extends BaseClass {
 		Log.startTestCase("projectteam");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
+		Thread.sleep(5000);
 		WebElement selectproject=	getDriver().findElement(By.xpath("//select[@id='ProjectID']"));
 		ac.selByVisibleText(selectproject, selproject1);
 		Thread.sleep(5000);

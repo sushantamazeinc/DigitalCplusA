@@ -13,9 +13,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class StaffLeavePage extends BaseClass{
 	ActionDriver ac=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-staffleaves[1]/div[1]/div[2]/div[2]/div[1]/label[1]/span[1]")
@@ -91,19 +93,42 @@ public class StaffLeavePage extends BaseClass{
 		 ac.selByVisibleText(selproject, selproject1);
 		 //stafftoggle.click();
 		 applyleave.click();
+		 lc.logs("Clicked on apply leave");
+		 
 		 ac.selByVisibleText(staffName, staffname1);
+		 lc.logs("selected staff name"+" "+staffname1);
+		 
 		 ac.selByVisibleText(leaveType, leavetype1);
+		 lc.logs("selected leave type"+" "+leavetype1);
+		 
 		 sdate.sendKeys(sdate1);
+		 String a1=sdate.getText();
+		 lc.logs("picked start date"+" "+a1);
+		 
 		 edate.sendKeys(edate1);
+		 String b1=sdate.getText();
+		 lc.logs("picked end date"+" "+b1);
+		 
 		 ac.selByVisibleText(coveringStaff, coveringstaff);
+		 lc.logs("selected covering staff"+" "+coveringstaff);
+		 
 		 reason.sendKeys(reason1);
+		 String re=reason.getText();
+		 lc.logs("Entered Reason"+" "+re);
+		 
 		 save.click();
 		 saveok.click();
 		 Thread.sleep(3000);
+		 lc.logs("Saved Successfully");
+		 
 		 stafftoggle.click();
+		 lc.logs("Clicked on staff toggle");
+		 
 		 search.sendKeys(staffname1);
 		 ac.selByVisibleText(selleavetype, leavetype1);
+		 lc.logs("selected leave type"+" "+leavetype1);
 		 Thread.sleep(3000);
+		 
 		 if(status.contentEquals("Accepted")) {
 			 accept.click();
 		 }else {
@@ -112,25 +137,9 @@ public class StaffLeavePage extends BaseClass{
 			 cancel.click();
 			 cancelok.click();
 		 }
-		// scroll.click();
-		// Thread.sleep(2000);
-		// drop.click();
-		// drop1.click();
+		
 		 scrol.click();
-		//Actions act=new Actions(getDriver());
 		
-		//act.keyUp(scrol, Keys.CONTROL.ARROW_DOWN);
-		
-		 //JavascriptExecutor js=(JavascriptExecutor)getDriver();
-		//js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
-		//js.executeScript("argument[0].scrollIntoView();", approvestaffleave);
-		//scroll.click();
-		//act.sendKeys(Keys.PAGE_DOWN);
-		//act.sendKeys(Keys.PAGE_DOWN);
-		
-		 //Thread.sleep(3000);
-		// act.sendKeys(Keys.PAGE_DOWN).build();
-		// act.sendKeys(Keys.PAGE_DOWN).build();
 		 Robot robot=new Robot();
 		 for(int i=0;i<2;i++) {
 			 robot.keyPress(KeyEvent.VK_PAGE_DOWN);
@@ -140,6 +149,7 @@ public class StaffLeavePage extends BaseClass{
 		 
 		 if(status.contentEquals("Accepted")) {
 		 approvestaffleave.click();
+		 lc.logs("clicked on approved staff leave");
 		 accexport.click();
 		 accsearch.sendKeys(staffname1);
 		 ac.selByVisibleText(accseleavetype, leavetype1);

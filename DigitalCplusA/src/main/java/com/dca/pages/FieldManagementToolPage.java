@@ -10,9 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class FieldManagementToolPage extends BaseClass {
 	ActionDriver ac=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
@@ -60,18 +62,42 @@ public class FieldManagementToolPage extends BaseClass {
 			String edate,String punchlista,String fieldn,String stat,String upstat) throws InterruptedException, AWTException {
 		ac.selByVisibleText(selproject, selproject1);
 		addnew.click();
+		lc.logs("clicked on add new button");
 		Thread.sleep(3000);
+		
 		ac.selByVisibleText(floor, floor1);
+		lc.logs("selected floor"+" "+floor1);
+		
 		ac.selByVisibleText(punchlist, punchlist1);
+		lc.logs("selected punchlist"+" "+punchlist1);
+		
 		ac.selByVisibleText(staff, staff1);
+		lc.logs("selected staff"+" "+staff1);
+		
 		startdate.sendKeys(sdate);
+		String b1=startdate.getText();
+		lc.logs("Entered startdate"+" "+b1);
+		
 		enddate.sendKeys(edate);
+		String c1=enddate.getText();
+		lc.logs("Entered startdate"+" "+c1);
+		
 		punchlistarea.sendKeys(punchlista);
+		String d1=punchlistarea.getText();
+		lc.logs("Entered punchlist area"+" "+d1);
+		
 		fieldnotes.sendKeys(fieldn);
+		String e1=fieldnotes.getText();
+		lc.logs("Entered field notes"+" "+e1);
+		
 		ac.selByVisibleText(status, stat);
+		lc.logs("selected status"+" "+stat);
+		
 		save.click();
 		saveok.click();
 		Thread.sleep(3000);
+		lc.logs("saved successfully");
+		
 		Robot robot1=new Robot();
 		 for(int i=0;i<1;i++) {
 			 robot1.keyPress(KeyEvent.VK_PAGE_UP);
@@ -79,10 +105,14 @@ public class FieldManagementToolPage extends BaseClass {
 		 }
 		exporttoexcel.click();
 		Thread.sleep(3000);
+		lc.logs("excel exported");
+		
 		edit.click();
 		ac.selByVisibleText(statusupdate, upstat);
+		lc.logs("updated status"+" "+upstat);
 		update.click();
 		updateok.click();
+		lc.logs("updated successfully");
 		
 		
 		

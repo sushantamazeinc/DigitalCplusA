@@ -60,7 +60,7 @@ public void upload() throws IOException, InterruptedException {
 	
 	String home=System.getProperty("user.dir");
 	Thread.sleep(3000);
-	Runtime.getRuntime().exec(home+"\\uploadexefile\\FileUploadnew123.exe");
+	Runtime.getRuntime().exec(home+"\\uploadexefile\\FileUploadnew.exe");
 	Thread.sleep(3000);
 }
 }
