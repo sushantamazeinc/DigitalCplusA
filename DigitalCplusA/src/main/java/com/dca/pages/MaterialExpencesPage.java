@@ -83,9 +83,11 @@ public class MaterialExpencesPage extends BaseClass {
 		 }
 		addexpence.click();
 		ac.selByVisibleText(expencetype, expencetype1);
+		
 		date.sendKeys(date1);
 		category.sendKeys(cat);
 		subcategory.sendKeys(subcat);
+		ac.selByIndex(item, 1);
 		quantity.sendKeys(quant);
 		amount.sendKeys(amoun);
 		add.click();

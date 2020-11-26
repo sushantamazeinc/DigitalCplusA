@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.dca.utility.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.dca.testcases.LoginPageTest">
+      <class name="com.dca.testcases.MaterialExpencesTest">
         <methods>
-          <include name="loginTest"/>
+          <include name="material_expences" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="afterSuite"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.dca.testcases.MaterialExpencesTest -->
+      <class name="com.dca.testcases.LabourExpencetest">
+        <methods>
+          <include name="tearDown"/>
           <include name="afterSuite"/>
           <include name="loadConfig"/>
           <include name="setup"/>
-          <include name="tearDown"/>
+          <include name="labour_expence" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.dca.testcases.LoginPageTest -->
+      </class> <!-- com.dca.testcases.LabourExpencetest -->
+      <class name="com.dca.testcases.LabourTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="afterSuite"/>
+          <include name="loadConfig"/>
+          <include name="labour_test" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.dca.testcases.LabourTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

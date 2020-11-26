@@ -45,6 +45,7 @@ public class LoginPage extends BaseClass implements ITestListener
 		uname.sendKeys(prop.getProperty("username"));
 		
 		lc.logs("Username is"+" "+prop.getProperty("username"));
+		
 		pswd.sendKeys(prop.getProperty("password"));
 		lc.logs("Password is"+" "+prop.getProperty("password"));
 		signin.click();

@@ -11,8 +11,10 @@ import org.openqa.selenium.support.ui.Select;
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
 import com.dca.pages.PropertyActionsPage;
+import com.dca.utility.ListenerClass;
 
 public class PropertPage extends BaseClass {
+	ListenerClass lc=new ListenerClass();
 	ActionDriver ac=new ActionDriver();
 	@FindBy(id = "ProejectType")
 	public WebElement projecttype;
@@ -70,18 +72,30 @@ public class PropertPage extends BaseClass {
 		Thread.sleep(1000);
 		Select select3=new Select(country);
 		select3.selectByIndex(1);
+		String ctext=country.getText();
+		lc.logs(ctext);
 		Thread.sleep(1000);
 		Select select4=new Select(state);
 		select4.selectByIndex(1);
+		String state1=state.getText();
+		lc.logs(state1);
 		Thread.sleep(1000);
 		Select select5=new Select(city);
 		select5.selectByIndex(1);
+		String city1=city.getText();
+		lc.logs(city1);
 		Thread.sleep(1000);
 		Select select6=new Select(propertytype);
 		select6.selectByIndex(2);
+		String proptype=propertytype.getText();
+		Thread.sleep(3000);
+		lc.logs(proptype);
 		Thread.sleep(1000);
 		projectname.sendKeys(proname);
+		lc.logs("Entered Projectname"+" "+proname);
+		
 		propertyaddr.sendKeys(proadd);
+		lc.logs("Entered PropertyAddress"+" "+proadd);
 		phonenumber.sendKeys(phone);
 		String mob=phonenumber.getAttribute("value");
 		if(mob.length()==10) {
@@ -89,8 +103,11 @@ public class PropertPage extends BaseClass {
 		}else {
 			System.out.println("Phone Number Invalid");
 		}
+		lc.logs("Entered PhoneNo"+" "+phone);
 		contactname.sendKeys(conname);
+		lc.logs("Entered ContactName"+" "+conname);
 		contactphone.sendKeys(conphone);
+		lc.logs("Entered Contact Phone"+" "+conphone);
 		String comob=contactphone.getAttribute("value");
 		if(comob.length()==10) {
 			System.out.println("Contact Person Phone Valid");
@@ -108,18 +125,23 @@ public class PropertPage extends BaseClass {
 		
 		System.out.println("Invalid Emails");
 		}
-		
+		lc.logs("Entered Contact Emails"+" "+mail);
 		numberoffloor.sendKeys(nofloor);
+		lc.logs("Number Of Floors"+" "+nofloor);
 		numberofbase.click();
+		lc.logs("Clicked On BaseMent");
 		numberofunit.sendKeys(noofunit);
+		lc.logs(" Entered Number Of Unit"+" "+noofunit);
 		unitperfloor.sendKeys(unitfloor);
+		lc.logs("Entered Number Of Unit Per Floor"+" "+unitfloor);
 		buildingarea.sendKeys(buildarea);
+		lc.logs("Entered Building Area"+" "+buildarea);
 		budgethour.sendKeys(budgethr);
-		
+		lc.logs("Entered Budget Hour"+" "+budgethr);
 		//Select select2=new Select(projecttype);
 		//select2.selectByIndex(1);
 		//yearbuild.sendKeys(ybuild);
-		budgethour.sendKeys(budgethr);
+		//budgethour.sendKeys(budgethr);
 		//Select select3=new Select(country);
 		//select3.selectByIndex(1);
 		//Select select4=new Select(state);
@@ -131,7 +153,9 @@ public class PropertPage extends BaseClass {
 		//photo.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 		Thread.sleep(3000);
 		photo.click();
+		lc.logs("Clicked On Photo");
 		ac.upload();
+		lc.logs("Photo upload Success");
 		//Select select7=new Select(enterance);
 		//select7.selectByIndex(2);
 		//Select select8=new Select(executed);
@@ -140,6 +164,7 @@ public class PropertPage extends BaseClass {
 		Thread.sleep(7000);
 		savebtn.click();
 		propsaved.click();
+		lc.logs("Property Saved Success");
 		Thread.sleep(3000);
 		getDriver().navigate().refresh();
 

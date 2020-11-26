@@ -41,6 +41,7 @@ public class ArchitecturalstagemasterPage extends BaseClass {
 		description.sendKeys(descriptions);
 		save.click();
 		saveok.click();
+		Thread.sleep(3000);
 		delete.click();
 		deleteok.click();
 		deleteoklast.click();

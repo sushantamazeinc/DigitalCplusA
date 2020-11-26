@@ -39,12 +39,13 @@ public class LabourExpencepPage extends BaseClass{
 	}
 	public void labourexpence(String selpro,String expencetype2,String date2,
 			String stafftype2,
-			String staff2,String noumberhr,String remak,String amount12) {
+			String staff2,String noumberhr,String remak,String amount12) throws InterruptedException {
 		
 	
 	ac.selByVisibleText(selproject, selpro);
 	addexpence.click();
 	ac.selByVisibleText(expencetype, expencetype2);
+	Thread.sleep(5000);
 	date.sendKeys(date2);
 	ac.selByVisibleText(stafftype, stafftype2);
 	ac.selByVisibleText(staff, staff2);
@@ -52,6 +53,7 @@ public class LabourExpencepPage extends BaseClass{
 	remarks.sendKeys(remak);
 	amount1.sendKeys(amount12);
 	add.click();
+	Thread.sleep(3000);
 	save.click();
 	saveok.click();
 	

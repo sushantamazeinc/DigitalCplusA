@@ -69,16 +69,20 @@ public class SiteVisitPage extends BaseClass {
 		saveok.click();
 		Thread.sleep(3000);
 		ad.selByVisibleText(stagefilter, stages);
+		Thread.sleep(3000);
 		ad.selByVisibleText(stafftypefilter, types);
 		//ad.selByVisibleText(stafffilterr, staffs);
 		Thread.sleep(3000);
 		editclick.click();
+		Thread.sleep(3000);
 		editsdate.sendKeys(eddate);
 		update.click();
+		Thread.sleep(3000);
 		updateok.click();
 		Thread.sleep(3000);
 		delete.click();
 		deleteok.click();
+		Thread.sleep(3000);
 		deletelast.click();
 		
 		

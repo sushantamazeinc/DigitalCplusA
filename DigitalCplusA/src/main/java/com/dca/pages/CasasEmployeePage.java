@@ -10,9 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class CasasEmployeePage extends BaseClass {
 	ActionDriver ac=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//button[contains(text(),'Export To Excel')]")
@@ -101,8 +103,11 @@ public class CasasEmployeePage extends BaseClass {
 			String allowance1) throws Exception {
 		ac.selByVisibleText(selproject, selproject1);
 		add.click();
+		lc.logs("Clicked On Add");
 		selAddNewEmployee.click();
+		lc.logs("Selected Add New Employee");
 		name.sendKeys(name1);
+		lc.logs("Entered name"+" "+name1);
 		phoneno.sendKeys(phoneno1);
 		email.sendKeys(email1);
 		ac.selByVisibleText(selectstafftype1, selstafftype11);

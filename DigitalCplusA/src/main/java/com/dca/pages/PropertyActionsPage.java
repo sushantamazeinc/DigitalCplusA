@@ -14,8 +14,10 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class PropertyActionsPage extends BaseClass {
+	ListenerClass lc=new ListenerClass();
 	ActionDriver ac = new ActionDriver();
 	PropertyActionsPage projectpage;
 	@FindBy(id = "btn_button")
@@ -183,38 +185,52 @@ WebElement profiles;
 		// Thread.sleep(5000);
 		Select select8 = new Select(selcountry);
 		select8.selectByIndex(1);
+		String selcountry1=selcountry.getText();
+		lc.logs(selcountry1);
 		Select select9 = new Select(selstate);
 		select9.selectByIndex(1);
+		String selstate1=selstate.getText();
+		lc.logs(selstate1);
 		Select select10 = new Select(selcity);
 		select10.selectByIndex(1);
+		String selcity1=selcity.getText();
+		lc.logs(selcity1);
 		Thread.sleep(3000);
 		edit.click();
+		lc.logs("Clicked On Edit");
 		String olddata = updatedata.getAttribute("value");
 		System.out.println("old data" + olddata);
 		updatedata.clear();
+		lc.logs("Updating The Data");
 		updatedata.sendKeys("Amit");
+		lc.logs("Updated Data"+" "+"Amit");
 		String udata = updatedata.getAttribute("value");
 		System.out.println("updated data" + udata);
 		updatebtn.click();
 		popupupdate.click();
 		Thread.sleep(3000);
+		lc.logs("Update Success");
 		attachment.click();
+		lc.logs("Clicked On Attachment");
 		attachmentdelete.click();
+		lc.logs("Clicked on Attachment Delete");
 		confirmdelete.click();
 		lastdel.click();
 
 		Thread.sleep(2000);
+		lc.logs("Attactment Delete Success");
 		addphoto.click();
 		// addPhotoNew.sendKeys("C:\\Users\\Amaze Inc Lap
 		// 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 
 		addPhotoNew.click();
+		lc.logs("Clicked On Add Photo");
 		ac.upload();
 		Thread.sleep(7000);
 
 		addphotobtn.click();
 		addphotook.click();
-		
+		lc.logs("Photo Add Success");
 
 		/*
 		 * attachment.click(); attachmentupdate.click(); Thread.sleep(5000);

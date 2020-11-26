@@ -20,7 +20,7 @@ public class ArchitecturalstageMasterTest extends BaseClass {
 	ActionDriver ac=new ActionDriver();
 	@Test(dataProvider = "Architecturalstagemaster", dataProviderClass = DataProviders.class)
 	
-	public void stagemaster(String selproject1,String stage,String descriptions) throws InterruptedException {
+	public void architechstagemaster(String selproject1,String stage,String descriptions) throws InterruptedException {
 		Log.startTestCase("stagemaster");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();	
@@ -40,7 +40,7 @@ public class ArchitecturalstageMasterTest extends BaseClass {
 
 	@AfterMethod()
 	public void tearDown() {
-	getDriver().quit();
+	//getDriver().quit();
 	}
 
 }

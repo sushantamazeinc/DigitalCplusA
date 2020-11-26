@@ -1,92 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.dca.utility.ListenerClass"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.dca.testcases.FieldManagementToolTest">
+      <class name="com.dca.testcases.MaterialExpencesTest">
         <methods>
-          <include name="afterSuite"/>
-          <include name="loadConfig"/>
-          <include name="fieldmanagetool" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.dca.testcases.FieldManagementToolTest -->
-      <class name="com.dca.testcases.Announcementtest">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="announcements" invocation-numbers="0"/>
-          <include name="afterSuite"/>
-          <include name="loadConfig"/>
-        </methods>
-      </class> <!-- com.dca.testcases.Announcementtest -->
-      <class name="com.dca.testcases.CasasEmployeeTest">
-        <methods>
-          <include name="casasemployee" invocation-numbers="0"/>
+          <include name="material_expences" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="afterSuite"/>
           <include name="loadConfig"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.dca.testcases.CasasEmployeeTest -->
-      <class name="com.dca.testcases.ProjectTimelines1Test">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="loadConfig"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="protimeline" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.dca.testcases.ProjectTimelines1Test -->
-      <class name="com.dca.testcases.SupplierOnlyTest">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="loadConfig"/>
-          <include name="setup"/>
-          <include name="inventory" invocation-numbers="0"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.dca.testcases.SupplierOnlyTest -->
-      <class name="com.dca.testcases.SupplierInvoiceTest">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="supplier_invoice_test" invocation-numbers="0"/>
-          <include name="loadConfig"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.dca.testcases.SupplierInvoiceTest -->
-      <class name="com.dca.testcases.AseetsTest">
+      </class> <!-- com.dca.testcases.MaterialExpencesTest -->
+      <class name="com.dca.testcases.LabourExpencetest">
         <methods>
           <include name="tearDown"/>
           <include name="afterSuite"/>
           <include name="loadConfig"/>
           <include name="setup"/>
-          <include name="assets" invocation-numbers="0"/>
+          <include name="labour_expence" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.dca.testcases.AseetsTest -->
-      <class name="com.dca.testcases.PunchlistMastersTest">
-        <methods>
-          <include name="punchlistmaster" invocation-numbers="0"/>
-          <include name="afterSuite"/>
-          <include name="loadConfig"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.dca.testcases.PunchlistMastersTest -->
-      <class name="com.dca.testcases.BudgetDashboardTest">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="tearDown"/>
-          <include name="loadConfig"/>
-          <include name="setup"/>
-          <include name="budgetDTest" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.dca.testcases.BudgetDashboardTest -->
+      </class> <!-- com.dca.testcases.LabourExpencetest -->
       <class name="com.dca.testcases.LabourTest">
         <methods>
           <include name="setup"/>
@@ -96,42 +33,6 @@
           <include name="labour_test" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.dca.testcases.LabourTest -->
-      <class name="com.dca.testcases.ProjectEmailsTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="emailTest" invocation-numbers="0"/>
-          <include name="afterSuite"/>
-          <include name="setup"/>
-          <include name="loadConfig"/>
-        </methods>
-      </class> <!-- com.dca.testcases.ProjectEmailsTest -->
-      <class name="com.dca.testcases.CommunicationTest">
-        <methods>
-          <include name="commtest" invocation-numbers="0"/>
-          <include name="afterSuite"/>
-          <include name="loadConfig"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.dca.testcases.CommunicationTest -->
-      <class name="com.dca.testcases.ArchitecturalstageMasterTest">
-        <methods>
-          <include name="stagemaster" invocation-numbers="0"/>
-          <include name="setup"/>
-          <include name="afterSuite"/>
-          <include name="loadConfig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.dca.testcases.ArchitecturalstageMasterTest -->
-      <class name="com.dca.testcases.StaffLeaveTest">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="loadConfig"/>
-          <include name="staff_leave" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.dca.testcases.StaffLeaveTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
