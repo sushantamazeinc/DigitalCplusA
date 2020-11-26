@@ -6,8 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class ProjectTeam extends BaseClass {
+	ListenerClass lc=new ListenerClass();
 	ActionDriver ad=new ActionDriver();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
@@ -79,38 +81,68 @@ public class ProjectTeam extends BaseClass {
 	    
 		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
+		lc.logs("clicked on add new");
 		ad.selByVisibleText(type, type1);
+		Thread.sleep(3000);
+		
+		String test1=type.getAttribute("value");
+		lc.logs(test1);
+		
 		ad.selByVisibleText(stafftype, stafftype1);
+		lc.logs("staff type"+" "+stafftype1);
+		
 		ad.selByVisibleText(staff, staff1);
+		String s=staff.getAttribute("value");
+		lc.logs("selected"+" "+s);
+		
 		description.sendKeys(des);
-		save.click();
+		String a1=description.getText();
+		lc.logs("entered description"+" "+a1);
+		
+		save.click();	
 		saveok.click();
+		lc.logs("saved project team");
 		Thread.sleep(3000);
 		mailok.click();
+		lc.logs("mail sented");
 		Thread.sleep(3000);
 		
 		search.sendKeys(des);
 		search.clear();
 		ad.selByVisibleText(stafftypefilter, stafftype1);
+		String sf=stafftypefilter.getAttribute("value");
+		lc.logs("selected"+" "+sf);
+		
+		
 		Thread.sleep(3000);
 		sendsmsclick.click();
 		message.sendKeys(msg);
 		smssave.click();
 		oksms.click();
+		lc.logs("sms saved");
+		
 		sendemailclick.click();
 		textmessage.sendKeys(email);
 		//attachment.sendKeys(("user.dir") +"\\imagesource\\image.jpg");
 		mailsave.click();
 		okmail.click();
+		lc.logs("email saved");
 		Thread.sleep(3000);
+		
 		editclick.click();
 		editstaff.sendKeys(staff2);
+		String es=editstaff.getText();
+		lc.logs("edited staff"+" "+es);
+		
 		update.click();
 		updateok.click();
+		lc.logs("updated successfully");
+		
 		chat.click();
 		textmsg.sendKeys(chat1);
 		sendchat.click();
 		chatclose.click();
+		lc.logs("chat working");
 		/*delete.click();
 		deleteok.click();
 		deletelast.click();*/

@@ -1,33 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-26T12:54:40 IST" name="Suite" finished-at="2020-11-26T12:55:19 IST" duration-ms="38516">
+  <suite name="Suite" duration-ms="38405" started-at="2020-11-26T16:01:57 IST" finished-at="2020-11-26T16:02:35 IST">
     <groups>
     </groups>
-    <test started-at="2020-11-26T12:54:40 IST" name="Test" finished-at="2020-11-26T12:55:19 IST" duration-ms="38516">
-      <class name="com.dca.testcases.PropertyactionsTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.dca.testcases.PropertyactionsTest@77eca502]" started-at="2020-11-26T12:54:40 IST" name="loadConfig" finished-at="2020-11-26T12:54:40 IST" duration-ms="310" status="PASS">
+    <test name="Test" duration-ms="38405" started-at="2020-11-26T16:01:57 IST" finished-at="2020-11-26T16:02:35 IST">
+      <class name="com.dca.testcases.MyTaskTest">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.MyTaskTest@57e1b0c]" name="loadConfig" is-config="true" duration-ms="219" started-at="2020-11-26T16:01:56 IST" finished-at="2020-11-26T16:01:57 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.dca.testcases.PropertyactionsTest@77eca502]" started-at="2020-11-26T12:54:40 IST" name="setup" finished-at="2020-11-26T12:54:50 IST" duration-ms="10046" status="PASS">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.MyTaskTest@57e1b0c]" name="setup" is-config="true" duration-ms="12729" started-at="2020-11-26T16:01:58 IST" finished-at="2020-11-26T16:02:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="propertyActions()[pri:0, instance:com.dca.testcases.PropertyactionsTest@77eca502]" started-at="2020-11-26T12:54:50 IST" name="propertyActions" finished-at="2020-11-26T12:55:18 IST" duration-ms="27525" status="PASS">
+        <test-method status="PASS" signature="mytasktest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.MyTaskTest@57e1b0c]" name="mytasktest" duration-ms="23687" started-at="2020-11-26T16:02:10 IST" data-provider="MyVisit" finished-at="2020-11-26T16:02:34 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test building]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[19122020]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[23122020]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[floor checking]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[check properly]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[25122020]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- propertyActions -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dca.testcases.PropertyactionsTest@77eca502]" started-at="2020-11-26T12:55:18 IST" name="tearDown" finished-at="2020-11-26T12:55:19 IST" duration-ms="902" status="PASS">
+        </test-method> <!-- mytasktest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.MyTaskTest@57e1b0c]" name="tearDown" is-config="true" duration-ms="723" started-at="2020-11-26T16:02:34 IST" finished-at="2020-11-26T16:02:35 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.dca.testcases.PropertyactionsTest@77eca502]" started-at="2020-11-26T12:55:19 IST" name="afterSuite" finished-at="2020-11-26T12:55:19 IST" duration-ms="442" status="PASS">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.MyTaskTest@57e1b0c]" name="afterSuite" is-config="true" duration-ms="511" started-at="2020-11-26T16:02:35 IST" finished-at="2020-11-26T16:02:35 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.dca.testcases.PropertyactionsTest -->
+      </class> <!-- com.dca.testcases.MyTaskTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

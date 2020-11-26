@@ -8,9 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class ProjectEmailsPage extends BaseClass {
 	ActionDriver ac=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
@@ -49,26 +51,42 @@ public class ProjectEmailsPage extends BaseClass {
 	public void projectemail(String selpro,String recipiet,String sub,String date1) throws InterruptedException, IOException {
 		ac.selByVisibleText(selproject, selpro);
 		addnew.click();
+        lc.logs("Clicked on add new button");
+        
 		recipient.sendKeys(recipiet);
-		subject.sendKeys(sub);
-		date.sendKeys(date1);
+		String a1=recipient.getText();
+		lc.logs("Entered recipient"+" "+a1);
 		
+		subject.sendKeys(sub);
+		String b1=subject.getText();
+		lc.logs("Entered subject"+" "+b1);
+		
+		date.sendKeys(date1);
+		String c1=date.getText();
+		lc.logs("picked date"+" "+c1);
 		//emailattach.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
+		
 		emailattach.click();
 		ac.upload();
 		Thread.sleep(7000);
 		attactmenisbig.click();
+		lc.logs("attachment uploded");
+		
 		save.click();
 		Thread.sleep(5000);
 		ok.click();
 		Thread.sleep(3000);
+		lc.logs("saved successfully");
+		
 		search.sendKeys(sub);
 		edit.click();
 		update.click();
 		updateok.click();
 		Thread.sleep(3000);
-		export.click();
+		lc.logs("Updated Suceessfully");
 		
+		export.click();
+		lc.logs("excel exported");
 		
 		
 		

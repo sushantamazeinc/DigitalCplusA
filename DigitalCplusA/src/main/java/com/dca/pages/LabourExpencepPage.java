@@ -6,8 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class LabourExpencepPage extends BaseClass{
+	ListenerClass lc=new ListenerClass();
 	ActionDriver ac=new ActionDriver();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
@@ -44,18 +46,40 @@ public class LabourExpencepPage extends BaseClass{
 	
 	ac.selByVisibleText(selproject, selpro);
 	addexpence.click();
+	lc.logs("clicked on add new");
+	
 	ac.selByVisibleText(expencetype, expencetype2);
+	lc.logs("selected expence type"+" "+expencetype2);
 	Thread.sleep(5000);
+	
 	date.sendKeys(date2);
+	String a1=date.getText();
+	lc.logs("picked date"+" "+a1);
+	
 	ac.selByVisibleText(stafftype, stafftype2);
+	lc.logs("selected staff type"+" "+stafftype2);
+	
 	ac.selByVisibleText(staff, staff2);
+	lc.logs("selected staff "+" "+staff2);
+	
 	noofhour.sendKeys(noumberhr);
+	String b1=noofhour.getText();
+	lc.logs("entered no of hrs"+" "+b1);
+	
 	remarks.sendKeys(remak);
+	String c1=remarks.getText();
+	lc.logs("entered remarks"+" "+c1);
+	
 	amount1.sendKeys(amount12);
+	String d1=amount1.getText();
+	lc.logs("entered amount"+" "+d1);
+	
 	add.click();
+	lc.logs("clicked on add buttun");
 	Thread.sleep(3000);
 	save.click();
 	saveok.click();
+	lc.logs("saved successfully");
 	
 	}
 }

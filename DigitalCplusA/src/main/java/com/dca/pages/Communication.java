@@ -14,9 +14,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class Communication extends BaseClass{
 	ActionDriver ac = new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	
@@ -93,33 +95,56 @@ public class Communication extends BaseClass{
 			String messageby) throws InterruptedException, AWTException, IOException {
 		ac.selByVisibleText(selproject, project);
 		
-		addtransmits.click();
-		
+		  addtransmits.click();
+		  lc.logs("clicked on transmittals add page");
+			
 		  subject.sendKeys(subject1);
+		  String a1=subject.getText();
+		  lc.logs("Entered Subject"+" "+a1);
+		  
 		  ac.selByVisibleText(from, from1);
+		  lc.logs("Entered from"+" "+from1);
 		  Thread.sleep(3000);
+		  
 		  ac.selByVisibleText(to, to1);
+		  lc.logs("Entered to"+" "+to1);
+		  Thread.sleep(3000);
+		  
 		  date.sendKeys(datesend);
-		  description.sendKeys(desc); 
+		  String p1=date.getText();
+		  lc.logs("Entered Subject"+" "+p1);
+		  
+		  description.sendKeys(desc);
+		  String de=description.getText();
+		  lc.logs("Entered Subject"+" "+de);
+		  
 		  remarks.sendKeys(remark); 
+		  String re=remarks.getText();
+		  lc.logs("Entered Subject"+" "+re);
+		  
 		  Robot robot=new
 		  Robot(); for(int i=0;i<2;i++)
 		  { robot.keyPress(KeyEvent.VK_PAGE_DOWN);
 		  Thread.sleep(3000); } 
-		  
-		  //attachment.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg"); 
 		  attachment1.click(); 
 		  Thread.sleep(3000); 
 		  ac.upload(); 
 		  Thread.sleep(7000);
+		  lc.logs("uploaded attachment");
+		  
 		  save.click(); 
 		  saveok.click(); 
 		  Thread.sleep(3000);
+		  lc.logs("Saved Successfully");
+		  
 		  edit.click();
 		  updatesubject.sendKeys(updatesub);
 		  update.click(); 
 		  updateok.click();
-		  //Thread.sleep(3000); //exporttoexcel.click(); 
+		  lc.logs("updated successfully");
+		  
+		  //Thread.sleep(3000); 
+		  //exporttoexcel.click(); 
 		  Robot robot1=new Robot();
 		  for(int i=0;i<1;i++) 
 		  { 
@@ -129,6 +154,7 @@ public class Communication extends BaseClass{
 		 
 		emails.click();
 		Thread.sleep(3000);
+		lc.logs("clicked on emails");
 		Actions actions=new Actions(getDriver());
 		//actions.keyUp(Keys.ARROW_UP);
 		actions.moveToElement(getDriver().findElement(By.xpath("//button[@id='btn_button']")));
@@ -136,12 +162,20 @@ public class Communication extends BaseClass{
 		  for(int i=0;i<1;i++) 
 		  { 
 			  robot11.keyPress(KeyEvent.VK_PAGE_UP);
-		  Thread.sleep(3000); }
+		  Thread.sleep(3000); 
+		  }
 		
 		
 		addemail.click();
+		lc.logs("clicked on add emails");
+		
 		ac.selByVisibleText(clientcontact,clientcon);
+		lc.logs("selected client contact"+" "+clientcon);
+		
 		msgbody.sendKeys(messageby);
+		String me=msgbody.getText();
+		lc.logs("Entered message"+" "+me);
+		
 		 Robot robot111=new Robot();
 		  for(int i=0;i<1;i++) 
 		  { 
@@ -154,33 +188,23 @@ public class Communication extends BaseClass{
 		Thread.sleep(3000);
 		ac.upload();
 		Thread.sleep(7000);
+		lc.logs("uploaded attachment");
+		
 		save1.click();
 		Thread.sleep(3000);
+		lc.logs("saved successfully");
+		
 		update1ok.click();
 		Thread.sleep(3000);
 		edit1.click();
 		update1.click();
 		//sleep(3000);
 		update1ok.click();
+		lc.logs("Updated Successfully");
 		
 		//export1.click();
 		
 		
-		
-		
-		
-	
-	
-	/*
-	 * @FindBy(xpath=
-	 * "//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[5]/ul[1]/li[3]/a[1]")
-	 * WebElement minutesofmeeting;
-	 * 
-	 * @FindBy(xpath="//button[@id='btn_button']") WebElement addmeeting;
-	 * 
-	 * @FindBy(xpath="")
-	 */
-	
 	
 
 }

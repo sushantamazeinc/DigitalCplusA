@@ -6,9 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class SiteVisitPage extends BaseClass {
 	ActionDriver ad=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
@@ -59,27 +61,48 @@ public class SiteVisitPage extends BaseClass {
 	public void siteVisit(String selproject1, String stages,String types,String staffs,String vdate,String des,String eddate  ) throws InterruptedException {
 		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
+		lc.logs("clicked on add new");
+		
 		ad.selByVisibleText(stage, stages);
+		lc.logs("selected stage"+" "+stages);
+		
 		ad.selByVisibleText(stafftype, types);
+		lc.logs("selected staff type"+" "+types);
+		
 		ad.selByVisibleText(staff, staffs);
+		lc.logs("selected staff "+" "+staffs);
 		Thread.sleep(3000);
+		
 		visitdate.sendKeys(vdate);
+		String a1=visitdate.getText();
+		lc.logs("picked visit date"+" "+a1);
+		
 		description.sendKeys(des);
+		String de=description.getText();
+		lc.logs("description entered"+" "+de);
+		
 		save.click();
 		saveok.click();
 		Thread.sleep(3000);
+		lc.logs("saved successfully");
+		
 		ad.selByVisibleText(stagefilter, stages);
 		Thread.sleep(3000);
 		ad.selByVisibleText(stafftypefilter, types);
 		//ad.selByVisibleText(stafffilterr, staffs);
 		Thread.sleep(3000);
+		
 		editclick.click();
 		Thread.sleep(3000);
 		editsdate.sendKeys(eddate);
+		String e1=editsdate.getText();
+		lc.logs("edited date"+" "+e1);
 		update.click();
 		Thread.sleep(3000);
 		updateok.click();
 		Thread.sleep(3000);
+		lc.logs("updated successfully");
+		
 		delete.click();
 		deleteok.click();
 		Thread.sleep(3000);

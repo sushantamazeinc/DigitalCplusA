@@ -7,9 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class Communication_meetingpage extends BaseClass{
 	ActionDriver ac=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
@@ -62,29 +64,55 @@ public class Communication_meetingpage extends BaseClass{
 			String link,String pswd,String meetcate,String meetdate,String clientattend,String meettime,
 			String meetname,String meetloc,String selmeettype ) throws InterruptedException {
 		ac.selByVisibleText(selproject, selproject1);
+		
 		addminutesofmeeting.click();
+		lc.logs("clicked on add button");
+		
 		ac.selByVisibleText(meetinftype, meettype);
+		lc.logs("selected meeting type"+" "+meettype);
 		try {
 			meetinflink.sendKeys(link);
 			password.sendKeys(pswd);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+		
 		ac.selByVisibleText(meetingcategory, meetcate);
+		lc.logs("selected meeting category"+" "+meetcate);
+		
 		meetingdate.sendKeys(meetdate);
+		String a1=meetingdate.getText();
+		lc.logs("picked date"+" "+a1);
+		
 		//ac.selByVisibleText(staffattendes, staffattend);
 		//ac.selByIndex(staffattendes, 2);
 		staffattendes.click();
 		selclient.click();
+		lc.logs("clicked on client");
 		
 		ac.selByVisibleText(clientattendes, clientattend);
+		lc.logs("selected clientattendes"+" "+clientattend);
+		
 		meetingtime.sendKeys(meettime);
+		String b1=meetingtime.getText();
+		lc.logs("picked date"+" "+b1);
+		
 		meetingname.sendKeys(meetname);
+		String c1=meetingname.getText();
+		lc.logs("picked date"+" "+c1);
+		
 		location.sendKeys(meetloc);
+		String d1=location.getText();
+		lc.logs("picked date"+" "+d1);
+		
 		includetransmit.click();
+		lc.logs("clicked on include transmittals");
+		
 		save3.click();
 		saveok3.click();
 		Thread.sleep(3000);
+		lc.logs("saved successfully");
+		
 		ac.selByVisibleText(selectmeetingtype, selmeettype);
 		Thread.sleep(3000);
 		edit12.click();
@@ -94,7 +122,7 @@ public class Communication_meetingpage extends BaseClass{
 		//ac.selByVisibleText(updatestaffattendes,staffattend );
 		update12.click();
 		update12ok.click();
-		
+		lc.logs("Updated Successfully");
 	}
 	
 }
