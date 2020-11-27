@@ -2,8 +2,6 @@ package com.dca.pages;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.io.IOException;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

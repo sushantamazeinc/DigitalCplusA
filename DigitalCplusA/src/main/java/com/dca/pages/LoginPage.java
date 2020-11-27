@@ -36,18 +36,20 @@ public class LoginPage extends BaseClass implements ITestListener
 		PageFactory.initElements(getDriver(), this);
 		
 	}
-	public PropertyActionsPage login() {
+	public PropertyActionsPage login() throws InterruptedException {
 		
 		Select select=new Select(selcompany);
 		select.selectByIndex(1);
 		Select select1=new Select(Seltype);
 		select1.selectByIndex(2);
 		uname.sendKeys(prop.getProperty("username"));
-		String a1=uname.getText();
+		String a1=uname.getAttribute("value");
+		
 		lc.logs("Username is"+" "+a1);
 		
 		pswd.sendKeys(prop.getProperty("password"));
-		String a2=pswd.getText();
+		String a2=pswd.getAttribute("value");
+		
 		lc.logs("Password is"+" "+a2);
 		signin.click();
 		lc.logs("Clicked On SignIn");
