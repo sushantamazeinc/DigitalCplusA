@@ -84,10 +84,10 @@ public class PunchlistMastersPage extends BaseClass {
 		Thread.sleep(3000);
 		lc.logs("Updated successfully");
 		
-		delete.click();
+		/*delete.click();
 		deleteok.click();
 		deleteoklast.click();
-		lc.logs("Deleted Successfully");
+		lc.logs("Deleted Successfully");*/
 		
 	}
 }

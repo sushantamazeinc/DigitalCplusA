@@ -18,6 +18,8 @@ public class PropertPage extends BaseClass {
 	ActionDriver ac=new ActionDriver();
 	@FindBy(id = "ProejectType")
 	public WebElement projecttype;
+	@FindBy(xpath="//button[@id='btn_button']")
+	WebElement addnew;
 	@FindBy(xpath="//input[@id='txt_BuildingName']")
 	public WebElement projectname;
 	@FindBy(xpath="//textarea[@id='txt_BuildingAddress']")
@@ -66,7 +68,7 @@ public class PropertPage extends BaseClass {
 		PageFactory.initElements(getDriver(), this);
 	}
 	public PropertyActionsPage details(String proname, String proadd, String phone,String conname,String conphone,String mail,String nofloor,String noofunit,String unitfloor,String buildarea,String budgethr) throws InterruptedException, IOException {
-
+		addnew.click();
 		Select select2=new Select(projecttype);
 		select2.selectByIndex(1);
 		Thread.sleep(1000);

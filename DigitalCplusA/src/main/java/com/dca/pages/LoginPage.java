@@ -27,7 +27,7 @@ public class LoginPage extends BaseClass implements ITestListener
 	public WebElement pswd;
 	@FindBy(id="btn_Loginbutton")
 	public WebElement signin;
-	@FindBy(xpath="//h4[contains(text(),'Project')]") 
+	@FindBy(xpath="//h6[contains(text(),'Project DASHBOARD')]") 
 	WebElement projecttest;
 
 	
@@ -52,7 +52,7 @@ public class LoginPage extends BaseClass implements ITestListener
 		signin.click();
 		lc.logs("Clicked On SignIn");
 		String verify= projecttest.getText();
-		Assert.assertEquals(verify, "PROJECT");
+		Assert.assertEquals(verify, "PROJECT DASHBOARD");
 		return new PropertyActionsPage();
 		
 	

@@ -6,11 +6,11 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-<class name="com.dca.testcases.LoginPageTest"/> 
-   		<!--  <class name="com.dca.testcases.PropertyPageTest"/> -->
+ <!--<class name="com.dca.testcases.LoginPageTest"/>-->
+   		    <class name="com.dca.testcases.PropertyPageTest"/>  
      <!--  <class name="com.dca.testcases.PropertyactionsTest"/> -->
-   <!--     <class name="com.dca.testcases.CasasEmployeeTest"/>
-      <class name="com.dca.testcases.ProjectTeamTest"/> -->
+      <!--  <class name="com.dca.testcases.CasasEmployeeTest"/> -->
+       <!--  <class name="com.dca.testcases.ProjectTeamTest"/> -->
      <!--  <class name="com.dca.testcases.ArchitecturalstageMasterTest"/> -->
       <!--  <class name="com.dca.testcases.BudgetDashboardTest"/>
    
@@ -22,9 +22,9 @@
          <class name="com.dca.testcases.AseetsTest"/>
      <class name="com.dca.testcases.ClientContactTest"/>-->
    <!--   <class name="com.dca.testcases.StaffLeaveTest"/> --> 
-  <!--  <class name="com.dca.testcases.PunchlistMastersTest"/> -->
+    <class name="com.dca.testcases.PunchlistMastersTest"/> 
       
-         <!--  <class name="com.dca.testcases.FieldManagementToolTest"/> -->
+         <!--  <class name="com.dca.testcases.FieldManagementToolTest"/>  -->
     <!--     <class name="com.dca.testcases.CommunicationTest"/>
           <class name="com.dca.testcases.Communication_meetingtest"/>
            <class name="com.dca.testcases.ProjectEmailsTest"/>

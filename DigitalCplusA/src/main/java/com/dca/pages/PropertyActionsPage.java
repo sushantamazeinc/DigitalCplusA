@@ -154,6 +154,9 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement droptechsupportmain;
 	@FindBy(xpath = "//a[contains(text(),'New Support Ticket')]")
 	WebElement droptechsupport;
+	@FindBy(xpath = "//a[@href='#/Building']")
+	WebElement droppropertypage;
+	
 
 	///////////////////////////
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[1]/a[1]")
@@ -477,6 +480,22 @@ WebElement profiles;
 		Thread.sleep(3000);
 		return new TechsupportPage();
 
+	}
+	public PropertPage droppropertypage() throws InterruptedException, AWTException {
+		
+		
+		dropmaster.click();
+		Thread.sleep(3000);
+		Robot robot1=new Robot();
+		  for(int i=0;i<1;i++)
+		  {
+		  robot1.keyPress(KeyEvent.VK_PAGE_DOWN);
+		  Thread.sleep(3000); 
+		  }
+		droppropertypage.click();
+		Thread.sleep(3000);
+		return new PropertPage() ;
+		
 	}
 
 }

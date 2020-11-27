@@ -6,15 +6,24 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.dca.testcases.ProjectTeamTest">
+      <class name="com.dca.testcases.PunchlistMastersTest">
         <methods>
+          <include name="punchlistmaster"/>
           <include name="afterSuite"/>
           <include name="loadConfig"/>
           <include name="setup"/>
-          <include name="projectteamtest" invocation-numbers="0"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.dca.testcases.ProjectTeamTest -->
+      </class> <!-- com.dca.testcases.PunchlistMastersTest -->
+      <class name="com.dca.testcases.PropertyPageTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+          <include name="propertyreg" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.dca.testcases.PropertyPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

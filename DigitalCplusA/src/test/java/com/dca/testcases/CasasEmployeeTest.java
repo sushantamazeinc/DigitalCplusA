@@ -28,6 +28,7 @@ public class CasasEmployeeTest extends BaseClass {
 		Log.startTestCase("casasemployees");
 		LoginPage lp=new LoginPage();
 		projectpage=	lp.login();
+		Thread.sleep(3000);
 		WebElement selectproject=	getDriver().findElement(By.xpath("//select[@id='ProjectID']"));
 		ac.selByVisibleText(selectproject, selproject1);
 		Thread.sleep(3000);
