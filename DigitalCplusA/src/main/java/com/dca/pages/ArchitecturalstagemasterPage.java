@@ -6,8 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class ArchitecturalstagemasterPage extends BaseClass {
+	ListenerClass lc=new ListenerClass();
 	ActionDriver ad=new ActionDriver();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
@@ -36,16 +38,22 @@ public class ArchitecturalstagemasterPage extends BaseClass {
 	public void architecturalmaster(String selproject1, String stage,String descriptions) throws InterruptedException {
 		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
+		lc.logs("Clicked On AddNew");
 		Thread.sleep(3000);
 		ad.selByVisibleText(stages, stage);
+		lc.logs("Selected Stages"+" "+stage);
 		description.sendKeys(descriptions);
+		String a1=description.getText();
+		lc.logs("Entered Discription"+" "+a1);
 		save.click();
 		saveok.click();
+		lc.logs("Saved Success");
 		Thread.sleep(3000);
 		delete.click();
+		lc.logs("Clicked on Delete");
 		deleteok.click();
 		deleteoklast.click();
-		
+		lc.logs("Delete Success");
 		
 		
 		

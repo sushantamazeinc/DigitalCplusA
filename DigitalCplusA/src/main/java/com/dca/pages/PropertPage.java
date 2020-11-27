@@ -92,10 +92,12 @@ public class PropertPage extends BaseClass {
 		lc.logs(proptype);
 		Thread.sleep(1000);
 		projectname.sendKeys(proname);
-		lc.logs("Entered Projectname"+" "+proname);
+		String a1=projectname.getText();
+		lc.logs("Entered Projectname"+" "+a1);
 		
 		propertyaddr.sendKeys(proadd);
-		lc.logs("Entered PropertyAddress"+" "+proadd);
+		String a2=propertyaddr.getText();
+		lc.logs("Entered PropertyAddress"+" "+a2);
 		phonenumber.sendKeys(phone);
 		String mob=phonenumber.getAttribute("value");
 		if(mob.length()==10) {
@@ -103,11 +105,14 @@ public class PropertPage extends BaseClass {
 		}else {
 			System.out.println("Phone Number Invalid");
 		}
-		lc.logs("Entered PhoneNo"+" "+phone);
+		String a3=phonenumber.getText();
+		lc.logs("Entered PhoneNo"+" "+a3);
 		contactname.sendKeys(conname);
-		lc.logs("Entered ContactName"+" "+conname);
+		String a4=contactname.getText();
+		lc.logs("Entered ContactName"+" "+a4);
 		contactphone.sendKeys(conphone);
-		lc.logs("Entered Contact Phone"+" "+conphone);
+		String a5=contactphone.getText();
+		lc.logs("Entered Contact Phone"+" "+a5);
 		String comob=contactphone.getAttribute("value");
 		if(comob.length()==10) {
 			System.out.println("Contact Person Phone Valid");
@@ -116,6 +121,7 @@ public class PropertPage extends BaseClass {
 		}
 		
 		contactemail.sendKeys(mail);
+		
 		String email=contactemail.getAttribute("value");
 		if((email).contains("@")){
 		    System.out.println("Valid Email");
@@ -125,19 +131,24 @@ public class PropertPage extends BaseClass {
 		
 		System.out.println("Invalid Emails");
 		}
-		lc.logs("Entered Contact Emails"+" "+mail);
+		lc.logs("Entered Contact Emails"+" "+email);
 		numberoffloor.sendKeys(nofloor);
-		lc.logs("Number Of Floors"+" "+nofloor);
+		String a6=numberoffloor.getText();
+		lc.logs("Number Of Floors"+" "+a6);
 		numberofbase.click();
 		lc.logs("Clicked On BaseMent");
 		numberofunit.sendKeys(noofunit);
-		lc.logs(" Entered Number Of Unit"+" "+noofunit);
+		String a7=numberofunit.getText();
+		lc.logs(" Entered Number Of Unit"+" "+a7);
 		unitperfloor.sendKeys(unitfloor);
-		lc.logs("Entered Number Of Unit Per Floor"+" "+unitfloor);
+		String a8=unitperfloor.getText();
+		lc.logs("Entered Number Of Unit Per Floor"+" "+a8);
 		buildingarea.sendKeys(buildarea);
-		lc.logs("Entered Building Area"+" "+buildarea);
+		String a9=buildingarea.getText();
+		lc.logs("Entered Building Area"+" "+a9);
 		budgethour.sendKeys(budgethr);
-		lc.logs("Entered Budget Hour"+" "+budgethr);
+		String a10=budgethour.getText();
+		lc.logs("Entered Budget Hour"+" "+a10);
 		//Select select2=new Select(projecttype);
 		//select2.selectByIndex(1);
 		//yearbuild.sendKeys(ybuild);

@@ -8,10 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class AssetsPage extends BaseClass{
 	//error in edit page need to fix
 	ActionDriver ad=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
 	@FindBy(xpath="//button[contains(text(),'Add New')]")
@@ -99,62 +101,107 @@ public class AssetsPage extends BaseClass{
 			String exisitingvendornames,String vendor) throws Exception{
 		ad.selByVisibleText(selproject, selproject1);
 		addnew.click();
-		assetname.sendKeys(assets);
-		ad.selByVisibleText(assettype, type);
-		ad.selByVisibleText(floor, floors);
-		ad.selByVisibleText(parentasset, parentassets);
-		modelname.sendKeys(modelnames);
-		serialno.sendKeys(serialnos);
-		purchasedate.sendKeys(purchasedates);
+		lc.logs("Clicked on AddNew");
 		
+		assetname.sendKeys(assets);
+		String a1=assetname.getText();
+		lc.logs("Assert Name"+" "+a1);
+		ad.selByVisibleText(assettype, type);
+		lc.logs("Assert Type"+" "+type);
+		ad.selByVisibleText(floor, floors);
+		lc.logs("Floor"+" "+floors);
+		ad.selByVisibleText(parentasset, parentassets);
+		lc.logs("Parrent Assert"+" "+parentassets);
+		modelname.sendKeys(modelnames);
+	String a2=	modelname.getText();
+	lc.logs("Model Name"+" "+a2);
+		serialno.sendKeys(serialnos);
+		String a3=serialno.getText();
+		lc.logs("Serial Number"+" "+a3);
+		purchasedate.sendKeys(purchasedates);
+		String a4=purchasedate.getText();
+		lc.logs("Purchase date"+" "+a4);
 		if(vendor.contentEquals("existingvendor")) {
 			exisitingvendor.click();
+			lc.logs("Clicked on Existing Vendor");
 			
 			exisitingvendorname.sendKeys(exisitingvendornames);
-			
+			String a5=exisitingvendorname.getText();
+			lc.logs("Existing vendor Name"+" "+a5);
 		}
 		else {
 			newvendorname.sendKeys(vname);
+			String a5=newvendorname.getText();
+			lc.logs("New Vendor Name"+" "+a5);
 			vendorcontactname.sendKeys(vendorcontactnames);
+			String a6=vendorcontactname.getText();
+			lc.logs("Vendor Contact Name"+" "+a6);
 			vendorphno.sendKeys(vendorphnos);
+			String a7=vendorphno.getText();
+			lc.logs("Vendor phone No"+" "+a7);
 			vendoremail.sendKeys(vendoremails);
-			
+			String a8=vendoremail.getText();
+			lc.logs("Vendor Email"+" "+a8);
 		    }
 		
 		warrantyfor.sendKeys(warrantyfors);
+		String a8=warrantyfor.getText();
+		lc.logs("Warrenty"+" "+a8);
 		warrantytill.sendKeys(warrantytills);
+		String a9=warrantytill.getText();
+		lc.logs("Warrenty Till"+" "+a9);
 		firstservicedue.sendKeys(firstservicedues);
+		String a10=firstservicedue.getText();
+		lc.logs("Firist Service Due"+" "+a10);
 		nextservicedue.sendKeys(nextservicedues);
+	String a11=	nextservicedue.getText();
+		lc.logs("Next Service Due"+" "+a11);
 		barcode.clear();
 		barcode.sendKeys(barcodes);
+		String a12=barcode.getText();
+		lc.logs("BarCodes"+" "+a12);
 		assetscost.sendKeys(assetscosts);
+		String a13=assetscost.getText();
+		lc.logs("AssertCost"+" "+a13);
 		depriciation.sendKeys(depriciations);
+		String a14=depriciation.getText();
+		lc.logs("Deprication"+" "+a14);
 		remindin.sendKeys(remindins);
+		String a15=remindin.getText();
+		lc.logs("Remind In"+" "+a15);
 		invoiceimage.click();
 		ad.upload();
+		lc.logs("invoice image Upload");
 		Thread.sleep(3000);
 		attachment.click();
 		ad.upload();
 		Thread.sleep(3000);
+		lc.logs("Attachment Upload");
 		assetphoto.click();
 		Thread.sleep(3000);
 		ad.upload();
 		Thread.sleep(3000);
+		lc.logs("Assert photo upload");
 		save.click();
 		Thread.sleep(3000);
 		saveok.click();
+		lc.logs("Save Success");
 		search.sendKeys(assets);
 		floorfilter.sendKeys(floors);
 		
 		edit.click();
+		lc.logs("Clicked on Edit");
 		Thread.sleep(3000);
 		update.click();	
 		Thread.sleep(3000);
 		updateok.click();
+		lc.logs("Update Success");
 		
 		delete.click();	
+		lc.logs("Clicked on Delete");
 		deleteok.click();
 		deletelast.click();
+		lc.logs("Deleted");
 		
 		//error in edit page need to fix
 	

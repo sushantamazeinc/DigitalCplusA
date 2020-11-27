@@ -33,8 +33,48 @@ WebElement save;
 WebElement savesuccess;
 
 
-@FindBy(xpath="//select[@id='folders']")
-WebElement folder;
+@FindBy(xpath="//input[@id='txt_Search']")
+WebElement search1;
+@FindBy(xpath="//tbody/tr[1]/td[1]/div[1]/div[2]")
+WebElement selectfolder;
+@FindBy(xpath="//p[contains(text(),'Drop your files here (or click)')]")
+WebElement uploadphoto1;
+@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-drag-drop-project-files[1]/div[1]/div[2]/div[3]/div[2]/button[1]")
+WebElement save1;
+@FindBy(xpath="//input[@id='Version ']")
+WebElement version1;
+@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-drag-drop-project-files[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]")
+WebElement versionsave;
+@FindBy(xpath="//button[contains(text(),'OK')]")
+WebElement versionsaveok;
+@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-drag-drop-project-files[1]/div[1]/div[2]/img[1]")
+WebElement back;
+@FindBy(xpath="//a[@href='#pageSubmenu']")
+WebElement pagesubmenu;
+@FindBy(xpath="//a[@href='#/BuildingPlans']")
+WebElement pagemenu;
+@FindBy(xpath="//tbody/tr[1]/td[4]/div[1]/div[1]/i[1]")
+WebElement sharefold;
+@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-building-plans[1]/div[3]/div[1]/div[1]/div[1]/div[2]/ng-multiselect-dropdown[1]/div[1]/div[1]/span[1]")
+WebElement selcasasemp; 
+@FindBy(xpath="//tbody/tr[2]/td[3]/input[1]")
+WebElement selcasaimage;
+@FindBy(xpath="//button[contains(text(),'Share Files')]")
+WebElement sharefiles;
+@FindBy(xpath="//tbody/tr[1]/td[8]/i[1]")
+WebElement del;
+@FindBy(xpath="//tbody/tr[1]/td[7]/input[1]")
+WebElement sharesel;
+@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-drag-drop-project-files[1]/div[1]/div[2]/div[4]/div[2]/button[1]")
+WebElement share1;
+@FindBy(xpath="//span[contains(text(),'Select Casas Employees')]")
+WebElement selcasasemployee;
+@FindBy(xpath="//div[contains(text(),'Select All')]")
+WebElement selall;
+@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-drag-drop-project-files[1]/div[3]/div[1]/div[1]/div[1]/div[2]/ng-multiselect-dropdown[1]/div[1]/div[1]/span[1]")
+WebElement undosel;
+@FindBy(xpath="//body/app-root[1]/div[2]/div[2]/div[1]/app-drag-drop-project-files[1]/div[3]/div[1]/div[1]/div[2]/div[1]/button[1]")
+WebElement casaasshare;
 @FindBy(xpath="//input[@id='txt_PlanName']")
 WebElement plan;
 @FindBy(xpath="//p[contains(text(),'Drop your files here (or click)')]")
@@ -128,10 +168,43 @@ public void projectfile(String selproject1, String foldname1, String planname1, 
 	save.click();
 	savesuccess.click();
 	Thread.sleep(3000);
-	folder.sendKeys(foldname1);
-	plan.sendKeys(planname1);
+	search1.sendKeys(foldname1);
+	selectfolder.click();
+	uploadphoto1.click();
+	ac.upload();
+	Thread.sleep(7000);
+	save1.click();
+	Thread.sleep(3000);
+	version1.sendKeys(version11);
+	versionsave.click();
+	versionsaveok.click();
+	Thread.sleep(3000);
+	sharesel.click();
+	share1.click();
+	//ac.selByIndex(selcasasemployee, 1);
+	selcasasemployee.click();
+	selall.click();
+	undosel.click();
+	Thread.sleep(3000);
+	casaasshare.click();
+	versionsaveok.click();
+	Thread.sleep(5000);
+	//back.click();
+	/*pagesubmenu.click();
+	pagemenu.click();
+	foldername.sendKeys(foldname1);
+	sharefold.click();
+	ac.selByIndex(selcasasemp, 1);
+	selcasaimage.click();
+	sharefiles.click();
+	versionsaveok.click();
+	foldername.sendKeys(foldname1);*/
+	del.click();
+	confirmphotodel.click();
+	photodelok.click();
+	//plan.sendKeys(planname1);
 	//projectplan.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
-	projectplan.click();
+	/*projectplan.click();
 	ac.upload();
 	Thread.sleep(5000);
 	description.sendKeys(description11);
@@ -201,7 +274,7 @@ public void projectfile(String selproject1, String foldname1, String planname1, 
 	 clicking.click();
 	share.click();
 	Thread.sleep(3000);
-	shareok.click();
+	shareok.click();*/
 	
 	
 }

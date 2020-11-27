@@ -12,7 +12,7 @@ public class LoginPageTest extends BaseClass  {
 	
 	
 	@Test()
-	public void loginTest() {
+	public void loginTest() throws InterruptedException {
 		Log.startTestCase("Login");
 		LoginPage loginpage=new LoginPage();
 		loginpage.login();

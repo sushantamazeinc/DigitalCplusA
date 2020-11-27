@@ -72,7 +72,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement filedelok;
 	@FindBy(xpath = "//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[2]/a[1]")
 	WebElement dropconstructionproject;
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[1]/ul[1]/li[2]/a[1]")
+	@FindBy(xpath = "//a[@href='#/BuildingPlans']")
 	WebElement selprojectfile;
 	@FindBy(xpath = "//a[@href='#/ArchitecturalProjectTimelineDasboard']")
 	WebElement selprojecttimeline;
@@ -156,7 +156,7 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement droptechsupport;
 
 	///////////////////////////
-	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[1]/a[1]")
+	@FindBy(xpath="//body/app-root[1]/div[2]/div[1]/nav[1]/ul[1]/li[1]/a[1]")
 	WebElement constpro;
 @FindBy(linkText ="Project Files")
 WebElement profiles;
