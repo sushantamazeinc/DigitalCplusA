@@ -12,9 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.dca.action.ActionDriver;
 import com.dca.base.BaseClass;
+import com.dca.utility.ListenerClass;
 
 public class ProjectFilesPages extends BaseClass {
 	ActionDriver ac=new ActionDriver();
+	ListenerClass lc=new ListenerClass();
 @FindBy(xpath="//select[@id='ProjectID']")
 WebElement selproj;
 @FindBy(xpath="//button[@id='btn_button']")
@@ -164,31 +166,45 @@ public void projectfile(String selproject1, String foldname1, String planname1, 
 	ac.selByVisibleText(selproj,selproject1);
 	Thread.sleep(5000);
 	newplanbtn.click();
+	lc.logs("Clicked On New Plan button");
 	foldername.sendKeys(foldname1);
+	String a1=foldername.getAttribute("value");
+	lc.logs("Folder name"+" "+a1);
 	save.click();
 	savesuccess.click();
+	lc.logs("Save Success");
 	Thread.sleep(3000);
 	search1.sendKeys(foldname1);
 	selectfolder.click();
+	lc.logs("Selected Folder"+" "+foldname1);
 	uploadphoto1.click();
 	ac.upload();
+	lc.logs("Upload Save success");
 	Thread.sleep(7000);
 	save1.click();
+	lc.logs("Save Success");
 	Thread.sleep(3000);
 	version1.sendKeys(version11);
+	Thread.sleep(2000);
+	String a2=version1.getAttribute("value");
+	lc.logs("Version number"+" "+a2);
 	versionsave.click();
 	versionsaveok.click();
+	lc.logs("Version Save Success");
 	Thread.sleep(3000);
 	sharesel.click();
+	lc.logs("Clicked On Share");
 	share1.click();
 	//ac.selByIndex(selcasasemployee, 1);
 	selcasasemployee.click();
 	selall.click();
+	lc.logs("Selected Employees to Share");
 	undosel.click();
 	Thread.sleep(3000);
 	casaasshare.click();
-	versionsaveok.click();
-	Thread.sleep(5000);
+	lc.logs("Share Success");
+	//versionsaveok.click();
+	Thread.sleep(7000);
 	//back.click();
 	/*pagesubmenu.click();
 	pagemenu.click();
@@ -200,8 +216,10 @@ public void projectfile(String selproject1, String foldname1, String planname1, 
 	versionsaveok.click();
 	foldername.sendKeys(foldname1);*/
 	del.click();
+	lc.logs("Clicked on Delete");
 	confirmphotodel.click();
 	photodelok.click();
+	lc.logs("Deleted Successfully");
 	//plan.sendKeys(planname1);
 	//projectplan.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 	/*projectplan.click();

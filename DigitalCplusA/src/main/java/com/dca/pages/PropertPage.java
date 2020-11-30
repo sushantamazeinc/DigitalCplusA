@@ -74,31 +74,35 @@ public class PropertPage extends BaseClass {
 		Thread.sleep(1000);
 		Select select3=new Select(country);
 		select3.selectByIndex(1);
+		Thread.sleep(2000);
 		String ctext=country.getText();
 		lc.logs(ctext);
 		Thread.sleep(1000);
 		Select select4=new Select(state);
 		select4.selectByIndex(1);
+		Thread.sleep(2000);
 		String state1=state.getText();
 		lc.logs(state1);
 		Thread.sleep(1000);
 		Select select5=new Select(city);
 		select5.selectByIndex(1);
+		Thread.sleep(2000);
 		String city1=city.getText();
 		lc.logs(city1);
 		Thread.sleep(1000);
 		Select select6=new Select(propertytype);
 		select6.selectByIndex(2);
+		Thread.sleep(2000);
 		String proptype=propertytype.getText();
 		Thread.sleep(3000);
 		lc.logs(proptype);
 		Thread.sleep(1000);
 		projectname.sendKeys(proname);
-		String a1=projectname.getText();
+		String a1=projectname.getAttribute("value");
 		lc.logs("Entered Projectname"+" "+a1);
 		
 		propertyaddr.sendKeys(proadd);
-		String a2=propertyaddr.getText();
+		String a2=propertyaddr.getAttribute("value");
 		lc.logs("Entered PropertyAddress"+" "+a2);
 		phonenumber.sendKeys(phone);
 		String mob=phonenumber.getAttribute("value");
@@ -107,13 +111,13 @@ public class PropertPage extends BaseClass {
 		}else {
 			System.out.println("Phone Number Invalid");
 		}
-		String a3=phonenumber.getText();
+		String a3=phonenumber.getAttribute("value");
 		lc.logs("Entered PhoneNo"+" "+a3);
 		contactname.sendKeys(conname);
 		String a4=contactname.getText();
 		lc.logs("Entered ContactName"+" "+a4);
 		contactphone.sendKeys(conphone);
-		String a5=contactphone.getText();
+		String a5=contactphone.getAttribute("value");
 		lc.logs("Entered Contact Phone"+" "+a5);
 		String comob=contactphone.getAttribute("value");
 		if(comob.length()==10) {
@@ -135,21 +139,21 @@ public class PropertPage extends BaseClass {
 		}
 		lc.logs("Entered Contact Emails"+" "+email);
 		numberoffloor.sendKeys(nofloor);
-		String a6=numberoffloor.getText();
+		String a6=numberoffloor.getAttribute("value");
 		lc.logs("Number Of Floors"+" "+a6);
 		numberofbase.click();
 		lc.logs("Clicked On BaseMent");
 		numberofunit.sendKeys(noofunit);
-		String a7=numberofunit.getText();
+		String a7=numberofunit.getAttribute("value");
 		lc.logs(" Entered Number Of Unit"+" "+a7);
 		unitperfloor.sendKeys(unitfloor);
-		String a8=unitperfloor.getText();
+		String a8=unitperfloor.getAttribute("value");
 		lc.logs("Entered Number Of Unit Per Floor"+" "+a8);
 		buildingarea.sendKeys(buildarea);
-		String a9=buildingarea.getText();
+		String a9=buildingarea.getAttribute("value");
 		lc.logs("Entered Building Area"+" "+a9);
 		budgethour.sendKeys(budgethr);
-		String a10=budgethour.getText();
+		String a10=budgethour.getAttribute("value");
 		lc.logs("Entered Budget Hour"+" "+a10);
 		//Select select2=new Select(projecttype);
 		//select2.selectByIndex(1);
