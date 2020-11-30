@@ -1,5 +1,6 @@
 package com.dca.testcases;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -19,12 +20,15 @@ public class PropertyactionsTest extends BaseClass{
 	PropertyActionsPage projectpage;
 	ActionDriver ac=new ActionDriver();
 	@Test()
-	public void propertyActions() throws InterruptedException, IOException {
+	public void propertyActions() throws InterruptedException, IOException, AWTException {
 		Log.startTestCase("propertyactions");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
 		WebElement selectproject=	getDriver().findElement(By.xpath("//select[@id='ProjectID']"));
 		ac.selByIndex(selectproject, 1);
+		Thread.sleep(5000);
+		projectpage.dropproaction();
+		Thread.sleep(3000);
 		projectpage.paction();
 		Log.endTestCase("propertyactions");
 	}

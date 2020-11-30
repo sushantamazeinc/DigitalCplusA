@@ -156,6 +156,8 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement droptechsupport;
 	@FindBy(xpath = "//a[@href='#/Building']")
 	WebElement droppropertypage;
+	@FindBy(xpath="//a[@href=\"#/Building\"]")
+	WebElement selectproject;
 	
 
 	///////////////////////////
@@ -163,6 +165,12 @@ public class PropertyActionsPage extends BaseClass {
 	WebElement constpro;
 @FindBy(linkText ="Project Files")
 WebElement profiles;
+
+
+//@FindBy(xpath="//a[@href="#Vendor"]")
+//WebElement supp;
+//@FindBy(xpath="//a[@href=\"#mATERS\"]")
+//WebElement dropmprojmas;
 	////////////////////////////////////////
 
 	public PropertyActionsPage() {
@@ -172,6 +180,27 @@ WebElement profiles;
 	public PropertPage add() {
 		addnew.click();
 		return new PropertPage();
+	}
+	
+	
+	public void dropproaction() throws AWTException, InterruptedException {
+		suppliers.click();
+		Thread.sleep(3000);
+		 Robot robot=new Robot();
+		  for(int i=0;i<1;i++) 
+		  { 
+			  robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+			  Thread.sleep(3000);
+			  }
+		dropmaster.click();
+		Thread.sleep(3000);
+		 Robot robot1=new Robot();
+		  for(int i=0;i<1;i++) 
+		  { 
+			  robot1.keyPress(KeyEvent.VK_PAGE_DOWN);
+			  Thread.sleep(3000);
+			  }
+		  droppropertypage.click();
 	}
 
 	/**
@@ -190,10 +219,12 @@ WebElement profiles;
 		select8.selectByIndex(1);
 		String selcountry1=selcountry.getText();
 		lc.logs(selcountry1);
+		Thread.sleep(3000);
 		Select select9 = new Select(selstate);
 		select9.selectByIndex(1);
 		String selstate1=selstate.getText();
 		lc.logs(selstate1);
+		Thread.sleep(3000);
 		Select select10 = new Select(selcity);
 		select10.selectByIndex(1);
 		String selcity1=selcity.getText();
@@ -484,7 +515,7 @@ WebElement profiles;
 	public PropertPage droppropertypage() throws InterruptedException, AWTException {
 		
 		
-		dropmaster.click();
+		/*dropmaster.click();
 		Thread.sleep(3000);
 		Robot robot1=new Robot();
 		  for(int i=0;i<1;i++)
@@ -493,7 +524,24 @@ WebElement profiles;
 		  Thread.sleep(3000); 
 		  }
 		droppropertypage.click();
+		Thread.sleep(3000);*/
+		suppliers.click();
 		Thread.sleep(3000);
+		 Robot robot=new Robot();
+		  for(int i=0;i<1;i++) 
+		  { 
+			  robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+			  Thread.sleep(3000);
+			  }
+		dropmaster.click();
+		Thread.sleep(3000);
+		 Robot robot1=new Robot();
+		  for(int i=0;i<1;i++) 
+		  { 
+			  robot1.keyPress(KeyEvent.VK_PAGE_DOWN);
+			  Thread.sleep(3000);
+			  }
+		  droppropertypage.click();
 		return new PropertPage() ;
 		
 	}

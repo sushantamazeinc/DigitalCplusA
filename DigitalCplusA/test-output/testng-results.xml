@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="52023" started-at="2020-11-27T18:54:17 IST" finished-at="2020-11-27T18:55:09 IST">
+  <suite started-at="2020-11-28T15:31:50 IST" name="Suite" finished-at="2020-11-28T15:33:07 IST" duration-ms="76067">
     <groups>
     </groups>
-    <test name="Test" duration-ms="52023" started-at="2020-11-27T18:54:17 IST" finished-at="2020-11-27T18:55:09 IST">
-      <class name="com.dca.testcases.FieldManagementToolTest">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.dca.testcases.FieldManagementToolTest@57e1b0c]" name="loadConfig" is-config="true" duration-ms="256" started-at="2020-11-27T18:54:17 IST" finished-at="2020-11-27T18:54:17 IST">
+    <test started-at="2020-11-28T15:31:50 IST" name="Test" finished-at="2020-11-28T15:33:07 IST" duration-ms="76067">
+      <class name="com.dca.testcases.ProjectFilesTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.dca.testcases.ProjectFilesTest@3246fb96]" started-at="2020-11-28T15:31:50 IST" name="loadConfig" finished-at="2020-11-28T15:31:50 IST" duration-ms="311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.dca.testcases.FieldManagementToolTest@57e1b0c]" name="setup" is-config="true" duration-ms="23586" started-at="2020-11-27T18:54:19 IST" finished-at="2020-11-27T18:54:42 IST">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.dca.testcases.ProjectFilesTest@3246fb96]" started-at="2020-11-28T15:31:52 IST" name="setup" finished-at="2020-11-28T15:32:12 IST" duration-ms="20300" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="fieldmanagetool(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.FieldManagementToolTest@57e1b0c]" name="fieldmanagetool" duration-ms="26343" started-at="2020-11-27T18:54:42 IST" data-provider="FieldManagementTool" finished-at="2020-11-27T18:55:08 IST">
+        <test-method signature="projectFTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ProjectFilesTest@3246fb96]" started-at="2020-11-28T15:32:12 IST" name="projectFTest" data-provider="Projectfile" finished-at="2020-11-28T15:33:07 IST" duration-ms="54499" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,62 +24,42 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Floor 1]]>
+                <![CDATA[bike]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[floor checking]]>
+                <![CDATA[general plus]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Valerie Valdez]]>
+                <![CDATA[this is for testing]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[15122020]]>
+                <![CDATA[1.0]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[17122020]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[220]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Testing]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[Assigned]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[Completed]]>
+                <![CDATA[1.5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fieldmanagetool -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dca.testcases.FieldManagementToolTest@57e1b0c]" name="tearDown" is-config="true" duration-ms="769" started-at="2020-11-27T18:55:08 IST" finished-at="2020-11-27T18:55:09 IST">
+        </test-method> <!-- projectFTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dca.testcases.ProjectFilesTest@3246fb96]" started-at="2020-11-28T15:33:07 IST" name="tearDown" finished-at="2020-11-28T15:33:07 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.dca.testcases.FieldManagementToolTest@57e1b0c]" name="afterSuite" is-config="true" duration-ms="837" started-at="2020-11-27T18:55:09 IST" finished-at="2020-11-27T18:55:10 IST">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.dca.testcases.ProjectFilesTest@3246fb96]" started-at="2020-11-28T15:33:07 IST" name="afterSuite" finished-at="2020-11-28T15:33:07 IST" duration-ms="548" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.dca.testcases.FieldManagementToolTest -->
+      </class> <!-- com.dca.testcases.ProjectFilesTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
