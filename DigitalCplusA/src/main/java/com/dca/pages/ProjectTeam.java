@@ -13,8 +13,10 @@ public class ProjectTeam extends BaseClass {
 	ActionDriver ad=new ActionDriver();
 	@FindBy(xpath="//select[@id='ProjectID']")
 	WebElement selproject;
-	@FindBy(xpath="//button[@id='btn_button']")
-	WebElement addnew;
+	@FindBy(xpath="//button[contains(text(),'Add')]")
+	WebElement add;
+	@FindBy(xpath = "//body/app-root[1]/div[2]/div[2]/div[1]/app-staff-details[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/input[2]")
+	WebElement selexisting;
 	@FindBy(xpath="//select[@id='TypeofStaff']")
 	WebElement type;
 	@FindBy(css="#StaffType")
@@ -80,7 +82,8 @@ public class ProjectTeam extends BaseClass {
 	public void projectTeam(String selproject1, String type1,String stafftype1,String staff1,String des,String msg,String email,String staff2,String chat1 ) throws InterruptedException {
 	    
 		ad.selByVisibleText(selproject, selproject1);
-		addnew.click();
+		add.click();
+		selexisting.click();
 		lc.logs("clicked on add new");
 		ad.selByVisibleText(type, type1);
 		Thread.sleep(3000);
@@ -92,11 +95,13 @@ public class ProjectTeam extends BaseClass {
 		lc.logs("staff type"+" "+stafftype1);
 		
 		ad.selByVisibleText(staff, staff1);
-		String s=staff.getAttribute("value");
+		Thread.sleep(3000);
+		String s=staff.getText();
 		lc.logs("selected"+" "+s);
 		
 		description.sendKeys(des);
-		String a1=description.getText();
+		Thread.sleep(3000);
+		String a1=description.getAttribute("value");
 		lc.logs("entered description"+" "+a1);
 		
 		save.click();	

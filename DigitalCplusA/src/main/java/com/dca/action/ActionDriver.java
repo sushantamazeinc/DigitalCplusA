@@ -63,5 +63,13 @@ public void upload() throws IOException, InterruptedException {
 	Runtime.getRuntime().exec(home+"\\uploadexefile\\FileUploadnew.exe");
 	Thread.sleep(3000);
 }
+public void uploadmsg() throws IOException, InterruptedException {
+	
+	
+	String home1=System.getProperty("user.dir");
+	Thread.sleep(3000);
+	Runtime.getRuntime().exec("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\uploadexefile\\FileUploadmsg123.exe");
+	Thread.sleep(3000);
+}
 }
 

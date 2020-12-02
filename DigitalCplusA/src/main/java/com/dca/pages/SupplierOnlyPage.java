@@ -124,7 +124,12 @@ public class SupplierOnlyPage extends BaseClass {
 	WebElement update1;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	WebElement updateok1;
-	
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[2]/div[2]/div[1]/app-item-master[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[4]/i[2]")
+	WebElement delete;
+	@FindBy(xpath="//button[contains(text(),'Yes, delete it!')]")
+	WebElement deleteok;
+	@FindBy(xpath="//button[contains(text(),'OK')]")
+	WebElement deletelast;
 	
 	
 	
@@ -360,6 +365,9 @@ public class SupplierOnlyPage extends BaseClass {
 		lc.logs("Update Success");
 		export.click();
 		lc.logs("Export Success");
+		delete.click();
+		deleteok.click();
+		deletelast.click();
 		Thread.sleep(3000);
 		scrol.click();
 		 Robot robot=new Robot();

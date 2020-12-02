@@ -30,7 +30,7 @@ public class ProjectEmailsPage extends BaseClass {
 	@FindBy(xpath="//button[contains(text(),'Save')]")
 	WebElement save;
 	//put some sleep
-	@FindBy(xpath="//button[contains(text(),'OK')]")
+	@FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[3]/button[1]")
 	WebElement ok;
 	@FindBy(xpath="//input[@id='txt_StaffsearchBuilding']")
 	WebElement search;
@@ -54,29 +54,34 @@ public class ProjectEmailsPage extends BaseClass {
         lc.logs("Clicked on add new button");
         
 		recipient.sendKeys(recipiet);
-		String a1=recipient.getText();
+		Thread.sleep(3000);
+		String a1=recipient.getAttribute("value");
 		lc.logs("Entered recipient"+" "+a1);
 		
 		subject.sendKeys(sub);
-		String b1=subject.getText();
+		Thread.sleep(2000);
+		String b1=subject.getAttribute("value");
 		lc.logs("Entered subject"+" "+b1);
 		
 		date.sendKeys(date1);
-		String c1=date.getText();
+		Thread.sleep(2000);
+		String c1=date.getAttribute("value");
 		lc.logs("picked date"+" "+c1);
 		//emailattach.sendKeys("C:\\Users\\Amaze Inc Lap 03\\git\\DigitalCplusA\\DigitalCplusA\\Imagesrc\\flower.jpg");
 		
 		emailattach.click();
-		ac.upload();
-		Thread.sleep(7000);
-		attactmenisbig.click();
+		ac.uploadmsg();
+		Thread.sleep(9000);
+		//attactmenisbig.click();
 		lc.logs("attachment uploded");
 		
 		save.click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		ok.click();
 		Thread.sleep(3000);
 		lc.logs("saved successfully");
+		getDriver().navigate().refresh();
+		
 		
 		search.sendKeys(sub);
 		edit.click();
