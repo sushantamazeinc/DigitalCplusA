@@ -64,6 +64,13 @@ public class PropertPage extends BaseClass {
 	public WebElement budgethour;
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	public WebElement propsaved;
+	
+	
+	@FindBy(xpath = "//a[@href='#mATERS']")
+	WebElement dropmaster;
+	@FindBy(xpath = "//a[@href='#/Building']")
+	WebElement droppropertypage;
+	
 	public PropertPage() {
 		PageFactory.initElements(getDriver(), this);
 	}
@@ -188,6 +195,14 @@ public class PropertPage extends BaseClass {
 
 		return new PropertyActionsPage();
 		
+		
+	}
+	public PropertyActionsPage droppertyaction() throws InterruptedException {
+		
+		dropmaster.click();
+		Thread.sleep(3000);
+		droppropertypage.click();
+		return new PropertyActionsPage();
 		
 	}
 

@@ -85,7 +85,7 @@ public class PropertyActionsPage extends BaseClass {
 	@FindBy(linkText = "Project Emails")
 
 	WebElement projectemails;
-	@FindBy(linkText = "Project Emails")
+	@FindBy(xpath="//a[contains(text(),'Project Emails Archive')]")
 	WebElement projectmail;
 	@FindBy(linkText = "Locator Request")
 	WebElement locatorrequest;
@@ -308,7 +308,7 @@ WebElement profiles;
 	}
 
 	public ProjectEmailsPage project_emails() {
-		profiles.click();
+		constpro.click();
 		projectmail.click();
 		return new ProjectEmailsPage();
 
@@ -401,8 +401,9 @@ WebElement profiles;
 	}
 
 	public ProjectTeam dropproteam() throws InterruptedException {
-		constpro.click();
-		droprojectteam.click();
+		dropcasasemployee.click();
+		Thread.sleep(3000);
+		casasemployee.click();
 		Thread.sleep(3000);
 		return new ProjectTeam();
 	}
