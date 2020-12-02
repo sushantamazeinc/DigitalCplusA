@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-28T15:31:50 IST" name="Suite" finished-at="2020-11-28T15:33:07 IST" duration-ms="76067">
+  <suite started-at="2020-12-01T17:56:23 IST" name="Suite" finished-at="2020-12-01T17:57:55 IST" duration-ms="92012">
     <groups>
     </groups>
-    <test started-at="2020-11-28T15:31:50 IST" name="Test" finished-at="2020-11-28T15:33:07 IST" duration-ms="76067">
-      <class name="com.dca.testcases.ProjectFilesTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.dca.testcases.ProjectFilesTest@3246fb96]" started-at="2020-11-28T15:31:50 IST" name="loadConfig" finished-at="2020-11-28T15:31:50 IST" duration-ms="311" status="PASS">
+    <test started-at="2020-12-01T17:56:23 IST" name="Test" finished-at="2020-12-01T17:57:55 IST" duration-ms="92012">
+      <class name="com.dca.testcases.Communication_meetingtest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.dca.testcases.Communication_meetingtest@3246fb96]" started-at="2020-12-01T17:56:23 IST" name="loadConfig" finished-at="2020-12-01T17:56:23 IST" duration-ms="314" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.dca.testcases.ProjectFilesTest@3246fb96]" started-at="2020-11-28T15:31:52 IST" name="setup" finished-at="2020-11-28T15:32:12 IST" duration-ms="20300" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.dca.testcases.Communication_meetingtest@3246fb96]" started-at="2020-12-01T17:56:24 IST" name="setup" finished-at="2020-12-01T17:56:33 IST" duration-ms="8920" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="projectFTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.ProjectFilesTest@3246fb96]" started-at="2020-11-28T15:32:12 IST" name="projectFTest" data-provider="Projectfile" finished-at="2020-11-28T15:33:07 IST" duration-ms="54499" status="PASS">
+        <test-method signature="comm_meeting(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dca.testcases.Communication_meetingtest@3246fb96]" started-at="2020-12-01T17:56:33 IST" name="comm_meeting" data-provider="Communicationmeet" finished-at="2020-12-01T17:57:54 IST" duration-ms="80857" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,42 +24,82 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[bike]]>
+                <![CDATA[Virtual Meeting]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[general plus]]>
+                <![CDATA[xyz.com]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[this is for testing]]>
+                <![CDATA[123.0]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[1.0]]>
+                <![CDATA[Conference]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[1.5]]>
+                <![CDATA[15122020]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sushant]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[11111]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[boardmeet]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[bangalore]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Virtual Meeting]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[12112020]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[General audit meet]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[18112020]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- projectFTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dca.testcases.ProjectFilesTest@3246fb96]" started-at="2020-11-28T15:33:07 IST" name="tearDown" finished-at="2020-11-28T15:33:07 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- comm_meeting -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dca.testcases.Communication_meetingtest@3246fb96]" started-at="2020-12-01T17:57:54 IST" name="tearDown" finished-at="2020-12-01T17:57:55 IST" duration-ms="961" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.dca.testcases.ProjectFilesTest@3246fb96]" started-at="2020-11-28T15:33:07 IST" name="afterSuite" finished-at="2020-11-28T15:33:07 IST" duration-ms="548" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.dca.testcases.Communication_meetingtest@3246fb96]" started-at="2020-12-01T17:57:55 IST" name="afterSuite" finished-at="2020-12-01T17:57:55 IST" duration-ms="450" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.dca.testcases.ProjectFilesTest -->
+      </class> <!-- com.dca.testcases.Communication_meetingtest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

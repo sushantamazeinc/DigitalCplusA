@@ -92,7 +92,7 @@ public class PropertPage extends BaseClass {
 		Thread.sleep(1000);
 		Select select6=new Select(propertytype);
 		select6.selectByIndex(2);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		String proptype=propertytype.getText();
 		Thread.sleep(3000);
 		lc.logs(proptype);
@@ -114,7 +114,8 @@ public class PropertPage extends BaseClass {
 		String a3=phonenumber.getAttribute("value");
 		lc.logs("Entered PhoneNo"+" "+a3);
 		contactname.sendKeys(conname);
-		String a4=contactname.getText();
+		Thread.sleep(2000);
+		String a4=contactname.getAttribute("value");
 		lc.logs("Entered ContactName"+" "+a4);
 		contactphone.sendKeys(conphone);
 		String a5=contactphone.getAttribute("value");
@@ -180,10 +181,10 @@ public class PropertPage extends BaseClass {
 		
 		Thread.sleep(7000);
 		savebtn.click();
-		propsaved.click();
+		//propsaved.click();
 		lc.logs("Property Saved Success");
-		Thread.sleep(3000);
-		getDriver().navigate().refresh();
+		//Thread.sleep(5000);
+		//getDriver().navigate().refresh();
 
 		return new PropertyActionsPage();
 		

@@ -197,6 +197,7 @@ public void projectfile(String selproject1, String foldname1, String planname1, 
 	share1.click();
 	//ac.selByIndex(selcasasemployee, 1);
 	selcasasemployee.click();
+	Thread.sleep(2000);
 	selall.click();
 	lc.logs("Selected Employees to Share");
 	undosel.click();

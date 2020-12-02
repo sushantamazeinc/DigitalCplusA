@@ -96,7 +96,7 @@ public class AnnouncementPage extends BaseClass {
 		save.click();
 		saveok.click();
 		lc.logs("Save Success");
-		search.sendKeys(announcements);
+		//search.sendKeys(announcements);
 		edit.click();
 		lc.logs("Clicked on Edit");
 		editdate.sendKeys(edate);

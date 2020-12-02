@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.dca.testcases.ProjectFilesTest">
+      <class name="com.dca.testcases.Communication_meetingtest">
         <methods>
-          <include name="afterSuite"/>
-          <include name="loadConfig"/>
-          <include name="projectFTest" invocation-numbers="0"/>
-          <include name="tearDown"/>
           <include name="setup"/>
+          <include name="afterSuite"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+          <include name="comm_meeting" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.dca.testcases.ProjectFilesTest -->
+      </class> <!-- com.dca.testcases.Communication_meetingtest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

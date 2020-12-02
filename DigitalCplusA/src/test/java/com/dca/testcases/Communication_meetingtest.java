@@ -1,5 +1,7 @@
 package com.dca.testcases;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
@@ -21,7 +23,8 @@ public class Communication_meetingtest extends BaseClass {
 	@Test(dataProvider = "Communicationmeet", dataProviderClass = DataProviders.class)
 	public void comm_meeting(String selproject1,String meettype,String link,
 			String pswd,String meetcate,String meetdate,
-			String clientattend,String meettime,String meetname,String meetloc,String selmeettype ) throws InterruptedException {
+			String clientattend,String meettime,String meetname,String meetloc,String selmeettype,String updateddate ,
+			String subject1,String date1) throws InterruptedException, IOException {
 		Log.startTestCase("meeting");
 		LoginPage loginpage=new LoginPage();
 		projectpage=loginpage.login();
@@ -30,7 +33,7 @@ public class Communication_meetingtest extends BaseClass {
 		Thread.sleep(5000);
 		cm=projectpage.communication_meeting();
 		cm.comm_meeting(selproject1, meettype, link, pswd, meetcate, meetdate, 
-				clientattend, meettime, meetname, meetloc, selmeettype);
+				clientattend, meettime, meetname, meetloc, selmeettype,updateddate,subject1,date1);
 		Log.endTestCase("meeting");
 	}
 	@BeforeMethod()
