@@ -20,23 +20,23 @@ public class MaterialExpencesPage extends BaseClass {
 	WebElement selproject;
 	@FindBy(xpath="//button[@id='btn_button']")
 	WebElement addexpence;
-	@FindBy(xpath="//select[@id='ExpenseType']")
+	@FindBy(id="ExpenseType")
 	WebElement expencetype;
-	@FindBy(xpath="//input[@id='ExpenseDate']")
+	@FindBy(id="ExpenseDate")
 	WebElement date;
 	
 	//material expence
 	
-	@FindBy(xpath="//select[@id='ItemCategory']")
+	@FindBy(id="ItemCategory")
 	WebElement category;
-	@FindBy(xpath="//select[@id='ItemSubCategory']")
+	@FindBy(id="ItemSubCategory")
 	WebElement subcategory;
-	@FindBy(xpath="//select[@id='Item']")
+	@FindBy(id="Item")
 	WebElement item;
-	@FindBy(xpath="//input[@id='Quantity']")
+	@FindBy(id="Quantity")
 	WebElement quantity;
-	@FindBy(xpath="//input[@id='TotalExpense']")
-	WebElement amount;
+	//@FindBy(xpath="//input[@id='TotalExpense']")
+	//WebElement amount;
 	
 	//add
 	@FindBy(xpath="//button[contains(text(),'Add')]")
@@ -68,6 +68,7 @@ public class MaterialExpencesPage extends BaseClass {
 	WebElement remarks;
 	@FindBy(xpath="//input[@id='TotalExpense']")
 	WebElement amount1;
+
 	
 	
 	public MaterialExpencesPage() {
@@ -109,8 +110,8 @@ public class MaterialExpencesPage extends BaseClass {
 		String e1=quantity.getText();
 		lc.logs("entered quantity"+" "+e1);
 		
-		amount.sendKeys(amoun);
-		String f1=amount.getText();
+		amount1.sendKeys(amoun);
+		String f1=amount1.getText();
 		lc.logs("entered amount"+" "+f1);
 		
 		add.click();

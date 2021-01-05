@@ -79,7 +79,8 @@ public class ProjectTeam extends BaseClass {
 	public ProjectTeam() {
 		PageFactory.initElements(getDriver(), this);
 	}
-	public void projectTeam(String selproject1, String type1,String stafftype1,String staff1,String des,String msg,String email,String staff2,String chat1 ) throws InterruptedException {
+	public void projectTeam(String selproject1, String type1,String stafftype1,String staff1,String des,String msg,String email,
+			String staff2,String chat1 ) throws InterruptedException {
 	    
 		ad.selByVisibleText(selproject, selproject1);
 		add.click();

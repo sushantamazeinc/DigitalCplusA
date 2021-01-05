@@ -23,7 +23,7 @@ public class PropertyPageTest extends BaseClass{
 	PropertPage propage;
 	PropertPage propertypage;
 	ActionDriver ac=new ActionDriver();
-	@Test(dataProvider = "credentials", dataProviderClass = DataProviders.class)
+	@Test(dataProvider = "Project", dataProviderClass = DataProviders.class)
 	public void propertyreg(String proname1,String proadd1,String phone1,String conname1,String conphone1,String mail1,String nofloor1,String noofunit1,String unitfloor1,String buildarea1,String budgethr1) throws InterruptedException, IOException, AWTException {
 		Log.startTestCase("property");
 		LoginPage loginpage=new LoginPage();
